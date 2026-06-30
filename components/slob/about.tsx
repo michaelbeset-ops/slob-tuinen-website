@@ -1,5 +1,6 @@
 import { WHATSAPP_URL } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
+import { withBasePath } from "@/lib/base-path"
 
 const VALUES = [
   {
@@ -22,7 +23,7 @@ export function About() {
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="relative min-h-[420px] overflow-hidden lg:min-h-[760px]">
           <img
-            src="/images/martin-slob.png"
+            src={withBasePath("/images/martin-slob.png")}
             alt="Martin Slob, eigenaar van Slob Tuinen, aan het werk"
             className="absolute inset-0 size-full object-cover"
           />
