@@ -2,12 +2,13 @@ import { ArrowDown } from "lucide-react"
 import { Navbar } from "./navbar"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { WHATSAPP_URL } from "./data"
+import { withBasePath } from "@/lib/base-path"
 
 export function Hero() {
   return (
     <section id="top" className="relative h-screen min-h-[640px] w-full overflow-hidden">
       <img
-        src="/images/hero-garden.png"
+        src={withBasePath("/images/hero-garden.png")}
         alt="Moderne tuin met natuurstenen terras aangelegd door Slob Tuinen"
         className="absolute inset-0 size-full object-cover"
       />
