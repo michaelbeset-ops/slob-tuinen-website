@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { ArrowUpRight, X } from "lucide-react"
 import { SERVICES, type Service, WHATSAPP_URL } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
+import { withBasePath } from "@/lib/base-path"
 
 export function Services() {
   const [active, setActive] = useState<Service | null>(null)
@@ -46,7 +47,7 @@ export function Services() {
               className="group relative aspect-[4/3] overflow-hidden bg-foreground text-left"
             >
               <img
-                src={service.image || "/placeholder.svg"}
+                src={withBasePath(service.image || "/placeholder.svg")}
                 alt={service.title}
                 className="absolute inset-0 size-full object-cover opacity-80 transition-all duration-500 group-hover:scale-105 group-hover:opacity-60"
               />
@@ -93,7 +94,7 @@ export function Services() {
             <>
               <div className="relative h-56 shrink-0 overflow-hidden md:h-72">
                 <img
-                  src={active.image || "/placeholder.svg"}
+                  src={withBasePath(active.image || "/placeholder.svg")}
                   alt={active.title}
                   className="size-full object-cover"
                 />

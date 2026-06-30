@@ -3,6 +3,7 @@
 import { useRef, useState } from "react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { PROJECTS } from "./data"
+import { withBasePath } from "@/lib/base-path"
 
 export function Projects() {
   const trackRef = useRef<HTMLDivElement>(null)
@@ -83,7 +84,7 @@ export function Projects() {
           >
             <div className="relative aspect-[4/3] overflow-hidden">
               <img
-                src={project.image || "/placeholder.svg"}
+                src={withBasePath(project.image || "/placeholder.svg")}
                 alt={`${project.title} — ${project.location}`}
                 className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
