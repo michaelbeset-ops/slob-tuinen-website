@@ -19,7 +19,7 @@ export function Hero() {
         <p className="mb-6 max-w-md text-sm font-semibold uppercase tracking-[0.25em] text-forest">
           Leerdam &amp; omgeving
         </p>
-        <h1 className="text-balance font-black uppercase leading-[0.85] tracking-tighter text-white text-[clamp(3rem,13vw,11rem)]">
+        <h1 className="text-balance font-black uppercase leading-[0.9] tracking-tighter text-white text-[clamp(2.25rem,6vw,5rem)]">
           Slob.
           <br />
           <span className="text-forest">Grond,</span> Groen
