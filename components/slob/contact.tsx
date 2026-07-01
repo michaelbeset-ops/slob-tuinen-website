@@ -117,7 +117,7 @@ export function Contact() {
               <img
                 src={withBasePath("/logo.png")}
                 alt="Slob Tuinen logo"
-                className="h-16 w-auto"
+                className="h-14 w-52 object-contain object-left"
               />
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
                 Vakmanschap van de hoogste plank. Grond, groen &amp; straat in

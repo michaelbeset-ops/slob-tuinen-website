@@ -16,7 +16,7 @@ export function Navbar() {
           <img
             src={withBasePath("/logo.png")}
             alt="Slob Tuinen logo"
-            className="h-14 w-auto md:h-16"
+            className="h-12 w-52 object-contain object-left md:h-14 md:w-60"
           />
         </a>
 
