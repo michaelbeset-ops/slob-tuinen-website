@@ -32,15 +32,21 @@ export function Hero() {
           beschoeiing tot complete tuinaanleg en strak straatwerk.
         </p>
 
-        <div className="mt-10">
+        <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 rounded-none bg-forest px-8 py-5 text-base font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark"
+            className="inline-flex items-center justify-center gap-3 rounded-none bg-forest px-8 py-5 text-base font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark"
           >
             <WhatsAppIcon className="size-5" />
             Direct contact via WhatsApp
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center gap-2 rounded-none border border-white/40 px-8 py-5 text-sm font-semibold uppercase tracking-wide text-white/85 transition-colors hover:border-white hover:text-white"
+          >
+            Offerte aanvragen
           </a>
         </div>
       </div>

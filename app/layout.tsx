@@ -16,21 +16,8 @@ export const metadata: Metadata = {
     'Slob Tuinen: vakmanschap van de hoogste plank door Martin Slob. Tuinaanleg, grondverzet, beschoeiingswerk, groenvoorziening, grondwerk en straatwerk in Leerdam en omgeving.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: withBasePath('/icon-light-32x32.png'),
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: withBasePath('/icon-dark-32x32.png'),
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: withBasePath('/icon.svg'),
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: withBasePath('/apple-icon.png'),
+    icon: withBasePath('/logo.png'),
+    apple: withBasePath('/logo.png'),
   },
 }
 
