@@ -1,4 +1,14 @@
 import { MapPin, Phone } from "lucide-react"
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
 import { PHONE, PHONE_TEL, WHATSAPP_URL } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { withBasePath } from "@/lib/base-path"
@@ -111,6 +121,15 @@ export function Contact() {
                 Vakmanschap van de hoogste plank. Grond, groen &amp; straat in
                 Leerdam en omgeving.
               </p>
+              <a
+                href="https://www.instagram.com/slob_tuinen/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
+              >
+                <InstagramIcon className="size-4" />
+                @slob_tuinen
+              </a>
             </div>
 
             {/* Diensten */}
@@ -158,6 +177,16 @@ export function Contact() {
                     WhatsApp
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/slob_tuinen/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-white"
+                  >
+                    Instagram
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -188,7 +217,7 @@ export function Contact() {
               &copy; 2026 Slob Tuinen. Grond, Groen &amp; Straat.
             </span>
             <span className="text-sm text-white/50">
-              KvK 00000000 &middot; BTW NL000000000B00
+              KvK 97104078
             </span>
           </div>
         </div>

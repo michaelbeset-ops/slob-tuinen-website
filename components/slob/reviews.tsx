@@ -15,11 +15,12 @@ function GoogleG({ className }: { className?: string }) {
   )
 }
 
-function Stars({ count }: { count: number }) {
+function Stars({ count, size = "md" }: { count: number; size?: "sm" | "md" | "lg" }) {
+  const sz = size === "lg" ? "size-6" : size === "sm" ? "size-3.5" : "size-4"
   return (
     <div className="flex gap-0.5" aria-label={`${count} van 5 sterren`}>
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} className={`size-4 ${i < count ? "fill-[#fbbc05] text-[#fbbc05]" : "text-border"}`} />
+        <Star key={i} className={`${sz} ${i < count ? "fill-[#fbbc05] text-[#fbbc05]" : "text-border"}`} />
       ))}
     </div>
   )
@@ -112,21 +113,19 @@ export function Reviews() {
             key={review.name}
             className="w-[85%] shrink-0 snap-start border border-border bg-card p-6 sm:w-[60%] md:p-8 lg:w-[38%]"
           >
-            <div className="mb-5 flex items-center justify-between">
-              <Stars count={review.rating} />
-              <GoogleG className="size-5 opacity-70" />
-            </div>
-            <blockquote className="text-pretty text-lg leading-relaxed text-foreground">
+            <Stars count={review.rating} size="lg" />
+            <blockquote className="mt-5 text-pretty text-lg leading-relaxed text-foreground">
               &ldquo;{review.quote}&rdquo;
             </blockquote>
             <figcaption className="mt-8 flex items-center gap-3 border-t border-border pt-5">
               <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-forest text-sm font-bold uppercase text-white">
                 {review.name.charAt(0)}
               </span>
-              <span>
+              <span className="flex-1">
                 <span className="block font-semibold text-foreground">{review.name}</span>
-                <span className="block text-sm text-muted-foreground">Google review · ★★★★★</span>
+                <span className="block text-sm text-muted-foreground">Google review</span>
               </span>
+              <GoogleG className="size-5 shrink-0 opacity-70" />
             </figcaption>
           </figure>
         ))}
