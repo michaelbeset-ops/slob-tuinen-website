@@ -1,6 +1,7 @@
 import { MapPin, Phone } from "lucide-react"
 import { PHONE, PHONE_TEL, WHATSAPP_URL } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
+import { withBasePath } from "@/lib/base-path"
 
 const SERVICES = [
   "Tuinaanleg",
@@ -12,10 +13,9 @@ const SERVICES = [
 ]
 
 const LEGAL = [
-  "Privacybeleid",
-  "Algemene voorwaarden",
-  "Cookiebeleid",
-  "Disclaimer",
+  { label: "Privacybeleid", href: "/privacybeleid" },
+  { label: "Cookiebeleid", href: "/cookiebeleid" },
+  { label: "Algemene voorwaarden", href: "#" },
 ]
 
 export function Contact() {
@@ -168,12 +168,12 @@ export function Contact() {
               </h3>
               <ul className="flex flex-col gap-2">
                 {LEGAL.map((l) => (
-                  <li key={l}>
+                  <li key={l.label}>
                     <a
-                      href="#"
+                      href={l.href === "#" ? "#" : withBasePath(l.href)}
                       className="text-sm text-white/60 transition-colors hover:text-white"
                     >
-                      {l}
+                      {l.label}
                     </a>
                   </li>
                 ))}

@@ -5,9 +5,35 @@ export const PHONE_TEL = "tel:+31628864744"
 export const NAV_LINKS = [
   { label: "Diensten", href: "#diensten" },
   { label: "Projecten", href: "#projecten" },
-  { label: "Over Ons", href: "#over-ons" },
+  { label: "Over Ons", href: "/over-ons", isPage: true },
   { label: "Reviews", href: "#reviews" },
   { label: "Contact", href: "#contact" },
+]
+
+export type TeamMember = {
+  name: string
+  role: string
+  image?: string
+}
+
+export const TEAM: TeamMember[] = [
+  {
+    name: "Martin Slob",
+    role: "Eigenaar & Uitvoerder",
+    image: "/images/martin-slob.png",
+  },
+  {
+    name: "Medewerker 1",
+    role: "Grondwerk & Bestrating",
+  },
+  {
+    name: "Medewerker 2",
+    role: "Tuinaanleg & Groenvoorziening",
+  },
+  {
+    name: "Medewerker 3",
+    role: "Beschoeiing & Grondverzet",
+  },
 ]
 
 export type Service = {
