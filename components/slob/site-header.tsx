@@ -20,11 +20,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <nav className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-12">
-        <a
-          href={withBasePath("/")}
-          className="text-lg font-black uppercase tracking-tight text-foreground md:text-xl"
-        >
-          Slob Tuinen
+        <a href={withBasePath("/")} className="shrink-0 overflow-hidden rounded" aria-label="Slob Tuinen — home">
+          <img
+            src={withBasePath("/logo.png")}
+            alt="Slob Tuinen logo"
+            className="h-12 w-auto md:h-14"
+          />
         </a>
 
         <div className="hidden items-center gap-10 lg:flex">
