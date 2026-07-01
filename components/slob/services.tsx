@@ -1,13 +1,44 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { ArrowUpRight, X } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
+import { ArrowLeft, ArrowRight, ArrowUpRight, X } from "lucide-react"
 import { SERVICES, type Service, WHATSAPP_URL } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { withBasePath } from "@/lib/base-path"
 
+function ServiceCard({ service, onClick }: { service: Service; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="group relative aspect-[4/3] w-full overflow-hidden bg-foreground text-left"
+    >
+      <img
+        src={withBasePath(service.image || "/placeholder.svg")}
+        alt={service.title}
+        className="absolute inset-0 size-full object-cover opacity-80 transition-all duration-500 group-hover:scale-105 group-hover:opacity-60"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/20 to-transparent" />
+      <div className="relative flex size-full flex-col justify-between p-6">
+        <span className="flex size-11 items-center justify-center self-end rounded-none border border-white/40 text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
+          <ArrowUpRight className="size-5" />
+        </span>
+        <div>
+          <h3 className="font-black uppercase leading-none tracking-tighter text-white text-[clamp(1.5rem,3vw,2.25rem)]">
+            {service.title}
+          </h3>
+          <p className="mt-2 max-w-xs text-sm text-white/70">{service.intro}</p>
+        </div>
+      </div>
+      <span className="absolute bottom-0 left-0 h-1 w-0 bg-forest transition-all duration-500 group-hover:w-full" />
+    </button>
+  )
+}
+
 export function Services() {
   const [active, setActive] = useState<Service | null>(null)
+  const trackRef = useRef<HTMLDivElement>(null)
+  const [current, setCurrent] = useState(0)
 
   useEffect(() => {
     if (active) {
@@ -19,6 +50,29 @@ export function Services() {
       document.body.style.overflow = ""
     }
   }, [active])
+
+  const scrollToIndex = (i: number) => {
+    const track = trackRef.current
+    if (!track) return
+    const clamped = Math.max(0, Math.min(i, SERVICES.length - 1))
+    const card = track.children[clamped] as HTMLElement | undefined
+    if (card) {
+      track.scrollTo({ left: card.offsetLeft, behavior: "smooth" })
+      setCurrent(clamped)
+    }
+  }
+
+  const onScroll = () => {
+    const track = trackRef.current
+    if (!track) return
+    let nearest = 0
+    let min = Infinity
+    Array.from(track.children as HTMLCollectionOf<HTMLElement>).forEach((child, i) => {
+      const dist = Math.abs(child.offsetLeft - track.scrollLeft)
+      if (dist < min) { min = dist; nearest = i }
+    })
+    setCurrent(nearest)
+  }
 
   return (
     <section id="diensten" className="bg-background py-20 md:py-32">
@@ -32,41 +86,80 @@ export function Services() {
               Alles voor buiten
             </h2>
           </div>
-          <p className="max-w-sm text-pretty leading-relaxed text-muted-foreground">
-            Zes specialismen, één aanspreekpunt. Klik op een dienst voor een
-            heldere uitleg.
-          </p>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between md:flex-col md:items-end md:gap-4">
+            <p className="max-w-sm text-pretty leading-relaxed text-muted-foreground">
+              Zes specialismen, één aanspreekpunt. Tik op een dienst voor meer info.
+            </p>
+            {/* Arrow controls — visible on md+ and also on mobile */}
+            <div className="flex items-center gap-2 md:hidden">
+              <button
+                type="button"
+                onClick={() => scrollToIndex(current - 1)}
+                disabled={current === 0}
+                className="flex size-11 items-center justify-center border border-border text-foreground transition-colors hover:border-forest hover:bg-forest hover:text-white disabled:opacity-30"
+                aria-label="Vorige dienst"
+              >
+                <ArrowLeft className="size-5" />
+              </button>
+              <span className="text-sm text-muted-foreground">
+                {current + 1} / {SERVICES.length}
+              </span>
+              <button
+                type="button"
+                onClick={() => scrollToIndex(current + 1)}
+                disabled={current === SERVICES.length - 1}
+                className="flex size-11 items-center justify-center border border-border text-foreground transition-colors hover:border-forest hover:bg-forest hover:text-white disabled:opacity-30"
+                aria-label="Volgende dienst"
+              >
+                <ArrowRight className="size-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile: horizontal swipe carousel */}
+      <div className="md:hidden">
+        {/* Swipe hint */}
+        <div className="mb-3 flex items-center gap-2 px-6 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+          <ArrowLeft className="size-3.5" />
+          <span>Swipe voor meer diensten</span>
+          <ArrowRight className="size-3.5" />
         </div>
 
+        <div
+          ref={trackRef}
+          onScroll={onScroll}
+          className="flex snap-x snap-mandatory gap-px overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {SERVICES.map((service) => (
+            <div key={service.id} className="w-[85vw] shrink-0 snap-start">
+              <ServiceCard service={service} onClick={() => setActive(service)} />
+            </div>
+          ))}
+        </div>
+
+        {/* Dot indicators */}
+        <div className="mt-4 flex justify-center gap-2 px-6">
+          {SERVICES.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => scrollToIndex(i)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === current ? "w-8 bg-forest" : "w-1.5 bg-border"
+              }`}
+              aria-label={`Dienst ${i + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop: grid */}
+      <div className="mx-auto hidden max-w-[1600px] px-6 md:block md:px-12">
         <div className="grid grid-cols-1 gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service) => (
-            <button
-              key={service.id}
-              type="button"
-              onClick={() => setActive(service)}
-              className="group relative aspect-[4/3] overflow-hidden bg-foreground text-left"
-            >
-              <img
-                src={withBasePath(service.image || "/placeholder.svg")}
-                alt={service.title}
-                className="absolute inset-0 size-full object-cover opacity-80 transition-all duration-500 group-hover:scale-105 group-hover:opacity-60"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/20 to-transparent" />
-              <div className="relative flex size-full flex-col justify-between p-6">
-                <span className="flex size-11 items-center justify-center self-end rounded-none border border-white/40 text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
-                  <ArrowUpRight className="size-5" />
-                </span>
-                <div>
-                  <h3 className="font-black uppercase leading-none tracking-tighter text-white text-[clamp(1.5rem,3vw,2.25rem)]">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 max-w-xs text-sm text-white/70">
-                    {service.intro}
-                  </p>
-                </div>
-              </div>
-              <span className="absolute bottom-0 left-0 h-1 w-0 bg-forest transition-all duration-500 group-hover:w-full" />
-            </button>
+            <ServiceCard key={service.id} service={service} onClick={() => setActive(service)} />
           ))}
         </div>
       </div>
