@@ -114,9 +114,11 @@ export function Contact() {
           <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
-              <span className="text-2xl font-black uppercase tracking-tight">
-                Slob Tuinen
-              </span>
+              <img
+                src={withBasePath("/logo.png")}
+                alt="Slob Tuinen logo"
+                className="h-16 w-auto"
+              />
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
                 Vakmanschap van de hoogste plank. Grond, groen &amp; straat in
                 Leerdam en omgeving.
