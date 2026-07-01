@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { withBasePath } from '@/lib/base-path'
+import { CookieBanner } from '@/components/slob/cookie-banner'
 import './globals.css'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
@@ -50,6 +51,7 @@ export default function RootLayout({
     >
       <body className="font-sans antialiased">
         {children}
+        <CookieBanner />
       </body>
     </html>
   )
