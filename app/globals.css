@@ -169,6 +169,30 @@
   }
 }
 
+/* One-time nudge that hints the before/after handle is draggable. */
+@keyframes ba-nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-14px);
+  }
+  70% {
+    transform: translateX(6px);
+  }
+}
+
+.ba-hint {
+  animation: ba-nudge 1.6s ease-in-out 0.6s 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ba-hint {
+    animation: none;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

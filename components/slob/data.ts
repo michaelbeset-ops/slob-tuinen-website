@@ -93,10 +93,19 @@ export type Project = {
   title: string
   location: string
   image: string
+  /** Optional "before" photo. When set, the card becomes a swipe comparison. */
+  beforeImage?: string
   size: "tall" | "wide" | "regular"
 }
 
 export const PROJECTS: Project[] = [
+  {
+    title: "Oprijlaan & Overkapping",
+    location: "Vijfheerenlanden",
+    image: "/images/project-oprijlaan-nu.png",
+    beforeImage: "/images/project-oprijlaan-toen.jpg",
+    size: "wide",
+  },
   {
     title: "Moderne Oprit",
     location: "Leerdam",
