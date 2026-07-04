@@ -10,14 +10,38 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
+const SITE_URL = 'https://michaelbeset-ops.github.io/slob-tuinen-website/'
+const SITE_TITLE = 'Slob Tuinen — Grond, Groen & Straat | Leerdam'
+const SITE_DESCRIPTION =
+  'Slob Tuinen: vakmanschap van de hoogste plank door Martin Slob. Tuinaanleg, grondverzet, beschoeiingswerk, groenvoorziening, grondwerk en straatwerk in Leerdam en omgeving.'
+
 export const metadata: Metadata = {
-  title: 'Slob Tuinen — Grond, Groen & Straat | Leerdam',
-  description:
-    'Slob Tuinen: vakmanschap van de hoogste plank door Martin Slob. Tuinaanleg, grondverzet, beschoeiingswerk, groenvoorziening, grondwerk en straatwerk in Leerdam en omgeving.',
-  generator: 'v0.app',
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   icons: {
     icon: withBasePath('/logo.png'),
     apple: withBasePath('/logo.png'),
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'Slob Tuinen',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    images: [
+      {
+        url: 'images/hero-garden.webp',
+        alt: 'Moderne tuin aangelegd door Slob Tuinen',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ['images/hero-garden.webp'],
   },
 }
 
@@ -37,6 +61,12 @@ export default function RootLayout({
       className={`light bg-background ${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="font-sans antialiased">
+        <a
+          href="#hoofdinhoud"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[200] focus:bg-forest focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:uppercase focus:tracking-wide focus:text-white"
+        >
+          Naar hoofdinhoud
+        </a>
         {children}
         <CookieBanner />
       </body>

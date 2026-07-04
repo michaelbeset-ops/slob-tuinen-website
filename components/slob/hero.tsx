@@ -6,10 +6,12 @@ import { withBasePath } from "@/lib/base-path"
 
 export function Hero() {
   return (
-    <section id="top" className="relative h-screen min-h-[640px] w-full overflow-hidden">
+    <section id="top" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
       <img
-        src={withBasePath("/images/hero-garden.png")}
+        src={withBasePath("/images/hero-garden.webp")}
         alt="Moderne tuin met natuurstenen terras aangelegd door Slob Tuinen"
+        fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 size-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/30 to-foreground/70" />

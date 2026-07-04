@@ -75,6 +75,8 @@ export function BeforeAfter({
         <img
           src={withBasePath(after)}
           alt={alt}
+          loading="lazy"
+          decoding="async"
           className="size-full object-cover"
         />
       </div>
@@ -92,6 +94,8 @@ export function BeforeAfter({
         src={withBasePath(before)}
         alt={`${alt} — ${beforeLabel.toLowerCase()}`}
         draggable={false}
+        loading="lazy"
+        decoding="async"
         onError={() => setBeforeFailed(true)}
         className="pointer-events-none absolute inset-0 size-full object-cover"
       />
@@ -108,6 +112,8 @@ export function BeforeAfter({
           src={withBasePath(after)}
           alt={`${alt} — ${afterLabel.toLowerCase()}`}
           draggable={false}
+          loading="lazy"
+          decoding="async"
           className="pointer-events-none absolute inset-0 size-full object-cover"
         />
         <span className="pointer-events-none absolute left-4 top-4 z-10 bg-forest px-3 py-1 text-xs font-semibold uppercase tracking-widest text-white">

@@ -18,10 +18,12 @@ export default function OverOnsPage() {
       <SiteHeader />
 
       {/* Hero: Martin Slob prominent */}
-      <section className="relative min-h-[70vh] bg-foreground">
+      <section id="hoofdinhoud" tabIndex={-1} className="relative min-h-[70vh] bg-foreground">
         <img
-          src={withBasePath("/images/martin-slob.png")}
+          src={withBasePath("/images/martin-slob.webp")}
           alt="Martin Slob, eigenaar van Slob Tuinen"
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 size-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/60 to-transparent" />
@@ -149,6 +151,8 @@ export default function OverOnsPage() {
                       <img
                         src={withBasePath(member.image)}
                         alt={member.name}
+                        loading="lazy"
+                        decoding="async"
                         className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     ) : (

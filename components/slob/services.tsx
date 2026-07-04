@@ -15,7 +15,9 @@ function ServiceCard({ service, onClick }: { service: Service; onClick: () => vo
     >
       <img
         src={withBasePath(service.image || "/placeholder.svg")}
-        alt={service.title}
+        alt={`${service.title} door Slob Tuinen`}
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 size-full object-cover opacity-80 transition-all duration-500 group-hover:scale-105 group-hover:opacity-60"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/20 to-transparent" />
@@ -146,7 +148,7 @@ export function Services() {
               key={i}
               type="button"
               onClick={() => scrollToIndex(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
+              className={`relative h-1.5 rounded-full transition-all duration-300 before:absolute before:left-1/2 before:top-1/2 before:size-11 before:-translate-x-1/2 before:-translate-y-1/2 before:content-[''] ${
                 i === current ? "w-8 bg-forest" : "w-1.5 bg-border"
               }`}
               aria-label={`Dienst ${i + 1}`}
@@ -189,6 +191,8 @@ export function Services() {
                 <img
                   src={withBasePath(active.image || "/placeholder.svg")}
                   alt={active.title}
+                  loading="lazy"
+                  decoding="async"
                   className="size-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />

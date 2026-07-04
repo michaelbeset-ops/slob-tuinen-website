@@ -10,7 +10,7 @@ export default function PrivacybeleidPage() {
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
-      <main className="mx-auto max-w-3xl px-6 py-20 md:px-12 md:py-28">
+      <main id="hoofdinhoud" tabIndex={-1} className="mx-auto max-w-3xl px-6 py-20 md:px-12 md:py-28">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-forest">
           Juridisch
         </p>
