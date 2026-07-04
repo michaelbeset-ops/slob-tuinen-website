@@ -1,21 +1,24 @@
 "use client"
 
 import { useState } from "react"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { WHATSAPP_URL } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { withBasePath } from "@/lib/base-path"
 
 const PAGE_NAV = [
-  { label: "Diensten", href: withBasePath("/#diensten") },
-  { label: "Projecten", href: withBasePath("/#projecten") },
-  { label: "Over Ons", href: withBasePath("/over-ons") },
-  { label: "Reviews", href: withBasePath("/#reviews") },
-  { label: "Contact", href: withBasePath("/#contact") },
+  { label: "Diensten", href: withBasePath("/#diensten"), match: null },
+  { label: "Projecten", href: withBasePath("/#projecten"), match: null },
+  { label: "Over Ons", href: withBasePath("/over-ons"), match: "/over-ons" },
+  { label: "Reviews", href: withBasePath("/#reviews"), match: null },
+  { label: "Contact", href: withBasePath("/#contact"), match: null },
 ]
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+  const isActive = (match: string | null) => !!match && pathname === match
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
@@ -33,7 +36,10 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium uppercase tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+              aria-current={isActive(link.match) ? "page" : undefined}
+              className={`text-sm font-medium uppercase tracking-wide transition-colors hover:text-foreground ${
+                isActive(link.match) ? "text-forest" : "text-muted-foreground"
+              }`}
             >
               {link.label}
             </a>
@@ -69,7 +75,10 @@ export function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-border py-4 text-base font-semibold uppercase tracking-wide text-foreground"
+                aria-current={isActive(link.match) ? "page" : undefined}
+                className={`border-b border-border py-4 text-base font-semibold uppercase tracking-wide ${
+                  isActive(link.match) ? "text-forest" : "text-foreground"
+                }`}
               >
                 {link.label}
               </a>

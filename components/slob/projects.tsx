@@ -94,6 +94,8 @@ export function Projects() {
                 <img
                   src={withBasePath(project.image || "/placeholder.svg")}
                   alt={`${project.title} — ${project.location}`}
+                  loading="lazy"
+                  decoding="async"
                   className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>
@@ -117,7 +119,7 @@ export function Projects() {
             type="button"
             onClick={() => scrollToIndex(i)}
             aria-label={`Ga naar project ${i + 1}`}
-            className={`h-1 rounded-none transition-all duration-300 ${
+            className={`relative h-1 rounded-none transition-all duration-300 before:absolute before:left-1/2 before:top-1/2 before:size-11 before:-translate-x-1/2 before:-translate-y-1/2 before:content-[''] ${
               i === active ? "w-10 bg-forest" : "w-5 bg-white/25 hover:bg-white/50"
             }`}
           />

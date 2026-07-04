@@ -25,7 +25,6 @@ const SERVICES = [
 const LEGAL = [
   { label: "Privacybeleid", href: "/privacybeleid" },
   { label: "Cookiebeleid", href: "/cookiebeleid" },
-  { label: "Algemene voorwaarden", href: "#" },
 ]
 
 export function Contact() {
@@ -51,7 +50,7 @@ export function Contact() {
             <div className="mt-12 flex flex-col gap-px border border-white/15 bg-white/15">
               <a
                 href={PHONE_TEL}
-                className="flex items-center gap-4 bg-foreground p-6 transition-colors hover:bg-forest"
+                className="group flex items-center gap-4 bg-foreground p-6 transition-colors hover:bg-forest"
               >
                 <Phone className="size-6 shrink-0 text-forest transition-colors group-hover:text-white" />
                 <span>

@@ -138,7 +138,7 @@ export function Reviews() {
             key={i}
             type="button"
             onClick={() => scrollToIndex(i)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
+            className={`relative h-1.5 rounded-full transition-all duration-300 before:absolute before:left-1/2 before:top-1/2 before:size-11 before:-translate-x-1/2 before:-translate-y-1/2 before:content-[''] ${
               i === active ? "w-8 bg-forest" : "w-1.5 bg-border hover:bg-muted-foreground"
             }`}
             aria-label={`Review ${i + 1}`}

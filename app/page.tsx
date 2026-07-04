@@ -9,7 +9,7 @@ import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
 
 export default function Page() {
   return (
-    <main className="bg-background">
+    <main id="hoofdinhoud" tabIndex={-1} className="bg-background">
       <Hero />
       <Services />
       <Projects />

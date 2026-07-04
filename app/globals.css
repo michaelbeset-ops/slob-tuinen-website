@@ -202,5 +202,33 @@
   }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
+  }
+
+  /* Visible keyboard focus on every interactive element. Forest outline
+     with an offset gap so it stays visible on both light and dark sections. */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--forest);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }
