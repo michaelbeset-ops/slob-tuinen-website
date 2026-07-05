@@ -108,7 +108,8 @@ export default function CookiebeleidPage() {
           <h2>7. Contact</h2>
           <p>
             Heeft u vragen over ons cookiebeleid? Neem dan contact op via
-            telefoon 0628864744 of via WhatsApp.
+            telefoon 0628864744, via WhatsApp of per e-mail:
+            slobdienstverlening@gmail.com.
           </p>
         </div>
       </main>

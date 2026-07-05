@@ -1,6 +1,8 @@
 export const WHATSAPP_URL = "https://wa.me/31628864744"
 export const PHONE = "0628864744"
 export const PHONE_TEL = "tel:+31628864744"
+export const EMAIL = "slobdienstverlening@gmail.com"
+export const EMAIL_MAILTO = `mailto:${EMAIL}`
 
 /** WhatsApp-link met vooringevuld bericht — verlaagt de drempel om contact op te nemen. */
 export function whatsappUrl(message: string) {
@@ -25,13 +27,25 @@ export type TeamMember = {
   image?: string
 }
 
-// Voeg hier teamleden toe (naam, rol en optioneel een foto) zodra ze bekend
-// zijn — de teamsectie op /over-ons verschijnt dan automatisch weer.
+// Vervang de namen en voeg foto's toe (image: "/images/naam.webp") zodra die
+// er zijn — de kaarten op /over-ons tonen tot die tijd een initiaal.
 export const TEAM: TeamMember[] = [
   {
     name: "Martin Slob",
     role: "Eigenaar & Uitvoerder",
     image: "/images/martin-slob.webp",
+  },
+  {
+    name: "Medewerker 1",
+    role: "Grondwerk & Bestrating",
+  },
+  {
+    name: "Medewerker 2",
+    role: "Tuinaanleg & Groenvoorziening",
+  },
+  {
+    name: "Medewerker 3",
+    role: "Beschoeiing & Grondverzet",
   },
 ]
 

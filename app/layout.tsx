@@ -57,6 +57,7 @@ const JSON_LD = {
   image: `${SITE_URL}og-image.jpg`,
   logo: `${SITE_URL}logo.png`,
   telephone: '+31628864744',
+  email: 'slobdienstverlening@gmail.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Recht van Ter Leede',
