@@ -27,8 +27,8 @@ export function CookieBanner() {
     <div className="fixed bottom-0 left-0 right-0 z-[100] border-t border-border bg-background shadow-2xl">
       <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between md:px-12">
         <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Wij gebruiken functionele cookies en Google Maps om onze website goed
-          te laten werken. Lees ons{" "}
+          Wij gebruiken één functionele cookie om uw voorkeur te onthouden.
+          Google Maps wordt alleen geladen als u daar zelf voor kiest. Lees ons{" "}
           <a
             href={withBasePath("/cookiebeleid")}
             className="underline underline-offset-2 hover:text-foreground"

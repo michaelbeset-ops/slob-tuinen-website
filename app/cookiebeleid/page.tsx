@@ -19,7 +19,7 @@ export default function CookiebeleidPage() {
         </h1>
 
         <div className="prose prose-neutral max-w-none text-muted-foreground [&_h2]:mb-3 [&_h2]:mt-10 [&_h2]:font-bold [&_h2]:uppercase [&_h2]:tracking-wide [&_h2]:text-foreground [&_p]:mb-4 [&_p]:leading-relaxed [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-1 [&_table]:mb-6 [&_table]:w-full [&_table]:text-sm [&_th]:border [&_th]:border-border [&_th]:bg-muted [&_th]:p-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-foreground [&_td]:border [&_td]:border-border [&_td]:p-3">
-          <p className="text-sm text-muted-foreground">Laatst bijgewerkt: 1 juli 2026</p>
+          <p className="text-sm text-muted-foreground">Laatst bijgewerkt: 5 juli 2026</p>
 
           <h2>1. Wat zijn cookies</h2>
           <p>
@@ -53,7 +53,8 @@ export default function CookiebeleidPage() {
                 <td>Google Maps cookies</td>
                 <td>Derde partij</td>
                 <td>
-                  Weergave van de interactieve kaart op de contactpagina
+                  Weergave van de interactieve kaart — alleen nadat u zelf op
+                  &ldquo;Kaart laden&rdquo; klikt
                 </td>
                 <td>Zie Google-beleid</td>
               </tr>
@@ -70,10 +71,14 @@ export default function CookiebeleidPage() {
 
           <h2>4. Cookies van Google Maps</h2>
           <p>
-            Op de contactpagina is een Google Maps-kaart ingebed. Google plaatst
-            hierbij mogelijk cookies op uw apparaat. Slob Tuinen heeft geen
-            invloed op de cookies die Google plaatst. Voor meer informatie
-            verwijzen wij u naar het cookiebeleid van Google:{" "}
+            Op de contactpagina kan een Google Maps-kaart worden getoond. Deze
+            kaart wordt <strong>niet automatisch geladen</strong>: pas nadat u
+            zelf op &ldquo;Kaart laden&rdquo; klikt, wordt verbinding gemaakt
+            met Google en kan Google cookies op uw apparaat plaatsen. Kiest u
+            daar niet voor, dan worden er geen cookies van Google geplaatst.
+            Slob Tuinen heeft geen invloed op de cookies die Google plaatst.
+            Voor meer informatie verwijzen wij u naar het cookiebeleid van
+            Google:{" "}
             <a
               href="https://policies.google.com/technologies/cookies"
               target="_blank"
