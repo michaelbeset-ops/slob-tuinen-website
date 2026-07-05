@@ -9,8 +9,9 @@ function InstagramIcon({ className }: { className?: string }) {
     </svg>
   )
 }
-import { PHONE, PHONE_TEL, WHATSAPP_URL } from "./data"
+import { PHONE, PHONE_TEL, WHATSAPP_QUOTE, WHATSAPP_URL } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
+import { MapEmbed } from "./map-embed"
 import { withBasePath } from "@/lib/base-path"
 
 const SERVICES = [
@@ -25,6 +26,7 @@ const SERVICES = [
 const LEGAL = [
   { label: "Privacybeleid", href: "/privacybeleid" },
   { label: "Cookiebeleid", href: "/cookiebeleid" },
+  { label: "Algemene voorwaarden", href: "/algemene-voorwaarden" },
 ]
 
 export function Contact() {
@@ -75,7 +77,7 @@ export function Contact() {
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a
-                href={WHATSAPP_URL}
+                href={WHATSAPP_QUOTE}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex flex-1 items-center justify-center gap-3 rounded-none bg-forest px-6 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark"
@@ -96,13 +98,7 @@ export function Contact() {
           {/* Right: map */}
           <div className="lg:pl-8">
             <div className="aspect-square w-full border border-white/15 lg:aspect-auto lg:h-full lg:min-h-[420px]">
-              <iframe
-                title="Locatie Slob Tuinen — Leerdam"
-                src="https://www.google.com/maps?q=Recht%20van%20Ter%20Leede%2C%204143%20LP%20Leerdam&output=embed"
-                className="size-full grayscale"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              <MapEmbed />
             </div>
           </div>
         </div>

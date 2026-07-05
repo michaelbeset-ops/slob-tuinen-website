@@ -1,4 +1,4 @@
-import { WHATSAPP_URL } from "./data"
+import { whatsappUrl } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { withBasePath } from "@/lib/base-path"
 
@@ -66,7 +66,7 @@ export function About() {
           </dl>
 
           <a
-            href={WHATSAPP_URL}
+            href={whatsappUrl("Hallo Martin, ik zou graag een kennismaking inplannen.")}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-10 inline-flex items-center gap-3 self-start rounded-none bg-forest px-8 py-5 text-base font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark"
