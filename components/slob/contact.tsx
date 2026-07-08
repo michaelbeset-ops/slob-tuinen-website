@@ -1,4 +1,4 @@
-import { MapPin, Phone } from "lucide-react"
+import { Mail, MapPin, Phone } from "lucide-react"
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -9,7 +9,7 @@ function InstagramIcon({ className }: { className?: string }) {
     </svg>
   )
 }
-import { PHONE, PHONE_TEL, WHATSAPP_QUOTE, WHATSAPP_URL } from "./data"
+import { EMAIL, EMAIL_MAILTO, PHONE, PHONE_TEL, WHATSAPP_QUOTE, WHATSAPP_URL } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { MapEmbed } from "./map-embed"
 import { withBasePath } from "@/lib/base-path"
@@ -60,6 +60,18 @@ export function Contact() {
                     Telefoon
                   </span>
                   <span className="text-lg font-semibold">{PHONE}</span>
+                </span>
+              </a>
+              <a
+                href={EMAIL_MAILTO}
+                className="group flex items-center gap-4 bg-foreground p-6 transition-colors hover:bg-forest"
+              >
+                <Mail className="size-6 shrink-0 text-forest transition-colors group-hover:text-white" />
+                <span>
+                  <span className="block text-xs uppercase tracking-wide text-white/50">
+                    E-mail
+                  </span>
+                  <span className="break-all text-lg font-semibold">{EMAIL}</span>
                 </span>
               </a>
               <div className="flex items-center gap-4 bg-foreground p-6">
@@ -160,6 +172,14 @@ export function Contact() {
                     className="transition-colors hover:text-white"
                   >
                     {PHONE}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={EMAIL_MAILTO}
+                    className="break-all transition-colors hover:text-white"
+                  >
+                    {EMAIL}
                   </a>
                 </li>
                 <li>Recht van Ter Leede</li>

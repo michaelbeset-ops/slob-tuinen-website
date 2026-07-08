@@ -19,7 +19,7 @@ export default function PrivacybeleidPage() {
         </h1>
 
         <div className="prose prose-neutral max-w-none text-muted-foreground [&_h2]:mb-3 [&_h2]:mt-10 [&_h2]:font-bold [&_h2]:uppercase [&_h2]:tracking-wide [&_h2]:text-foreground [&_p]:mb-4 [&_p]:leading-relaxed [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-1">
-          <p className="text-sm text-muted-foreground">Laatst bijgewerkt: 1 juli 2026</p>
+          <p className="text-sm text-muted-foreground">Laatst bijgewerkt: 5 juli 2026</p>
 
           <h2>1. Wie zijn wij</h2>
           <p>
@@ -30,18 +30,20 @@ export default function PrivacybeleidPage() {
           <p>
             <strong>Contactgegevens:</strong><br />
             Telefoon: 0628864744<br />
+            E-mail: slobdienstverlening@gmail.com<br />
             WhatsApp: via de website
           </p>
 
           <h2>2. Welke gegevens verwerken wij</h2>
           <p>
             Slob Tuinen verwerkt uw persoonsgegevens uitsluitend wanneer u
-            direct contact opneemt via telefoon of WhatsApp. De gegevens die
-            wij verwerken zijn:
+            direct contact opneemt via telefoon, WhatsApp of e-mail. De
+            gegevens die wij verwerken zijn:
           </p>
           <ul>
             <li>Naam</li>
             <li>Telefoonnummer en/of WhatsApp-nummer</li>
+            <li>E-mailadres</li>
             <li>Adresgegevens van de uit te voeren klus</li>
             <li>Omschrijving van het gevraagde werk</li>
           </ul>
@@ -98,8 +100,9 @@ export default function PrivacybeleidPage() {
             <li>bezwaar te maken tegen de verwerking</li>
           </ul>
           <p>
-            U kunt een verzoek indienen via telefoon of WhatsApp. Wij reageren
-            binnen 4 weken op uw verzoek.
+            U kunt een verzoek indienen via telefoon, WhatsApp of e-mail
+            (slobdienstverlening@gmail.com). Wij reageren binnen 4 weken op uw
+            verzoek.
           </p>
 
           <h2>8. Klachten</h2>

@@ -1,6 +1,8 @@
 export const WHATSAPP_URL = "https://wa.me/31628864744"
 export const PHONE = "0628864744"
 export const PHONE_TEL = "tel:+31628864744"
+export const EMAIL = "slobdienstverlening@gmail.com"
+export const EMAIL_MAILTO = `mailto:${EMAIL}`
 
 /** WhatsApp-link met vooringevuld bericht — verlaagt de drempel om contact op te nemen. */
 export function whatsappUrl(message: string) {
@@ -25,13 +27,25 @@ export type TeamMember = {
   image?: string
 }
 
-// Voeg hier teamleden toe (naam, rol en optioneel een foto) zodra ze bekend
-// zijn — de teamsectie op /over-ons verschijnt dan automatisch weer.
+// Vervang de namen en voeg foto's toe (image: "/images/naam.webp") zodra die
+// er zijn — de kaarten op /over-ons tonen tot die tijd een initiaal.
 export const TEAM: TeamMember[] = [
   {
     name: "Martin Slob",
     role: "Eigenaar & Uitvoerder",
     image: "/images/martin-slob.webp",
+  },
+  {
+    name: "Medewerker 1",
+    role: "Grondwerk & Bestrating",
+  },
+  {
+    name: "Medewerker 2",
+    role: "Tuinaanleg & Groenvoorziening",
+  },
+  {
+    name: "Medewerker 3",
+    role: "Beschoeiing & Grondverzet",
   },
 ]
 
@@ -92,18 +106,44 @@ export type Project = {
   title: string
   location: string
   image: string
-  /** Optional "before" photo. When set, the card becomes a swipe comparison. */
+  /** Optional "before" photo. When set, the detail page toont een swipe-vergelijking. */
   beforeImage?: string
   size: "tall" | "wide" | "regular"
+  /** Wanneer gezet, is de projectkaart klikbaar naar /projecten/[slug]. */
+  slug?: string
+  /** Korte samenvatting — dient als lead én als SEO meta-description. */
+  summary?: string
+  /** Beschrijvende alinea's voor de detailpagina. */
+  body?: string[]
+  /** Uitgevoerde werkzaamheden (bulletlijst). */
+  highlights?: string[]
+  /** Diensten die bij dit project zijn ingezet. */
+  services?: string[]
 }
 
 export const PROJECTS: Project[] = [
   {
-    title: "Oprijlaan & Overkapping",
-    location: "Vijfheerenlanden",
+    title: "Oprijlaan",
+    location: "Nieuwland",
     image: "/images/project-oprijlaan-nu.webp",
     beforeImage: "/images/project-oprijlaan-toen.webp",
     size: "wide",
+    slug: "oprijlaan-nieuwland",
+    summary:
+      "Van een modderige, onbegaanbare oprijlaan naar een strakke, verharde toegangsweg in Nieuwland. Slob Tuinen verzorgde het volledige grondwerk, de afwatering en de verharding.",
+    body: [
+      "De oprijlaan in Nieuwland veranderde bij elke regenbui in een modderpoel. De ondergrond was verzadigd, water bleef in plassen staan en de laan was nauwelijks begaanbaar — niet voor auto's en niet te voet. Een stevige, duurzame oplossing was nodig die het hele jaar door droog en berijdbaar blijft.",
+      "Wij zijn begonnen met het afgraven en afvoeren van de doorweekte bovenlaag. Daarna is een stabiele, waterdoorlatende fundering aangebracht en zorgvuldig verdicht, met de juiste afschot richting de naastgelegen sloot zodat regenwater voortaan snel wegloopt. De laan is afgewerkt met een strakke grindverharding en langs de oever is een nette houten afscheiding geplaatst.",
+      "Het resultaat is een verzorgde, onderhoudsarme oprijlaan die naadloos aansluit op het landelijke karakter van de omgeving. Waar eerst modder en plassen lagen, is nu een egale, droge toegangsweg die jarenlang meegaat.",
+    ],
+    highlights: [
+      "Afgraven en afvoeren van de verzadigde modderlaag",
+      "Aanbrengen en verdichten van een stabiele, waterdoorlatende fundering",
+      "Afwatering met de juiste afschot richting de sloot",
+      "Strakke grindverharding voor een natuurlijke, onderhoudsarme uitstraling",
+      "Nette houten afscheiding langs de oever",
+    ],
+    services: ["Grondwerk", "Grondverzet", "Straatwerk"],
   },
   {
     title: "Moderne Oprit",
@@ -130,6 +170,12 @@ export const PROJECTS: Project[] = [
     size: "tall",
   },
 ]
+
+export function getProjectBySlug(slug: string) {
+  return PROJECTS.find((p) => p.slug === slug)
+}
+
+export const PROJECT_SLUGS = PROJECTS.flatMap((p) => (p.slug ? [p.slug] : []))
 
 export type Review = {
   name: string
