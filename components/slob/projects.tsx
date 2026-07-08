@@ -4,6 +4,7 @@ import { useRef, useState } from "react"
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react"
 import { PROJECTS } from "./data"
 import { withBasePath } from "@/lib/base-path"
+import { BeforeAfter } from "./before-after"
 
 export function Projects() {
   const trackRef = useRef<HTMLDivElement>(null)
@@ -78,6 +79,56 @@ export function Projects() {
         className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-6 pb-4 [scrollbar-width:none] md:gap-8 md:px-12 [&::-webkit-scrollbar]:hidden"
       >
         {PROJECTS.map((project) => {
+          const hasSwipe = !!project.beforeImage
+
+          // Klikbaar bijschrift (titel + locatie) — leidt naar de projectpagina.
+          const linkedCaption = (
+            <a
+              href={withBasePath(`/projecten/${project.slug}`)}
+              className="group/cap mt-5 flex items-baseline justify-between gap-4 border-t border-white/15 pt-4"
+              aria-label={`Bekijk project: ${project.title} in ${project.location}`}
+            >
+              <span className="inline-flex items-center gap-2 font-black uppercase tracking-tighter text-[clamp(1.25rem,2.2vw,1.875rem)] transition-colors group-hover/cap:text-forest">
+                {project.title}
+                <ArrowUpRight className="size-5 text-forest transition-transform group-hover/cap:translate-x-0.5 group-hover/cap:-translate-y-0.5" />
+              </span>
+              <span className="shrink-0 text-sm font-medium uppercase tracking-wide text-forest">
+                {project.location}
+              </span>
+            </a>
+          )
+
+          const plainCaption = (
+            <figcaption className="mt-5 flex items-baseline justify-between gap-4 border-t border-white/15 pt-4">
+              <span className="font-black uppercase tracking-tighter text-[clamp(1.25rem,2.2vw,1.875rem)]">
+                {project.title}
+              </span>
+              <span className="shrink-0 text-sm font-medium uppercase tracking-wide text-forest">
+                {project.location}
+              </span>
+            </figcaption>
+          )
+
+          // Projecten met een "toen"-foto tonen de swipe-vergelijking. Die is
+          // versleepbaar, dus de hele kaart mag geen link zijn — het bijschrift
+          // eronder linkt door naar de projectpagina.
+          if (hasSwipe) {
+            return (
+              <figure
+                key={project.title}
+                className="group w-[85%] shrink-0 snap-start sm:w-[60%] lg:w-[42%]"
+              >
+                <BeforeAfter
+                  after={project.image || "/placeholder.svg"}
+                  before={project.beforeImage!}
+                  alt={`${project.title} — ${project.location}`}
+                />
+                {project.slug ? linkedCaption : plainCaption}
+              </figure>
+            )
+          }
+
+          // Overige projecten: statische foto. Met slug is de hele kaart klikbaar.
           const media = (
             <div className="relative aspect-[4/3] overflow-hidden">
               <img
@@ -101,17 +152,6 @@ export function Projects() {
             </div>
           )
 
-          const caption = (
-            <figcaption className="mt-5 flex items-baseline justify-between gap-4 border-t border-white/15 pt-4">
-              <span className="font-black uppercase tracking-tighter text-[clamp(1.25rem,2.2vw,1.875rem)]">
-                {project.title}
-              </span>
-              <span className="shrink-0 text-sm font-medium uppercase tracking-wide text-forest">
-                {project.location}
-              </span>
-            </figcaption>
-          )
-
           return project.slug ? (
             <a
               key={project.title}
@@ -120,7 +160,7 @@ export function Projects() {
               aria-label={`Bekijk project: ${project.title} in ${project.location}`}
             >
               {media}
-              {caption}
+              {plainCaption}
             </a>
           ) : (
             <figure
@@ -128,7 +168,7 @@ export function Projects() {
               className="group w-[85%] shrink-0 snap-start sm:w-[60%] lg:w-[42%]"
             >
               {media}
-              {caption}
+              {plainCaption}
             </figure>
           )
         })}

@@ -11,6 +11,36 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/diensten/tuinaanleg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/diensten/grondverzet</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/diensten/beschoeiingswerk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/diensten/groenvoorziening</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/diensten/grondwerk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/diensten/straatwerk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/projecten/oprijlaan-nieuwland</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

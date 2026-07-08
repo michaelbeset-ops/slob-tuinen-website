@@ -1,17 +1,16 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-import { ArrowLeft, ArrowRight, ArrowUpRight, X } from "lucide-react"
-import { SERVICES, type Service, whatsappUrl } from "./data"
-import { WhatsAppIcon } from "./whatsapp-icon"
+import { useRef, useState } from "react"
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react"
+import { SERVICES, type Service } from "./data"
 import { withBasePath } from "@/lib/base-path"
 
-function ServiceCard({ service, onClick }: { service: Service; onClick: () => void }) {
+function ServiceCard({ service }: { service: Service }) {
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="group relative aspect-[4/3] w-full overflow-hidden bg-foreground text-left"
+    <a
+      href={withBasePath(`/diensten/${service.id}`)}
+      className="group relative block aspect-[4/3] w-full overflow-hidden bg-foreground text-left"
+      aria-label={`Meer over ${service.title}`}
     >
       <img
         src={withBasePath(service.image || "/placeholder.svg")}
@@ -33,25 +32,13 @@ function ServiceCard({ service, onClick }: { service: Service; onClick: () => vo
         </div>
       </div>
       <span className="absolute bottom-0 left-0 h-1 w-0 bg-forest transition-all duration-500 group-hover:w-full" />
-    </button>
+    </a>
   )
 }
 
 export function Services() {
-  const [active, setActive] = useState<Service | null>(null)
   const trackRef = useRef<HTMLDivElement>(null)
   const [current, setCurrent] = useState(0)
-
-  useEffect(() => {
-    if (active) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = ""
-    }
-    return () => {
-      document.body.style.overflow = ""
-    }
-  }, [active])
 
   const scrollToIndex = (i: number) => {
     const track = trackRef.current
@@ -90,7 +77,7 @@ export function Services() {
           </div>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between md:flex-col md:items-end md:gap-4">
             <p className="max-w-sm text-pretty leading-relaxed text-muted-foreground">
-              Zes specialismen, één aanspreekpunt. Tik op een dienst voor meer info.
+              Zes specialismen, één aanspreekpunt. Klik op een dienst voor meer info.
             </p>
             {/* Arrow controls — visible on md+ and also on mobile */}
             <div className="flex items-center gap-2 md:hidden">
@@ -136,7 +123,7 @@ export function Services() {
         >
           {SERVICES.map((service) => (
             <div key={service.id} className="w-[85vw] shrink-0 snap-start">
-              <ServiceCard service={service} onClick={() => setActive(service)} />
+              <ServiceCard service={service} />
             </div>
           ))}
         </div>
@@ -161,77 +148,9 @@ export function Services() {
       <div className="mx-auto hidden max-w-[1600px] px-6 md:block md:px-12">
         <div className="grid grid-cols-1 gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service) => (
-            <ServiceCard key={service.id} service={service} onClick={() => setActive(service)} />
+            <ServiceCard key={service.id} service={service} />
           ))}
         </div>
-      </div>
-
-      {/* Side drawer */}
-      <div
-        className={`fixed inset-0 z-[60] transition-opacity duration-300 ${
-          active ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
-        }`}
-        aria-hidden={!active}
-      >
-        <div
-          className="absolute inset-0 bg-foreground/70 backdrop-blur-sm"
-          onClick={() => setActive(null)}
-        />
-        <aside
-          className={`absolute right-0 top-0 flex h-full w-full max-w-xl flex-col bg-background shadow-2xl transition-transform duration-500 ${
-            active ? "translate-x-0" : "translate-x-full"
-          }`}
-          role="dialog"
-          aria-modal="true"
-          aria-label={active?.title}
-        >
-          {active && (
-            <>
-              <div className="relative h-56 shrink-0 overflow-hidden md:h-72">
-                <img
-                  src={withBasePath(active.image || "/placeholder.svg")}
-                  alt={active.title}
-                  loading="lazy"
-                  decoding="async"
-                  className="size-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
-                <button
-                  type="button"
-                  onClick={() => setActive(null)}
-                  className="absolute right-5 top-5 flex size-11 items-center justify-center rounded-none bg-background/90 text-foreground transition-colors hover:bg-forest hover:text-white"
-                  aria-label="Sluiten"
-                >
-                  <X className="size-5" />
-                </button>
-                <h3 className="absolute bottom-6 left-6 font-black uppercase leading-none tracking-tighter text-white text-[clamp(2rem,5vw,3rem)]">
-                  {active.title}
-                </h3>
-              </div>
-
-              <div className="flex flex-1 flex-col overflow-y-auto p-8 md:p-10">
-                <p className="text-lg font-semibold leading-snug text-foreground">
-                  {active.intro}
-                </p>
-                <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
-                  {active.body}
-                </p>
-
-                <a
-                  href={whatsappUrl(
-                    `Hallo Martin, ik zou graag een offerte aanvragen voor ${active.title.toLowerCase()}.`,
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center justify-center gap-3 rounded-none bg-forest px-8 py-5 text-base font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark"
-                >
-                  <WhatsAppIcon className="size-5" />
-                  Vraag {active.title.toLowerCase()} aan
-                </a>
-              </div>
-            </>
-          )}
-        </aside>
       </div>
     </section>
   )
