@@ -1,10 +1,9 @@
 "use client"
 
 import { useRef, useState } from "react"
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react"
 import { PROJECTS } from "./data"
 import { withBasePath } from "@/lib/base-path"
-import { BeforeAfter } from "./before-after"
 
 export function Projects() {
   const trackRef = useRef<HTMLDivElement>(null)
@@ -78,28 +77,31 @@ export function Projects() {
         onScroll={onScroll}
         className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-6 pb-4 [scrollbar-width:none] md:gap-8 md:px-12 [&::-webkit-scrollbar]:hidden"
       >
-        {PROJECTS.map((project) => (
-          <figure
-            key={project.title}
-            className="group w-[85%] shrink-0 snap-start sm:w-[60%] lg:w-[42%]"
-          >
-            {project.beforeImage ? (
-              <BeforeAfter
-                after={project.image || "/placeholder.svg"}
-                before={project.beforeImage}
+        {PROJECTS.map((project) => {
+          const media = (
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <img
+                src={withBasePath(project.image || "/placeholder.svg")}
                 alt={`${project.title} — ${project.location}`}
+                loading="lazy"
+                decoding="async"
+                className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
-            ) : (
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img
-                  src={withBasePath(project.image || "/placeholder.svg")}
-                  alt={`${project.title} — ${project.location}`}
-                  loading="lazy"
-                  decoding="async"
-                  className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-              </div>
-            )}
+              {project.slug && (
+                <>
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <span className="absolute right-4 top-4 flex size-11 items-center justify-center rounded-none bg-forest text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
+                    <ArrowUpRight className="size-5" />
+                  </span>
+                  <span className="absolute bottom-4 left-4 bg-forest px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    Bekijk project
+                  </span>
+                </>
+              )}
+            </div>
+          )
+
+          const caption = (
             <figcaption className="mt-5 flex items-baseline justify-between gap-4 border-t border-white/15 pt-4">
               <span className="font-black uppercase tracking-tighter text-[clamp(1.25rem,2.2vw,1.875rem)]">
                 {project.title}
@@ -108,8 +110,28 @@ export function Projects() {
                 {project.location}
               </span>
             </figcaption>
-          </figure>
-        ))}
+          )
+
+          return project.slug ? (
+            <a
+              key={project.title}
+              href={withBasePath(`/projecten/${project.slug}`)}
+              className="group w-[85%] shrink-0 snap-start sm:w-[60%] lg:w-[42%]"
+              aria-label={`Bekijk project: ${project.title} in ${project.location}`}
+            >
+              {media}
+              {caption}
+            </a>
+          ) : (
+            <figure
+              key={project.title}
+              className="group w-[85%] shrink-0 snap-start sm:w-[60%] lg:w-[42%]"
+            >
+              {media}
+              {caption}
+            </figure>
+          )
+        })}
       </div>
 
       <div className="mx-auto mt-8 flex max-w-[1600px] items-center gap-2 px-6 md:px-12">
