@@ -5,7 +5,7 @@ import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
 import { withBasePath } from "@/lib/base-path"
 
 export const metadata = {
-  title: "Over Ons — Slob Tuinen | Leerdam",
+  title: "Over Ons | Slob Tuinen, Leerdam",
   description:
     "Maak kennis met Martin Slob en het team van Slob Tuinen. Vakmanschap, eerlijkheid en jarenlange ervaring in grond, groen en straat.",
 }
@@ -40,14 +40,14 @@ export default function OverOnsPage() {
             het werk
           </h1>
           <p className="mt-8 max-w-lg text-pretty text-lg leading-relaxed text-white/75">
-            Slob Tuinen is Martin Slob: een toegewijde, betrouwbare vakman uit
-            Leerdam. Met een nuchtere instelling en oog voor detail pakt hij
-            elke klus aan alsof het zijn eigen tuin is — van het zware grondwerk
-            tot de laatste straatsteen.
+            Slob Tuinen, dat is Martin Slob. Een nuchtere Leerdammer die zijn
+            vak verstaat en gewoon doet wat hij belooft. Hij staat zelf op de
+            klus en pakt elk werk aan alsof het zijn eigen tuin is, of het nu
+            gaat om zwaar grondwerk of de laatste straatsteen.
           </p>
           <div className="mt-4">
             <span className="inline-block bg-forest px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">
-              {martin.name} &mdash; {martin.role}
+              {martin.name}, {martin.role}
             </span>
           </div>
         </div>
@@ -59,26 +59,26 @@ export default function OverOnsPage() {
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
             <div>
               <h2 className="text-balance font-black uppercase leading-[0.9] tracking-tighter text-foreground text-[clamp(2rem,4vw,3.5rem)]">
-                Vakmanschap
+                Zelf op de klus,
                 <br />
-                zit in het bloed
+                elke dag
               </h2>
               <div className="mt-8 flex flex-col gap-5 text-pretty leading-relaxed text-muted-foreground">
                 <p>
-                  Martin Slob heeft jarenlange ervaring in grondwerk,
-                  tuinaanleg, beschoeiing en straatwerk. Hij begon jong in de
-                  buitensector en heeft zijn vakkennis door de jaren heen
-                  opgebouwd tot een breed en solide fundament.
+                  Martin werkt al jaren in het buitenvak: grondwerk,
+                  tuinaanleg, beschoeiing en straatwerk. Hij begon jong en
+                  heeft in de loop van de tijd van alles voorbij zien komen. Die
+                  ervaring ziet u terug in het werk.
                 </p>
                 <p>
-                  Wat hem onderscheidt, is zijn persoonlijke betrokkenheid bij
-                  elk project. Hij staat zelf op de klus, denkt mee met de
-                  klant en levert op wat hij belooft — zonder gedoe.
+                  Het grote verschil? Hij staat er zelf bij. Hij denkt met u
+                  mee, pakt de schop mee de grond in en levert op wat hij heeft
+                  beloofd. Zonder gedoe, zonder verrassingen achteraf.
                 </p>
                 <p>
-                  Slob Tuinen werkt voor particulieren en zakelijke opdrachtgevers
-                  in Leerdam en de Betuwe. Klein of groot, eenvoudig of complex
-                  — het werk klopt altijd tot in de details.
+                  We werken voor particulieren en bedrijven in Leerdam en de
+                  Betuwe. Een klein klusje of een groot project: het werk klopt,
+                  tot in de details.
                 </p>
               </div>
               <a
@@ -100,7 +100,7 @@ export default function OverOnsPage() {
                 },
                 {
                   title: "Afspraak is afspraak",
-                  text: "Wat we afspreken, komen we na — in planning, in prijs en in kwaliteit.",
+                  text: "Wat we afspreken, dat doen we ook. In de planning, in de prijs en in de kwaliteit.",
                 },
                 {
                   title: "Vakkennis",

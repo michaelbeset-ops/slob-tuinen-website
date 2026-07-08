@@ -20,9 +20,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const service = getServiceById(slug)
-  if (!service) return { title: "Dienst niet gevonden — Slob Tuinen" }
+  if (!service) return { title: "Dienst niet gevonden | Slob Tuinen" }
 
-  const title = `${service.title} — Slob Tuinen | Leerdam e.o.`
+  const title = `${service.title} | Slob Tuinen, Leerdam e.o.`
   const description = service.summary
   // OG-afbeelding afgeleid van de afbeeldingsnaam (image-id ≠ altijd de slug).
   const ogImage = service.image.replace(/^\//, "").replace(/\.webp$/, "-og.jpg")
@@ -225,7 +225,7 @@ export default async function ServicePage({
               Klaar om te beginnen?
             </h2>
             <p className="mx-auto mt-6 max-w-md text-pretty leading-relaxed text-white/70">
-              Vertel Martin over uw project — u krijgt snel en eerlijk antwoord,
+              Vertel Martin over uw project. U krijgt snel en eerlijk antwoord,
               met een vrijblijvende offerte.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

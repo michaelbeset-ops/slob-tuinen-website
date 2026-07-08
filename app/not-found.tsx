@@ -14,7 +14,7 @@ export default function NotFound() {
         className="mx-auto flex w-full max-w-[1600px] flex-1 flex-col justify-center px-6 py-20 md:px-12"
       >
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-forest">
-          404 — Pagina niet gevonden
+          Pagina niet gevonden (404)
         </p>
         <h1 className="max-w-3xl text-balance font-black uppercase leading-[0.9] tracking-tighter text-foreground text-[clamp(2.5rem,7vw,6rem)]">
           Hier is nog
@@ -22,8 +22,8 @@ export default function NotFound() {
           niets aangelegd
         </h1>
         <p className="mt-8 max-w-md text-pretty text-lg leading-relaxed text-muted-foreground">
-          De pagina die u zoekt bestaat niet (meer). Geen zorgen — via
-          onderstaande knoppen bent u zo weer op de juiste plek.
+          De pagina die u zoekt bestaat niet (meer). Geen zorgen, via de
+          knoppen hieronder bent u zo weer op de juiste plek.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
           <a

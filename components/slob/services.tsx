@@ -79,7 +79,7 @@ export function Services() {
             <p className="max-w-sm text-pretty leading-relaxed text-muted-foreground">
               Zes specialismen, één aanspreekpunt. Klik op een dienst voor meer info.
             </p>
-            {/* Arrow controls — visible on md+ and also on mobile */}
+            {/* Arrow controls, visible on md+ and also on mobile */}
             <div className="flex items-center gap-2 md:hidden">
               <button
                 type="button"

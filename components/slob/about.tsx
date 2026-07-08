@@ -9,7 +9,7 @@ const VALUES = [
   },
   {
     title: "Afspraak is afspraak",
-    text: "Wat we afspreken, komen we na — in planning, in prijs en in kwaliteit.",
+    text: "Wat we afspreken, dat doen we ook. In de planning, in de prijs en in de kwaliteit.",
   },
   {
     title: "Vakkennis",
@@ -46,10 +46,10 @@ export function About() {
             het werk
           </h2>
           <p className="mt-8 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Slob Tuinen is Martin Slob: een toegewijde, betrouwbare vakman uit
-            Leerdam. Met een nuchtere instelling en oog voor detail pakt hij
-            elke klus aan alsof het zijn eigen tuin is — van het zware grondwerk
-            tot de laatste straatsteen.
+            Slob Tuinen, dat is Martin Slob. Een nuchtere Leerdammer die zijn
+            vak verstaat en gewoon doet wat hij belooft. Hij staat zelf op de
+            klus en pakt elk werk aan alsof het zijn eigen tuin is, of het nu
+            gaat om zwaar grondwerk of de laatste straatsteen.
           </p>
 
           <dl className="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-1">
