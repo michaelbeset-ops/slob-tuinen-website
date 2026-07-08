@@ -23,7 +23,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <nav className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-12">
-        <a href={withBasePath("/")} className="shrink-0" aria-label="Slob Tuinen — home">
+        <a href={withBasePath("/")} className="shrink-0" aria-label="Slob Tuinen, naar home">
           <img
             src={withBasePath("/logo.png")}
             alt="Slob Tuinen logo"

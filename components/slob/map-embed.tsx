@@ -18,7 +18,7 @@ export function MapEmbed() {
   if (loaded) {
     return (
       <iframe
-        title="Locatie Slob Tuinen — Leerdam"
+        title="Locatie Slob Tuinen in Leerdam"
         src={MAPS_EMBED_URL}
         className="size-full grayscale"
         loading="lazy"

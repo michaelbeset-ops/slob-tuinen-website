@@ -81,7 +81,7 @@ export function Projects() {
         {PROJECTS.map((project) => {
           const hasSwipe = !!project.beforeImage
 
-          // Klikbaar bijschrift (titel + locatie) — leidt naar de projectpagina.
+          // Klikbaar bijschrift (titel + locatie) dat naar de projectpagina leidt.
           const linkedCaption = (
             <a
               href={withBasePath(`/projecten/${project.slug}`)}
@@ -110,7 +110,7 @@ export function Projects() {
           )
 
           // Projecten met een "toen"-foto tonen de swipe-vergelijking. Die is
-          // versleepbaar, dus de hele kaart mag geen link zijn — het bijschrift
+          // versleepbaar, dus de hele kaart mag geen link zijn. Het bijschrift
           // eronder linkt door naar de projectpagina.
           if (hasSwipe) {
             return (
@@ -121,7 +121,7 @@ export function Projects() {
                 <BeforeAfter
                   after={project.image || "/placeholder.svg"}
                   before={project.beforeImage!}
-                  alt={`${project.title} — ${project.location}`}
+                  alt={`${project.title} in ${project.location}`}
                 />
                 {project.slug ? linkedCaption : plainCaption}
               </figure>
@@ -133,7 +133,7 @@ export function Projects() {
             <div className="relative aspect-[4/3] overflow-hidden">
               <img
                 src={withBasePath(project.image || "/placeholder.svg")}
-                alt={`${project.title} — ${project.location}`}
+                alt={`${project.title} in ${project.location}`}
                 loading="lazy"
                 decoding="async"
                 className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"

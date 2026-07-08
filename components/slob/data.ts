@@ -4,7 +4,7 @@ export const PHONE_TEL = "tel:+31628864744"
 export const EMAIL = "slobdienstverlening@gmail.com"
 export const EMAIL_MAILTO = `mailto:${EMAIL}`
 
-/** WhatsApp-link met vooringevuld bericht — verlaagt de drempel om contact op te nemen. */
+/** WhatsApp-link met vooringevuld bericht, verlaagt de drempel om contact op te nemen. */
 export function whatsappUrl(message: string) {
   return `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`
 }
@@ -28,7 +28,7 @@ export type TeamMember = {
 }
 
 // Vervang de namen en voeg foto's toe (image: "/images/naam.webp") zodra die
-// er zijn — de kaarten op /over-ons tonen tot die tijd een initiaal.
+// er zijn. De kaarten op /over-ons tonen tot die tijd een initiaal.
 export const TEAM: TeamMember[] = [
   {
     name: "Martin Slob",
@@ -69,20 +69,20 @@ export const SERVICES: Service[] = [
     id: "tuinaanleg",
     title: "Tuinaanleg",
     image: "/images/service-tuinaanleg.webp",
-    intro: "Complete tuinen, van schets tot oplevering.",
+    intro: "Een complete tuin, precies zoals u hem voor ogen heeft.",
     summary:
-      "Complete tuinaanleg in Leerdam en omgeving — van ontwerp en grondwerk tot beplanting, bestrating en de laatste details. Slob Tuinen legt tuinen aan die jarenlang meegaan.",
+      "Wij leggen complete tuinen aan in Leerdam en omgeving. Van het eerste idee tot de laatste plant, alles in eigen beheer en klaar om er jaren van te genieten.",
     paragraphs: [
-      "Een mooie tuin begint bij een goed plan. Wij denken met u mee over indeling, materialen en beplanting, en vertalen uw wensen naar een ontwerp dat past bij uw woning én bij de manier waarop u de tuin wilt gebruiken. Of het nu gaat om een strakke stadstuin of een ruime landelijke tuin — de verhoudingen moeten kloppen.",
-      "Vanaf de eerste spade tot de laatste plant voeren wij alles in eigen beheer uit: grondwerk, bestrating, beschoeiing, beplanting en de sfeervolle afwerking. Doordat alles in één hand ligt, sluit elk onderdeel naadloos op elkaar aan en houdt u één aanspreekpunt.",
-      "Wij werken met duurzame materialen en kwaliteitsbeplanting, zodat uw tuin niet alleen bij oplevering mooi is, maar dat jarenlang blijft. Het resultaat is een tuin die af is tot in de details en waar u met een gerust hart van kunt genieten.",
+      "Een goede tuin begint met een goed plan. We komen langs, kijken naar uw huis en luisteren naar wat u wilt. Samen bedenken we hoe de tuin ingedeeld kan worden. Een strakke tuin bij huis of juist een ruime, groene tuin: het moet passen bij hoe u buiten leeft.",
+      "Daarna doen we alles zelf. Het grondwerk, de bestrating, de beschoeiing en de beplanting. Doordat we het hele werk in eigen hand houden, sluit alles op elkaar aan en heeft u maar één aanspreekpunt: Martin.",
+      "We kiezen materialen en planten die tegen een stootje kunnen, zodat uw tuin er over een paar jaar nog net zo goed bij ligt. En als we klaar zijn, is de tuin ook echt af.",
     ],
     highlights: [
       "Tuinontwerp en advies op maat",
       "Grondwerk en egalisatie",
       "Bestrating, paden en terrassen",
       "Beplanting, hagen en borders",
-      "Oplevering tot in de details",
+      "Netjes opgeleverd tot in de details",
     ],
   },
   {
@@ -91,17 +91,17 @@ export const SERVICES: Service[] = [
     image: "/images/service-grondverzet.webp",
     intro: "Graven, verplaatsen en egaliseren met zwaar materieel.",
     summary:
-      "Grondverzet in Leerdam en de Betuwe — ontgraven, ophogen, egaliseren en afvoeren met modern materieel. Efficiënt uitgevoerd en netjes opgeleverd door Slob Tuinen.",
+      "Grondverzet in Leerdam en de Betuwe: ontgraven, ophogen, egaliseren en grond afvoeren. Wij hebben het materieel in huis en leveren uw terrein netjes op.",
     paragraphs: [
-      "Groot of klein: voor elke grondverzetklus beschikken wij over het juiste materieel en de ervaring om efficiënt te werken. Van het bouwrijp maken van een kavel tot het uitgraven van een vijver of het ophogen van een terrein — wij pakken het vakkundig aan.",
-      "Wij ontgraven, verplaatsen, egaliseren en voeren overtollige grond af. Daarbij werken we met oog voor uw perceel en de omgeving: we voorkomen onnodige schade, houden rekening met kabels en leidingen en laten het terrein strak en verzorgd achter.",
-      "Doordat wij ook het grond- en straatwerk verzorgen, sluit het grondverzet naadloos aan op de vervolgstappen. Zo legt u een solide basis voor bestrating, beplanting of bebouwing.",
+      "Klein karwei of groot project, we hebben het materieel en de ervaring om vlot door te werken. Een kavel bouwrijp maken, een vijver uitgraven of een terrein ophogen: we pakken het aan zoals het hoort.",
+      "We ontgraven, verplaatsen en egaliseren, en voeren de grond af die u niet meer nodig heeft. Daarbij letten we goed op uw perceel en op de omgeving. We houden rekening met kabels en leidingen en laten het terrein strak achter.",
+      "Omdat we ook het grond- en straatwerk doen, kunnen we meteen doorpakken. Zo ligt er een goede basis voor bestrating, beplanting of een aanbouw.",
     ],
     highlights: [
       "Ontgraven en uitgraven",
       "Ophogen en egaliseren",
       "Afvoeren van overtollige grond",
-      "Bouwrijp maken van kavels",
+      "Kavels bouwrijp maken",
       "Modern materieel, ervaren uitvoering",
     ],
   },
@@ -109,13 +109,13 @@ export const SERVICES: Service[] = [
     id: "beschoeiingswerk",
     title: "Beschoeiingswerk",
     image: "/images/service-beschoeiing.webp",
-    intro: "Stevige oeverbescherming langs water.",
+    intro: "Stevige oeverbescherming langs het water.",
     summary:
-      "Beschoeiing plaatsen langs water in de Vijfheerenlanden en omgeving. Slob Tuinen plaatst duurzame oeverbescherming in hout, kunststof of staal — waterpas en op maat.",
+      "Beschoeiing langs het water in de Vijfheerenlanden en omgeving. Wij plaatsen stevige oevers in hout, kunststof of staal, waterpas en op maat.",
     paragraphs: [
-      "Een sterke beschoeiing beschermt uw oever tegen afkalving en geeft het water een strakke, verzorgde rand. Zeker in een waterrijke omgeving als de Vijfheerenlanden is een goede oeverbescherming geen luxe, maar noodzaak.",
-      "Wij plaatsen beschoeiingen in hout, kunststof of staal, afgestemd op uw situatie en wensen. Alles wordt perfect waterpas en op maat aangelegd, met een stevige verankering die de druk van grond en water jarenlang opvangt.",
-      "Of het nu gaat om een sloot, vijver of bredere watergang — wij zorgen voor een beschoeiing die decennialang meegaat en die de overgang tussen land en water netjes afwerkt.",
+      "Een goede beschoeiing houdt uw oever op zijn plek en geeft het water een nette rand. In een waterrijk gebied als de Vijfheerenlanden is dat geen overbodige luxe, maar gewoon nodig.",
+      "We plaatsen beschoeiing in hout, kunststof of staal, afhankelijk van uw situatie en van wat u mooi vindt. Alles komt waterpas en op maat te staan, met een verankering die de druk van grond en water jarenlang houdt.",
+      "Een sloot, een vijver of een bredere watergang: we zorgen voor een oever die decennia meegaat en de overgang tussen land en water netjes afmaakt.",
     ],
     highlights: [
       "Beschoeiing in hout, kunststof of staal",
@@ -131,11 +131,11 @@ export const SERVICES: Service[] = [
     image: "/images/service-groenvoorziening.webp",
     intro: "Beplanting, hagen en onderhoud.",
     summary:
-      "Groenvoorziening en groenonderhoud in Leerdam en omgeving — beplanting, hagen, bomen en structureel onderhoud. De juiste plant op de juiste plek door Slob Tuinen.",
+      "Groenaanleg en onderhoud in Leerdam en omgeving. Wij planten hagen, borders en bomen, en houden uw groen het hele jaar netjes.",
     paragraphs: [
-      "Groen maakt een tuin of terrein pas echt af. Wij verzorgen het aanplanten van hagen, borders, bomen en beplanting, met kennis van welke soort waar het beste tot zijn recht komt — qua grondsoort, licht en onderhoud.",
-      "Naast de aanleg verzorgen wij ook structureel groenonderhoud: snoeien, knippen, schoffelen en het op peil houden van uw beplanting. Zo staat uw groen er het hele jaar door verzorgd bij, zonder dat u er zelf naar hoeft om te kijken.",
-      "Of het nu gaat om een enkele haag of het complete groen rondom uw woning of bedrijfspand — wij leveren vakwerk met oog voor detail en voor de lange termijn.",
+      "Groen maakt een tuin pas af. We planten hagen, borders, bomen en vaste planten, en weten welke soort waar het beste groeit. Welke grond, hoeveel zon en hoeveel onderhoud er bij komt kijken: daar denken we vooraf over na.",
+      "Ook na de aanleg blijven we langskomen als u dat wilt. Snoeien, knippen, schoffelen en het groen op peil houden, zodat u er zelf geen omkijken naar heeft.",
+      "Van één haag tot al het groen rond uw huis of bedrijfspand: we doen het met zorg en houden de lange termijn in gedachten.",
     ],
     highlights: [
       "Aanplant van hagen, borders en bomen",
@@ -149,13 +149,13 @@ export const SERVICES: Service[] = [
     id: "grondwerk",
     title: "Grondwerk",
     image: "/images/service-grondwerk.webp",
-    intro: "De solide basis onder elk project.",
+    intro: "De basis die u niet ziet, maar die alles bepaalt.",
     summary:
-      "Grondwerk in Leerdam en omgeving — ontgraving, fundering, drainage en een waterpas voorbereide ondergrond. De solide, onzichtbare basis onder elk project van Slob Tuinen.",
+      "Grondwerk in Leerdam en omgeving: ontgraving, fundering, drainage en een waterpas ondergrond. De basis waar u straks niets meer van ziet, maar die alles bepaalt.",
     paragraphs: [
-      "Goed grondwerk is de basis van elk geslaagd buitenproject. Wat onder de grond gebeurt, bepaalt of bestrating vlak blijft liggen en of beplanting goed gedijt. Wij nemen die basis serieus.",
-      "Wij verzorgen ontgraving, fundering, drainage en een waterpas voorbereide ondergrond. Door de juiste opbouw en een goede afwatering voorkomen we verzakking en wateroverlast — problemen die anders pas later, en duur, aan het licht komen.",
-      "Onzichtbaar, maar bepalend voor het eindresultaat. Met degelijk grondwerk legt u de fundering voor een terrein dat jarenlang stabiel en strak blijft.",
+      "Goed grondwerk is de basis van elk buitenproject. Wat er onder de grond gebeurt, bepaalt of uw bestrating vlak blijft liggen en of planten goed groeien. Daar doen we geen concessies aan.",
+      "We verzorgen de ontgraving, de fundering, de drainage en een waterpas voorbereide ondergrond. Met de juiste opbouw en afwatering voorkomen we verzakking en wateroverlast, problemen die anders pas later opduiken en dan duur zijn om te herstellen.",
+      "U ziet het straks niet meer terug, maar het bepaalt wel het eindresultaat. Met goed grondwerk ligt er een terrein dat jarenlang strak en stabiel blijft.",
     ],
     highlights: [
       "Ontgraving en fundering",
@@ -171,11 +171,11 @@ export const SERVICES: Service[] = [
     image: "/images/service-straatwerk.webp",
     intro: "Strakke opritten, paden en terrassen.",
     summary:
-      "Straatwerk en bestrating in Leerdam en omgeving — strakke opritten, tuinpaden en terrassen met perfecte voegen en goede afwatering. Vakwerk dat blijft liggen, door Slob Tuinen.",
+      "Straatwerk en bestrating in Leerdam en omgeving. Strakke opritten, paden en terrassen met nette voegen en een goede afwatering, die blijven liggen.",
     paragraphs: [
-      "Bestrating waar u jaren plezier van heeft, begint bij een goede ondergrond en eindigt bij strak gelegde stenen. Of het nu gaat om een moderne oprit, een sfeervol terras of een tuinpad — wij leggen het vakkundig en met oog voor detail.",
-      "Wij verzorgen het complete traject: van de voorbereiding van de ondergrond en de juiste afwatering tot het leggen van de bestrating met perfecte voegen en een nette kantopsluiting. Zo blijft uw bestrating vlak liggen en staat ze stevig.",
-      "Van klinkers en betontegels tot natuursteen — wij adviseren over materiaal en legpatroon en leveren straatwerk dat blijft liggen en blijft staan.",
+      "Bestrating waar u jaren plezier van heeft, begint bij een goede ondergrond en eindigt bij strak gelegde stenen. Een oprit, een terras of een tuinpad: we leggen het netjes en met aandacht.",
+      "We doen het hele werk. De ondergrond voorbereiden, zorgen voor de juiste afwatering en de stenen leggen met nette voegen en een goede kantopsluiting. Zo blijft uw bestrating vlak liggen en zakt er niets weg.",
+      "Klinkers, betontegels of natuursteen: we helpen u kiezen in materiaal en legpatroon, en leggen straatwerk dat blijft liggen.",
     ],
     highlights: [
       "Opritten, paden en terrassen",
@@ -200,7 +200,7 @@ export type Project = {
   size: "tall" | "wide" | "regular"
   /** Wanneer gezet, is de projectkaart klikbaar naar /projecten/[slug]. */
   slug?: string
-  /** Korte samenvatting — dient als lead én als SEO meta-description. */
+  /** Korte samenvatting, dient als lead én als SEO meta-description. */
   summary?: string
   /** Beschrijvende alinea's voor de detailpagina. */
   body?: string[]
@@ -219,11 +219,11 @@ export const PROJECTS: Project[] = [
     size: "wide",
     slug: "oprijlaan-nieuwland",
     summary:
-      "Van een modderige, onbegaanbare oprijlaan naar een strakke, verharde toegangsweg in Nieuwland. Slob Tuinen verzorgde het volledige grondwerk, de afwatering en de verharding.",
+      "Een modderige, onbegaanbare oprijlaan in Nieuwland werd een strakke, verharde toegangsweg. Wij deden het grondwerk, de afwatering en de verharding.",
     body: [
-      "De oprijlaan in Nieuwland veranderde bij elke regenbui in een modderpoel. De ondergrond was verzadigd, water bleef in plassen staan en de laan was nauwelijks begaanbaar — niet voor auto's en niet te voet. Een stevige, duurzame oplossing was nodig die het hele jaar door droog en berijdbaar blijft.",
-      "Wij zijn begonnen met het afgraven en afvoeren van de doorweekte bovenlaag. Daarna is een stabiele, waterdoorlatende fundering aangebracht en zorgvuldig verdicht, met de juiste afschot richting de naastgelegen sloot zodat regenwater voortaan snel wegloopt. De laan is afgewerkt met een strakke grindverharding en langs de oever is een nette houten afscheiding geplaatst.",
-      "Het resultaat is een verzorgde, onderhoudsarme oprijlaan die naadloos aansluit op het landelijke karakter van de omgeving. Waar eerst modder en plassen lagen, is nu een egale, droge toegangsweg die jarenlang meegaat.",
+      "De oprijlaan in Nieuwland veranderde bij elke regenbui in een modderpoel. De grond was verzadigd, het water bleef staan en je kon er nauwelijks door, niet met de auto en niet te voet. Er moest iets komen dat het hele jaar droog en berijdbaar blijft.",
+      "We zijn begonnen met het afgraven en afvoeren van de doorweekte bovenlaag. Daarna hebben we een stabiele, waterdoorlatende fundering aangebracht en goed verdicht, met de juiste afschot richting de sloot zodat het regenwater voortaan snel wegloopt. De laan is afgewerkt met een strakke grindverharding en langs de kant hebben we een nette houten afscheiding gezet.",
+      "Waar eerst modder en plassen lagen, ligt nu een egale, droge oprijlaan die past bij het landelijke plaatje. Onderhoudsarm, en klaar om jaren mee te gaan.",
     ],
     highlights: [
       "Afgraven en afvoeren van de verzadigde modderlaag",

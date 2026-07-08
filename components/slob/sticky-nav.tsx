@@ -36,7 +36,7 @@ export function StickyNav() {
         <a
           href="#top"
           className="shrink-0"
-          aria-label="Slob Tuinen — naar boven"
+          aria-label="Slob Tuinen, naar boven"
           tabIndex={shown ? 0 : -1}
         >
           <img

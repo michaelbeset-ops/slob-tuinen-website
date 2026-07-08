@@ -5,9 +5,9 @@ import { MoveHorizontal } from "lucide-react"
 import { withBasePath } from "@/lib/base-path"
 
 type BeforeAfterProps = {
-  /** New / finished result — shown by default. */
+  /** New / finished result, shown by default. */
   after: string
-  /** Old / original situation — revealed by dragging the handle. */
+  /** Old / original situation, revealed by dragging the handle. */
   before: string
   alt: string
   beforeLabel?: string
@@ -92,7 +92,7 @@ export function BeforeAfter({
       {/* Base layer: the OLD situation */}
       <img
         src={withBasePath(before)}
-        alt={`${alt} — ${beforeLabel.toLowerCase()}`}
+        alt={`${alt}, ${beforeLabel.toLowerCase()}`}
         draggable={false}
         loading="lazy"
         decoding="async"
@@ -110,7 +110,7 @@ export function BeforeAfter({
       >
         <img
           src={withBasePath(after)}
-          alt={`${alt} — ${afterLabel.toLowerCase()}`}
+          alt={`${alt}, ${afterLabel.toLowerCase()}`}
           draggable={false}
           loading="lazy"
           decoding="async"
@@ -125,7 +125,7 @@ export function BeforeAfter({
       <div
         role="slider"
         tabIndex={0}
-        aria-label={`${afterLabel} versus ${beforeLabel} — sleep om te vergelijken`}
+        aria-label={`${afterLabel} versus ${beforeLabel}, sleep om te vergelijken`}
         aria-valuemin={0}
         aria-valuemax={100}
         aria-valuenow={Math.round(pos)}

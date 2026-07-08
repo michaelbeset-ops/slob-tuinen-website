@@ -30,8 +30,9 @@ export function Hero() {
           &amp; Straat.
         </h1>
         <p className="mt-8 max-w-xl text-pretty text-base leading-relaxed text-white/85 md:text-lg">
-          Vakmanschap van de hoogste plank door Martin Slob. Van grondverzet en
-          beschoeiing tot complete tuinaanleg en strak straatwerk.
+          Ik ben Martin Slob. Grondwerk, beschoeiing, tuinaanleg of straatwerk:
+          u heeft één aanspreekpunt en werk dat netjes wordt opgeleverd. App of
+          bel me gerust, dan kijk ik met u mee.
         </p>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">

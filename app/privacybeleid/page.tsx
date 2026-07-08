@@ -2,7 +2,7 @@ import { SiteHeader } from "@/components/slob/site-header"
 import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
 
 export const metadata = {
-  title: "Privacybeleid — Slob Tuinen",
+  title: "Privacybeleid | Slob Tuinen",
   description: "Privacybeleid van Slob Tuinen. Lees hoe wij omgaan met uw persoonsgegevens.",
 }
 

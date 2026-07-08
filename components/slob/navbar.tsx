@@ -12,7 +12,7 @@ export function Navbar() {
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-6 md:px-12 md:py-8">
-        <a href="#top" className="shrink-0" aria-label="Slob Tuinen — home">
+        <a href="#top" className="shrink-0" aria-label="Slob Tuinen, naar home">
           <img
             src={withBasePath("/logo.png")}
             alt="Slob Tuinen logo"

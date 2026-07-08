@@ -16,9 +16,9 @@ export function TeamTeaser() {
               het werk doen
             </h2>
             <p className="mt-6 max-w-md text-pretty leading-relaxed text-white/65">
-              Achter elk project staat een vast team van vakmensen. Strak in hun
-              werk, betrokken bij de klant en altijd gericht op een resultaat
-              om trots op te zijn.
+              Achter elk project staat een vast clubje mensen dat weet wat het
+              doet. Ze zijn strak in hun werk, gaan netjes met uw tuin om en
+              zijn pas tevreden als u dat ook bent.
             </p>
           </div>
           <a

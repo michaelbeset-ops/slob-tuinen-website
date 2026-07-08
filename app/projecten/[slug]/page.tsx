@@ -21,9 +21,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const project = getProjectBySlug(slug)
-  if (!project) return { title: "Project niet gevonden — Slob Tuinen" }
+  if (!project) return { title: "Project niet gevonden | Slob Tuinen" }
 
-  const title = `${project.title} in ${project.location} — Slob Tuinen`
+  const title = `${project.title} in ${project.location} | Slob Tuinen`
   const description =
     project.summary ??
     `${project.title} in ${project.location}, uitgevoerd door Slob Tuinen.`
@@ -40,7 +40,7 @@ export async function generateMetadata({
       title,
       description,
       url: `${SITE_URL}projecten/${slug}`,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: `${project.title} — ${project.location}` }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: `${project.title} in ${project.location}` }],
     },
     twitter: {
       card: "summary_large_image",
@@ -69,7 +69,7 @@ export default async function ProjectPage({
       {
         "@type": "ListItem",
         position: 3,
-        name: `${project.title} — ${project.location}`,
+        name: `${project.title} in ${project.location}`,
         item: `${SITE_URL}projecten/${slug}`,
       },
     ],
@@ -112,7 +112,7 @@ export default async function ProjectPage({
             <div className="relative aspect-[4/3] overflow-hidden">
               <img
                 src={withBasePath(project.image)}
-                alt={`${project.title} in ${project.location} — het eindresultaat door Slob Tuinen`}
+                alt={`${project.title} in ${project.location}, het eindresultaat door Slob Tuinen`}
                 fetchPriority="high"
                 decoding="async"
                 className="size-full object-cover"
@@ -213,7 +213,7 @@ export default async function ProjectPage({
               Zoiets voor uw terrein?
             </h2>
             <p className="mx-auto mt-6 max-w-md text-pretty leading-relaxed text-white/70">
-              Vertel Martin over uw project — u krijgt snel en eerlijk antwoord,
+              Vertel Martin over uw project. U krijgt snel en eerlijk antwoord,
               met een vrijblijvende offerte.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

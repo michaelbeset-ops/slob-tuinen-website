@@ -2,7 +2,7 @@ import { SiteHeader } from "@/components/slob/site-header"
 import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
 
 export const metadata = {
-  title: "Algemene Voorwaarden — Slob Tuinen",
+  title: "Algemene Voorwaarden | Slob Tuinen",
   description:
     "Algemene voorwaarden van Slob Tuinen voor tuinaanleg, grondverzet, beschoeiingswerk, groenvoorziening, grondwerk en straatwerk.",
 }
@@ -22,7 +22,7 @@ export default function AlgemeneVoorwaardenPage() {
         <div className="prose prose-neutral max-w-none text-muted-foreground [&_h2]:mb-3 [&_h2]:mt-10 [&_h2]:font-bold [&_h2]:uppercase [&_h2]:tracking-wide [&_h2]:text-foreground [&_p]:mb-4 [&_p]:leading-relaxed [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-1 [&_ol]:mb-4 [&_ol]:list-decimal [&_ol]:pl-6">
           <p className="text-sm text-muted-foreground">Laatst bijgewerkt: 5 juli 2026</p>
 
-          <h2>Artikel 1 — Definities</h2>
+          <h2>Artikel 1. Definities</h2>
           <ul>
             <li>
               <strong>Opdrachtnemer:</strong> Slob Tuinen, gevestigd aan Recht
@@ -46,7 +46,7 @@ export default function AlgemeneVoorwaardenPage() {
             </li>
           </ul>
 
-          <h2>Artikel 2 — Toepasselijkheid</h2>
+          <h2>Artikel 2. Toepasselijkheid</h2>
           <p>
             Deze voorwaarden zijn van toepassing op alle offertes,
             overeenkomsten en werkzaamheden van Slob Tuinen. Afwijkingen gelden
@@ -58,7 +58,7 @@ export default function AlgemeneVoorwaardenPage() {
             benadert.
           </p>
 
-          <h2>Artikel 3 — Offertes en totstandkoming</h2>
+          <h2>Artikel 3. Offertes en totstandkoming</h2>
           <p>
             Alle offertes zijn vrijblijvend en 30 dagen geldig, tenzij in de
             offerte anders is aangegeven. Offertes zijn gebaseerd op de door de
@@ -69,7 +69,7 @@ export default function AlgemeneVoorwaardenPage() {
             schriftelijk (waaronder per e-mail of WhatsApp) heeft aanvaard.
           </p>
 
-          <h2>Artikel 4 — Prijzen</h2>
+          <h2>Artikel 4. Prijzen</h2>
           <p>
             Voor consumenten zijn genoemde prijzen inclusief btw; voor
             zakelijke opdrachtgevers exclusief btw, tenzij anders vermeld.
@@ -81,7 +81,7 @@ export default function AlgemeneVoorwaardenPage() {
             na akkoord (zie artikel 8).
           </p>
 
-          <h2>Artikel 5 — Herroepingsrecht voor consumenten</h2>
+          <h2>Artikel 5. Herroepingsrecht voor consumenten</h2>
           <p>
             Is de overeenkomst met een consument op afstand (bijvoorbeeld via
             WhatsApp, telefoon of e-mail) of buiten de bedrijfsruimte van Slob
@@ -104,7 +104,7 @@ export default function AlgemeneVoorwaardenPage() {
             nagekomen.
           </p>
 
-          <h2>Artikel 6 — Uitvoering en planning</h2>
+          <h2>Artikel 6. Uitvoering en planning</h2>
           <p>
             Slob Tuinen voert de werkzaamheden vakkundig en volgens afspraak
             uit. Opgegeven termijnen zijn indicatief en gelden niet als fatale
@@ -117,7 +117,7 @@ export default function AlgemeneVoorwaardenPage() {
             gunnen om alsnog na te komen, voordat sprake kan zijn van verzuim.
           </p>
 
-          <h2>Artikel 7 — Verplichtingen van de opdrachtgever</h2>
+          <h2>Artikel 7. Verplichtingen van de opdrachtgever</h2>
           <ul>
             <li>
               De opdrachtgever zorgt dat het terrein goed bereikbaar en
@@ -136,7 +136,7 @@ export default function AlgemeneVoorwaardenPage() {
             </li>
           </ul>
 
-          <h2>Artikel 8 — Meerwerk</h2>
+          <h2>Artikel 8. Meerwerk</h2>
           <p>
             Werkzaamheden die buiten de offerte vallen (meerwerk) worden vooraf
             besproken, inclusief de prijsgevolgen, en pas na akkoord van de
@@ -144,7 +144,7 @@ export default function AlgemeneVoorwaardenPage() {
             factuur.
           </p>
 
-          <h2>Artikel 9 — Annulering en opzegging</h2>
+          <h2>Artikel 9. Annulering en opzegging</h2>
           <p>
             De opdrachtgever is bevoegd de overeenkomst geheel of gedeeltelijk
             op te zeggen. In dat geval worden het al uitgevoerde werk, de al
@@ -155,7 +155,7 @@ export default function AlgemeneVoorwaardenPage() {
             mindering worden gebracht.
           </p>
 
-          <h2>Artikel 10 — Betaling</h2>
+          <h2>Artikel 10. Betaling</h2>
           <p>
             Betaling geschiedt binnen 14 dagen na factuurdatum, tenzij anders
             overeengekomen. Bij grotere projecten kan een aanbetaling of
@@ -170,7 +170,7 @@ export default function AlgemeneVoorwaardenPage() {
             blijft.
           </p>
 
-          <h2>Artikel 11 — Eigendomsvoorbehoud</h2>
+          <h2>Artikel 11. Eigendomsvoorbehoud</h2>
           <p>
             Geleverde materialen blijven eigendom van Slob Tuinen totdat de
             opdrachtgever alle daarvoor verschuldigde bedragen volledig heeft
@@ -178,19 +178,19 @@ export default function AlgemeneVoorwaardenPage() {
             toestaat.
           </p>
 
-          <h2>Artikel 12 — Garantie en beplanting</h2>
+          <h2>Artikel 12. Garantie en beplanting</h2>
           <p>
             Slob Tuinen staat in voor de deugdelijkheid van het geleverde werk.
             Op levend materiaal (planten, bomen, gras) kan geen garantie op
             aanslaan of hergroei worden gegeven, omdat dit mede afhankelijk is
-            van verzorging en weersomstandigheden — tenzij schriftelijk anders
+            van verzorging en weersomstandigheden, tenzij schriftelijk anders
             is overeengekomen. Verzakking van bestrating door natuurlijke
             zetting van de ondergrond valt buiten de garantie. Deze bepaling
             doet geen afbreuk aan de wettelijke rechten van de consument,
             waaronder het recht op een deugdelijke nakoming (conformiteit).
           </p>
 
-          <h2>Artikel 13 — Aansprakelijkheid</h2>
+          <h2>Artikel 13. Aansprakelijkheid</h2>
           <p>
             De aansprakelijkheid van Slob Tuinen is beperkt tot het bedrag dat
             in het betreffende geval door de
@@ -203,7 +203,7 @@ export default function AlgemeneVoorwaardenPage() {
             van consumenten.
           </p>
 
-          <h2>Artikel 14 — Overmacht</h2>
+          <h2>Artikel 14. Overmacht</h2>
           <p>
             Bij overmacht (waaronder extreme weersomstandigheden, ziekte en
             leveringsproblemen bij toeleveranciers) worden de verplichtingen
@@ -214,7 +214,7 @@ export default function AlgemeneVoorwaardenPage() {
             verhouding afgerekend.
           </p>
 
-          <h2>Artikel 15 — Klachten</h2>
+          <h2>Artikel 15. Klachten</h2>
           <p>
             Klachten over het uitgevoerde werk dienen binnen bekwame tijd na
             ontdekking te worden gemeld via telefoon (0628864744), WhatsApp of
@@ -226,7 +226,7 @@ export default function AlgemeneVoorwaardenPage() {
             niet op.
           </p>
 
-          <h2>Artikel 16 — Toepasselijk recht en geschillen</h2>
+          <h2>Artikel 16. Toepasselijk recht en geschillen</h2>
           <p>
             Op alle overeenkomsten is Nederlands recht van toepassing.
             Geschillen worden bij voorkeur in onderling overleg opgelost.

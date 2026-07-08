@@ -2,7 +2,7 @@ import { SiteHeader } from "@/components/slob/site-header"
 import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
 
 export const metadata = {
-  title: "Cookiebeleid — Slob Tuinen",
+  title: "Cookiebeleid | Slob Tuinen",
   description: "Cookiebeleid van Slob Tuinen. Lees welke cookies wij gebruiken en waarom.",
 }
 
@@ -53,7 +53,7 @@ export default function CookiebeleidPage() {
                 <td>Google Maps cookies</td>
                 <td>Derde partij</td>
                 <td>
-                  Weergave van de interactieve kaart — alleen nadat u zelf op
+                  Weergave van de interactieve kaart, alleen nadat u zelf op
                   &ldquo;Kaart laden&rdquo; klikt
                 </td>
                 <td>Zie Google-beleid</td>
