@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, Check } from "lucide-react"
 import { Navbar } from "./navbar"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { WHATSAPP_QUOTE, WHATSAPP_URL } from "./data"
@@ -54,6 +54,20 @@ export function Hero() {
             Offerte aanvragen
           </a>
         </div>
+
+        {/* Vertrouwenspunten */}
+        <ul className="mt-8 flex flex-col gap-x-8 gap-y-3 text-sm text-white/85 sm:flex-row sm:flex-wrap sm:items-center">
+          {[
+            "Eén vast aanspreekpunt van begin tot eind",
+            "Jarenlange ervaring in zwaar grond- en straatwerk",
+            "Duidelijke afspraken, geen verrassingen achteraf",
+          ].map((usp) => (
+            <li key={usp} className="flex items-center gap-2">
+              <Check className="size-4 shrink-0 text-forest" strokeWidth={3} />
+              <span>{usp}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <a

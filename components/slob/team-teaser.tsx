@@ -11,14 +11,15 @@ export function TeamTeaser() {
               Het team
             </p>
             <h2 className="max-w-xl text-balance font-black uppercase leading-[0.9] tracking-tighter text-[clamp(2rem,4.5vw,3.75rem)]">
-              Mensen die
+              De jongens
               <br />
-              het werk doen
+              van Slob
             </h2>
             <p className="mt-6 max-w-md text-pretty leading-relaxed text-white/65">
-              Achter elk project staat een vast clubje mensen dat weet wat het
-              doet. Ze zijn strak in hun werk, gaan netjes met uw tuin om en
-              zijn pas tevreden als u dat ook bent.
+              Achter elk project staat een nuchtere club mannen die simpelweg
+              van aanpakken weet. Geen dure praatjes, maar mouwen opstropen. We
+              werken netjes, overleggen als dat nodig is en gaan pas weg als de
+              oprit of tuin er strak bij ligt. Gewoon goed geregeld.
             </p>
           </div>
           <a

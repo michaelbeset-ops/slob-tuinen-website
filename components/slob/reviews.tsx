@@ -68,14 +68,14 @@ export function Reviews() {
           </div>
 
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-4 border border-border bg-card px-5 py-4">
-              <GoogleG className="size-9 shrink-0" />
+            <div className="flex items-center gap-4 border border-border bg-card px-6 py-5 shadow-sm">
+              <GoogleG className="size-12 shrink-0" />
               <div>
-                <div className="flex items-center gap-2">
-                  <span className="text-2xl font-bold leading-none text-foreground">5,0</span>
-                  <Stars count={5} />
+                <div className="flex items-center gap-2.5">
+                  <span className="text-4xl font-black leading-none tracking-tight text-foreground">5,0</span>
+                  <Stars count={5} size="lg" />
                 </div>
-                <p className="mt-1 text-sm text-muted-foreground">Beoordelingen op Google</p>
+                <p className="mt-1.5 text-sm font-medium text-muted-foreground">Beoordelingen op Google</p>
               </div>
             </div>
 
