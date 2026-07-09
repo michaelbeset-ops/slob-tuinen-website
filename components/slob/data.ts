@@ -107,7 +107,7 @@ export const SERVICES: Service[] = [
   {
     id: "grondverzet",
     title: "Grondverzet",
-    image: "/images/project-grondverzet-kopje.webp",
+    image: "/images/service-grondverzet.webp",
     intro: "Graven, verplaatsen en egaliseren met zwaar materieel.",
     summary:
       "Grondverzet in Leerdam en de Betuwe: ontgraven, ophogen, egaliseren en grond afvoeren. Wij hebben het materieel in huis en leveren uw terrein netjes op.",
