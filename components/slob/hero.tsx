@@ -18,7 +18,7 @@ export function Hero() {
 
       <Navbar />
 
-      <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-center px-6 md:px-12">
+      <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-6 pb-24 md:justify-center md:px-12 md:pb-0">
         <p className="mb-6 hidden max-w-md text-sm font-semibold uppercase tracking-[0.25em] text-forest md:block">
           Leerdam &amp; omgeving
         </p>
