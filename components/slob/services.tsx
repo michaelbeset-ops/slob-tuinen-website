@@ -122,10 +122,10 @@ export function Services() {
         <div
           ref={trackRef}
           onScroll={onScroll}
-          className="flex snap-x snap-mandatory gap-px overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-6 pb-1 scroll-px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {SERVICES.map((service) => (
-            <div key={service.id} className="w-[85vw] shrink-0 snap-start">
+            <div key={service.id} className="w-[85%] shrink-0 snap-start">
               <ServiceCard service={service} />
             </div>
           ))}

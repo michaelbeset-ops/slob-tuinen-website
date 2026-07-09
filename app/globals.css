@@ -199,6 +199,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Voorkomt horizontaal meescrollen (witruimte) op mobiel. overflow-x:clip
+       maakt geen scroll-container, dus sticky/position blijft werken. */
+    overflow-x: clip;
   }
   html {
     @apply font-sans;
