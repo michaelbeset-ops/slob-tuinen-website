@@ -190,6 +190,33 @@ export default async function ServicePage({
           </div>
         </section>
 
+        {/* Galerij: eigen foto's van uitgevoerd werk */}
+        {service.gallery && service.gallery.length > 0 && (
+          <section className="mx-auto max-w-[1600px] px-6 pb-16 md:px-12 md:pb-24">
+            <div className="border-t border-border pt-14">
+              <h2 className="mb-8 font-black uppercase tracking-tighter text-foreground text-[clamp(1.75rem,4vw,3rem)]">
+                Beeld van het werk
+              </h2>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
+                {service.gallery.map((src, i) => (
+                  <div
+                    key={src}
+                    className="relative aspect-[4/3] overflow-hidden bg-muted"
+                  >
+                    <img
+                      src={withBasePath(src)}
+                      alt={`${service.title} door Slob Tuinen, foto ${i + 1}`}
+                      loading="lazy"
+                      decoding="async"
+                      className="size-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Andere diensten */}
         <section className="border-t border-border bg-background py-16 md:py-20">
           <div className="mx-auto max-w-[1600px] px-6 md:px-12">

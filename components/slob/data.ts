@@ -81,6 +81,8 @@ export type Service = {
   paragraphs: string[]
   /** Wat wij bieden (bulletlijst). */
   highlights: string[]
+  /** Eigen foto's van uitgevoerd werk, getoond als galerij op de dienstpagina. */
+  gallery?: string[]
 }
 
 export const SERVICES: Service[] = [
@@ -202,6 +204,11 @@ export const SERVICES: Service[] = [
       "Goede afwatering en afschot",
       "Klinkers, tegels of natuursteen",
       "Degelijke voorbereiding van de ondergrond",
+    ],
+    gallery: [
+      "/images/service-straatwerk-work-1.webp",
+      "/images/service-straatwerk-work-2.webp",
+      "/images/service-straatwerk-work-3.webp",
     ],
   },
 ]
@@ -359,32 +366,6 @@ export const PROJECTS: Project[] = [
       "Vlak en degelijk opgeleverd",
     ],
     services: ["Straatwerk", "Grondwerk", "Grondverzet"],
-  },
-  {
-    title: "Straatwerk",
-    location: "Leerdam e.o.",
-    image: "/images/project-straatwerk-leerdam-1.webp",
-    gallery: [
-      "/images/project-straatwerk-leerdam-1.webp",
-      "/images/project-straatwerk-leerdam-2.webp",
-      "/images/project-straatwerk-leerdam-3.webp",
-    ],
-    size: "regular",
-    slug: "straatwerk-leerdam",
-    summary:
-      "Straatwerk in de omgeving van Leerdam: van grondwerk en zandbed tot een strak afgetrilde, egale bestrating, netjes opgeleverd.",
-    body: [
-      "Voor dit project verzorgden we het volledige straatwerk, van voorbereiding tot oplevering. Eerst het grondwerk en een goed verdicht zandbed, zodat de bestrating een stabiele basis heeft.",
-      "Daarna hebben we de stenen strak gelegd en het geheel afgetrild voor een vlakke, egale ligging. We werken door tot het klopt, ook als dat betekent dat we in de avond nog even doorgaan om het netjes af te ronden.",
-    ],
-    highlights: [
-      "Grondwerk en verdicht zandbed",
-      "Bestrating strak gelegd",
-      "Afgetrild voor een vlakke ligging",
-      "Nette kantafwerking",
-      "Netjes opgeleverd",
-    ],
-    services: ["Straatwerk", "Grondwerk"],
   },
   {
     title: "Schutting Dalem",
