@@ -13,6 +13,8 @@ export function CookieBanner() {
 
   const accept = () => {
     localStorage.setItem("cookie_consent", "accepted")
+    // Laat o.a. de kaart weten dat er toestemming is, zodat die meteen laadt.
+    window.dispatchEvent(new Event("slob-cookie-accepted"))
     setVisible(false)
   }
 
