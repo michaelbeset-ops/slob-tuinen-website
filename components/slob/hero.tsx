@@ -8,8 +8,8 @@ export function Hero() {
   return (
     <section id="top" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
       <img
-        src={withBasePath("/images/hero-garden.webp")}
-        alt="Moderne tuin met natuurstenen terras aangelegd door Slob Tuinen"
+        src={withBasePath("/images/hero-voortuin-avond.webp")}
+        alt="Sfeervol aangelegde voortuin met bestrating en verlichting door Slob Tuinen"
         fetchPriority="high"
         decoding="async"
         className="absolute inset-0 size-full object-cover"
