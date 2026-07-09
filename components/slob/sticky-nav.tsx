@@ -27,7 +27,7 @@ export function StickyNav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b border-border bg-background/95 backdrop-blur transition-transform duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-foreground/95 backdrop-blur transition-transform duration-300 ${
         shown ? "translate-y-0" : "-translate-y-full"
       }`}
       aria-hidden={!shown}
@@ -52,7 +52,7 @@ export function StickyNav() {
               key={link.href}
               href={link.isPage ? withBasePath(link.href) : link.href}
               tabIndex={shown ? 0 : -1}
-              className="text-sm font-medium uppercase tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm font-medium uppercase tracking-wide text-white/80 transition-colors hover:text-white"
             >
               {link.label}
             </a>
@@ -65,16 +65,16 @@ export function StickyNav() {
             target="_blank"
             rel="noopener noreferrer"
             tabIndex={shown ? 0 : -1}
-            className="hidden items-center gap-2 bg-forest px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark sm:flex"
+            className="flex items-center gap-2 bg-forest px-4 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark sm:px-5 sm:py-3"
           >
             <WhatsAppIcon className="size-4" />
-            WhatsApp
+            <span className="hidden sm:inline">WhatsApp</span>
           </a>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
             tabIndex={shown ? 0 : -1}
-            className="flex size-11 items-center justify-center border border-border text-foreground lg:hidden"
+            className="flex size-11 items-center justify-center border border-white/40 text-white lg:hidden"
             aria-label={open ? "Sluit menu" : "Open menu"}
             aria-expanded={open}
           >

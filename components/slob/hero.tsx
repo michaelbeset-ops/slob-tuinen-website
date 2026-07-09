@@ -30,9 +30,8 @@ export function Hero() {
           &amp; Straat.
         </h1>
         <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-white/85 md:mt-8 md:text-lg">
-          Ik ben Martin Slob. Grondwerk, beschoeiing, tuinaanleg of straatwerk:
-          u heeft één aanspreekpunt en werk dat netjes wordt opgeleverd. App of
-          bel me gerust, dan kijk ik met u mee.
+          Uw tuin, oprit of terrein in vertrouwde handen. Duidelijke afspraken,
+          strak werk en één aanspreekpunt van begin tot eind.
         </p>
 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center md:mt-10">
@@ -56,9 +55,9 @@ export function Hero() {
         {/* Vertrouwenspunten */}
         <ul className="mt-6 flex flex-col gap-x-8 gap-y-2.5 text-[0.8125rem] text-white/85 sm:flex-row sm:flex-wrap sm:items-center md:mt-8 md:text-sm">
           {[
-            "Eén vast aanspreekpunt van begin tot eind",
+            "Vakwerk in grond, groen én straat",
             "Jarenlange ervaring in zwaar grond- en straatwerk",
-            "Duidelijke afspraken, geen verrassingen achteraf",
+            "Alles in eigen beheer, van start tot oplevering",
           ].map((usp) => (
             <li key={usp} className="flex items-center gap-2">
               <Check className="size-4 shrink-0 text-forest" strokeWidth={3} />
