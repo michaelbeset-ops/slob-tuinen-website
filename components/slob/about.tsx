@@ -55,7 +55,7 @@ export function About() {
           <dl className="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-1">
             {VALUES.map((value) => (
               <div key={value.title} className="bg-background p-6">
-                <dt className="font-bold uppercase tracking-wide text-foreground">
+                <dt className="text-sm font-bold uppercase tracking-wide text-foreground md:text-base">
                   {value.title}
                 </dt>
                 <dd className="mt-2 leading-relaxed text-muted-foreground">

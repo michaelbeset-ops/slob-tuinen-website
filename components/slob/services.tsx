@@ -67,45 +67,21 @@ export function Services() {
   }
 
   return (
-    <section id="diensten" className="bg-background py-20 md:py-32">
+    <section id="diensten" className="bg-background py-14 md:py-32">
       <div className="mx-auto max-w-[1600px] px-6 md:px-12">
-        <div className="mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
+        <div className="mb-6 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
           <div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-forest">
               Onze diensten
             </p>
-            <h2 className="max-w-2xl text-balance font-black uppercase leading-[0.9] tracking-tighter text-foreground text-[clamp(2.25rem,6vw,5rem)]">
+            <h2 className="max-w-2xl text-balance font-black uppercase leading-[0.9] tracking-tighter text-foreground text-[clamp(2rem,6vw,5rem)]">
               Alles voor buiten
             </h2>
           </div>
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between md:flex-col md:items-end md:gap-4">
+          <div className="flex flex-col gap-4 md:items-end">
             <p className="max-w-sm text-pretty leading-relaxed text-muted-foreground">
               Zes specialismen, één aanspreekpunt. Klik op een dienst voor meer info.
             </p>
-            {/* Arrow controls, visible on md+ and also on mobile */}
-            <div className="flex items-center gap-2 md:hidden">
-              <button
-                type="button"
-                onClick={() => scrollToIndex(current - 1)}
-                disabled={current === 0}
-                className="flex size-11 items-center justify-center border border-border text-foreground transition-colors hover:border-forest hover:bg-forest hover:text-white disabled:opacity-30"
-                aria-label="Vorige dienst"
-              >
-                <ArrowLeft className="size-5" />
-              </button>
-              <span className="text-sm text-muted-foreground">
-                {current + 1} / {SERVICES.length}
-              </span>
-              <button
-                type="button"
-                onClick={() => scrollToIndex(current + 1)}
-                disabled={current === SERVICES.length - 1}
-                className="flex size-11 items-center justify-center border border-border text-foreground transition-colors hover:border-forest hover:bg-forest hover:text-white disabled:opacity-30"
-                aria-label="Volgende dienst"
-              >
-                <ArrowRight className="size-5" />
-              </button>
-            </div>
           </div>
         </div>
       </div>
