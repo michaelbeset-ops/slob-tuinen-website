@@ -4,7 +4,7 @@ import { useState } from "react"
 import { MapPin } from "lucide-react"
 
 const MAPS_EMBED_URL =
-  "https://www.google.com/maps?q=Recht%20van%20Ter%20Leede%2C%204143%20LP%20Leerdam&output=embed"
+  "https://maps.google.com/maps?q=Recht%20van%20Ter%20Leede%2C%204143%20LP%20Leerdam&t=&z=15&ie=UTF8&iwloc=&output=embed"
 const MAPS_ROUTE_URL =
   "https://www.google.com/maps/dir/?api=1&destination=Recht+van+Ter+Leede,+4143+LP+Leerdam"
 
