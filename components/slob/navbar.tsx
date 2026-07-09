@@ -56,14 +56,29 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/15 bg-foreground/95 backdrop-blur lg:hidden">
-          <div className="flex flex-col px-6 py-4">
+        <div className="fixed inset-0 z-[60] flex flex-col bg-foreground lg:hidden">
+          <div className="flex items-center justify-between px-6 py-6">
+            <img
+              src={withBasePath("/logo.png")}
+              alt="Slob Tuinen logo"
+              className="h-12 w-52 object-contain object-left"
+            />
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              aria-label="Sluit menu"
+              className="flex size-11 items-center justify-center border border-white/40 text-white"
+            >
+              <X className="size-5" />
+            </button>
+          </div>
+          <nav className="flex flex-1 flex-col px-6 pt-2">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.isPage ? withBasePath(link.href) : link.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-white/10 py-4 text-base font-semibold uppercase tracking-wide text-white"
+                className="border-b border-white/10 py-5 text-lg font-semibold uppercase tracking-wide text-white"
               >
                 {link.label}
               </a>
@@ -72,12 +87,12 @@ export function Navbar() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 flex items-center justify-center gap-2 rounded-none bg-forest px-5 py-4 text-sm font-bold uppercase tracking-wide text-white"
+              className="mt-8 flex items-center justify-center gap-2 rounded-none bg-forest px-5 py-4 text-sm font-bold uppercase tracking-wide text-white"
             >
               <WhatsAppIcon className="size-4" />
               WhatsApp Martin
             </a>
-          </div>
+          </nav>
         </div>
       )}
     </header>

@@ -50,7 +50,7 @@ export function Projects() {
               Werk dat blijft
             </h2>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="hidden items-center gap-3 md:flex">
             <button
               type="button"
               onClick={() => scrollToIndex(active - 1)}
@@ -70,6 +70,13 @@ export function Projects() {
               <ArrowRight className="size-5" />
             </button>
           </div>
+        </div>
+
+        {/* Swipe hint (mobiel) */}
+        <div className="mb-3 flex items-center gap-2 text-xs font-medium uppercase tracking-wide text-white/60 md:hidden">
+          <ArrowLeft className="size-3.5" />
+          <span>Swipe voor meer werk</span>
+          <ArrowRight className="size-3.5" />
         </div>
       </div>
 

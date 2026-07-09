@@ -104,7 +104,7 @@ export default function OverOnsPage() {
                 },
               ].map((v) => (
                 <div key={v.title} className="bg-background p-6 md:p-8">
-                  <dt className="font-bold uppercase tracking-wide text-foreground">
+                  <dt className="text-sm font-bold uppercase tracking-wide text-foreground md:text-base">
                     {v.title}
                   </dt>
                   <dd className="mt-2 leading-relaxed text-muted-foreground">
