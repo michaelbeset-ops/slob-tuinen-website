@@ -125,6 +125,7 @@ export const SERVICES: Service[] = [
       "Kavels bouwrijp maken",
       "Modern materieel, ervaren uitvoering",
     ],
+    gallery: ["/images/service-grondverzet-work.webp"],
   },
   {
     id: "beschoeiingswerk",

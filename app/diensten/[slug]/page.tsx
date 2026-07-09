@@ -197,7 +197,13 @@ export default async function ServicePage({
               <h2 className="mb-8 font-black uppercase tracking-tighter text-foreground text-[clamp(1.75rem,4vw,3rem)]">
                 Beeld van het werk
               </h2>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
+              <div
+                className={
+                  service.gallery.length === 1
+                    ? "max-w-3xl"
+                    : "grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3"
+                }
+              >
                 {service.gallery.map((src, i) => (
                   <div
                     key={src}
