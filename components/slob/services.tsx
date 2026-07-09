@@ -17,15 +17,18 @@ function ServiceCard({ service }: { service: Service }) {
         alt={`${service.title} door Slob Tuinen`}
         loading="lazy"
         decoding="async"
-        className="absolute inset-0 size-full object-cover opacity-80 transition-all duration-500 group-hover:scale-105 group-hover:opacity-60"
+        className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/20 to-transparent" />
+      {/* Uniforme donkere overlay: zelfde dekking op elke kaart */}
+      <div className="absolute inset-0 bg-foreground/45 transition-colors duration-500 group-hover:bg-foreground/30" />
+      {/* Verloop onderaan voor leesbaarheid van de titel */}
+      <div className="absolute inset-0 bg-gradient-to-t from-foreground/75 via-transparent to-transparent" />
       <div className="relative flex size-full flex-col justify-between p-6">
         <span className="flex size-11 items-center justify-center self-end rounded-none border border-white/40 text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
           <ArrowUpRight className="size-5" />
         </span>
         <div>
-          <h3 className="font-black uppercase leading-none tracking-tighter text-white text-[clamp(1.5rem,3vw,2.25rem)]">
+          <h3 className="font-extrabold uppercase leading-none tracking-tight text-white text-[clamp(1.5rem,3vw,2.25rem)]">
             {service.title}
           </h3>
           <p className="mt-2 max-w-xs text-sm text-white/70">{service.intro}</p>

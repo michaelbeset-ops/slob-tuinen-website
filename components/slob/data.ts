@@ -107,7 +107,7 @@ export const SERVICES: Service[] = [
   {
     id: "grondverzet",
     title: "Grondverzet",
-    image: "/images/service-grondverzet.webp",
+    image: "/images/project-grondverzet-kopje.webp",
     intro: "Graven, verplaatsen en egaliseren met zwaar materieel.",
     summary:
       "Grondverzet in Leerdam en de Betuwe: ontgraven, ophogen, egaliseren en grond afvoeren. Wij hebben het materieel in huis en leveren uw terrein netjes op.",
@@ -256,12 +256,6 @@ export const PROJECTS: Project[] = [
     services: ["Grondwerk", "Grondverzet", "Straatwerk"],
   },
   {
-    title: "Moderne Oprit",
-    location: "Leerdam",
-    image: "/images/project-oprit.webp",
-    size: "tall",
-  },
-  {
     title: "Tuinaanleg Dalem",
     location: "Dalem",
     image: "/images/project-dalem-1.webp",
@@ -287,24 +281,6 @@ export const PROJECTS: Project[] = [
       "Onderhoudsarm en strak opgeleverd",
     ],
     services: ["Grondwerk", "Straatwerk", "Tuinaanleg"],
-  },
-  {
-    title: "Grootschalig Grondverzet",
-    location: "Betuwe",
-    image: "/images/project-grondverzet-kopje.webp",
-    size: "wide",
-  },
-  {
-    title: "Complete Tuinaanleg",
-    location: "Leerdam e.o.",
-    image: "/images/project-tuin.webp",
-    size: "regular",
-  },
-  {
-    title: "Beschoeiing & Oever",
-    location: "Vijfheerenlanden",
-    image: "/images/project-beschoeiing.webp",
-    size: "tall",
   },
 ]
 

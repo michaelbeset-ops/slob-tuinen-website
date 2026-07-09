@@ -12,6 +12,7 @@ function InstagramIcon({ className }: { className?: string }) {
 import { EMAIL, EMAIL_MAILTO, PHONE, PHONE_TEL, WHATSAPP_QUOTE, WHATSAPP_URL } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { MapEmbed } from "./map-embed"
+import { ContactForm } from "./contact-form"
 import { withBasePath } from "@/lib/base-path"
 
 const SERVICES = [
@@ -33,23 +34,62 @@ export function Contact() {
   return (
     <section id="contact" className="bg-foreground text-white">
       <div className="mx-auto max-w-[1600px] px-6 py-20 md:px-12 md:py-32">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-          {/* Left: heading + details */}
-          <div>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-forest">
-              Contact
-            </p>
-            <h2 className="text-balance font-black uppercase leading-[0.9] tracking-tighter text-[clamp(2.5rem,6vw,5.5rem)]">
-              Laten we
-              <br />
-              beginnen
-            </h2>
-            <p className="mt-8 max-w-md text-pretty leading-relaxed text-white/70">
-              Een idee, een vraag of een offerte? Stuur een bericht via WhatsApp
-              of bel Martin direct. U krijgt snel en eerlijk antwoord.
-            </p>
+        {/* Kop */}
+        <div className="max-w-2xl">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-forest">
+            Contact
+          </p>
+          <h2 className="text-balance font-black uppercase leading-[0.9] tracking-tighter text-[clamp(2.5rem,6vw,5.5rem)]">
+            Laten we beginnen
+          </h2>
+          <p className="mt-8 max-w-md text-pretty leading-relaxed text-white/70">
+            Een idee, een vraag of een offerte? Laat hiernaast een bericht
+            achter, app of bel Martin direct. U krijgt snel en eerlijk antwoord.
+          </p>
+        </div>
 
-            <div className="mt-12 flex flex-col gap-px border border-white/15 bg-white/15">
+        <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+          {/* Links: kaart + adres + snelle contactknoppen */}
+          <div className="flex flex-col gap-6">
+            <div className="aspect-square w-full border border-white/15 sm:aspect-[4/3]">
+              <MapEmbed />
+            </div>
+
+            <div className="flex items-center gap-4 border border-white/15 bg-white/5 p-6">
+              <MapPin className="size-6 shrink-0 text-forest" />
+              <span>
+                <span className="block text-xs uppercase tracking-wide text-white/50">
+                  Adres
+                </span>
+                <span className="text-lg font-semibold">
+                  Recht van Ter Leede, 4143 LP Leerdam
+                </span>
+              </span>
+            </div>
+
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a
+                href={WHATSAPP_QUOTE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex flex-1 items-center justify-center gap-3 rounded-none bg-forest px-6 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark"
+              >
+                <WhatsAppIcon className="size-5" />
+                WhatsApp
+              </a>
+              <a
+                href={PHONE_TEL}
+                className="inline-flex flex-1 items-center justify-center gap-3 rounded-none border border-white/40 px-6 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-foreground"
+              >
+                <Phone className="size-5" />
+                Bel direct
+              </a>
+            </div>
+          </div>
+
+          {/* Rechts: telefoon/e-mail + inline formulier */}
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-px border border-white/15 bg-white/15">
               <a
                 href={PHONE_TEL}
                 className="group flex items-center gap-4 bg-foreground p-6 transition-colors hover:bg-forest"
@@ -74,43 +114,13 @@ export function Contact() {
                   <span className="break-all text-lg font-semibold">{EMAIL}</span>
                 </span>
               </a>
-              <div className="flex items-center gap-4 bg-foreground p-6">
-                <MapPin className="size-6 shrink-0 text-forest" />
-                <span>
-                  <span className="block text-xs uppercase tracking-wide text-white/50">
-                    Adres
-                  </span>
-                  <span className="text-lg font-semibold">
-                    Recht van Ter Leede, 4143 LP Leerdam
-                  </span>
-                </span>
-              </div>
             </div>
 
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={WHATSAPP_QUOTE}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex flex-1 items-center justify-center gap-3 rounded-none bg-forest px-6 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark"
-              >
-                <WhatsAppIcon className="size-5" />
-                WhatsApp
-              </a>
-              <a
-                href={PHONE_TEL}
-                className="inline-flex flex-1 items-center justify-center gap-3 rounded-none border border-white/40 px-6 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-foreground"
-              >
-                <Phone className="size-5" />
-                Bel direct
-              </a>
-            </div>
-          </div>
-
-          {/* Right: map */}
-          <div className="lg:pl-8">
-            <div className="aspect-square w-full border border-white/15 lg:aspect-auto lg:h-full lg:min-h-[420px]">
-              <MapEmbed />
+            <div>
+              <h3 className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-forest">
+                Stuur een bericht
+              </h3>
+              <ContactForm />
             </div>
           </div>
         </div>

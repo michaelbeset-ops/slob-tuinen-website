@@ -17,38 +17,43 @@ export default function OverOnsPage() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
-      {/* Hero: Martin Slob prominent */}
-      <section id="hoofdinhoud" tabIndex={-1} className="relative min-h-[70vh] bg-foreground">
-        <img
-          src={withBasePath(martin.image ?? "/images/martin-slob.webp")}
-          alt="Martin Slob, eigenaar van Slob Tuinen"
-          fetchPriority="high"
-          decoding="async"
-          className="absolute inset-0 size-full object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/60 to-transparent" />
+      {/* Hero: Martin Slob prominent, foto duidelijk in beeld */}
+      <section id="hoofdinhoud" tabIndex={-1} className="bg-foreground">
+        <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-stretch lg:grid-cols-2">
+          {/* Tekst */}
+          <div className="order-2 flex flex-col justify-center px-6 py-14 md:px-12 md:py-20 lg:order-1 lg:py-28">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-forest">
+              Over ons
+            </p>
+            <h1 className="max-w-2xl text-balance font-black uppercase leading-[0.9] tracking-tighter text-white text-[clamp(2.5rem,6vw,5rem)]">
+              De man
+              <br />
+              achter
+              <br />
+              het werk
+            </h1>
+            <p className="mt-8 max-w-lg text-pretty text-lg leading-relaxed text-white/75">
+              Slob Tuinen, dat is Martin Slob. Een nuchtere Leerdammer die zijn
+              vak verstaat en gewoon doet wat hij belooft. Hij staat zelf op de
+              klus en pakt elk werk aan alsof het zijn eigen tuin is, of het nu
+              gaat om zwaar grondwerk of de laatste straatsteen.
+            </p>
+            <div className="mt-6">
+              <span className="inline-block bg-forest px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">
+                {martin.name}, {martin.role}
+              </span>
+            </div>
+          </div>
 
-        <div className="relative mx-auto flex min-h-[70vh] max-w-[1600px] flex-col justify-end px-6 pb-16 md:px-12 md:pb-24">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-forest">
-            Over ons
-          </p>
-          <h1 className="max-w-2xl text-balance font-black uppercase leading-[0.9] tracking-tighter text-white text-[clamp(2.5rem,7vw,6rem)]">
-            De man
-            <br />
-            achter
-            <br />
-            het werk
-          </h1>
-          <p className="mt-8 max-w-lg text-pretty text-lg leading-relaxed text-white/75">
-            Slob Tuinen, dat is Martin Slob. Een nuchtere Leerdammer die zijn
-            vak verstaat en gewoon doet wat hij belooft. Hij staat zelf op de
-            klus en pakt elk werk aan alsof het zijn eigen tuin is, of het nu
-            gaat om zwaar grondwerk of de laatste straatsteen.
-          </p>
-          <div className="mt-4">
-            <span className="inline-block bg-forest px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">
-              {martin.name}, {martin.role}
-            </span>
+          {/* Foto: volledig zichtbaar */}
+          <div className="relative order-1 min-h-[440px] overflow-hidden bg-foreground sm:min-h-[560px] lg:order-2 lg:min-h-[720px]">
+            <img
+              src={withBasePath(martin.image ?? "/images/martin-slob.webp")}
+              alt="Martin Slob, eigenaar van Slob Tuinen"
+              fetchPriority="high"
+              decoding="async"
+              className="absolute inset-0 size-full object-cover object-[center_20%]"
+            />
           </div>
         </div>
       </section>
@@ -121,9 +126,9 @@ export default function OverOnsPage() {
                 Het team
               </p>
               <h2 className="text-balance font-black uppercase leading-[0.9] tracking-tighter text-foreground text-[clamp(2rem,4vw,3.5rem)]">
-                Mensen die
+                De jongens
                 <br />
-                het werk doen
+                van Slob
               </h2>
             </div>
 
