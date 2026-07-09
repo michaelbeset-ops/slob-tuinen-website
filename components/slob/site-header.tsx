@@ -21,7 +21,7 @@ export function SiteHeader() {
   const isActive = (match: string | null) => !!match && pathname === match
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-foreground/95 backdrop-blur">
       <nav className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-12">
         <a href={withBasePath("/")} className="shrink-0" aria-label="Slob Tuinen, naar home">
           <img
@@ -37,8 +37,8 @@ export function SiteHeader() {
               key={link.href}
               href={link.href}
               aria-current={isActive(link.match) ? "page" : undefined}
-              className={`text-sm font-medium uppercase tracking-wide transition-colors hover:text-foreground ${
-                isActive(link.match) ? "text-forest" : "text-muted-foreground"
+              className={`text-sm font-medium uppercase tracking-wide transition-colors hover:text-white ${
+                isActive(link.match) ? "text-forest" : "text-white/80"
               }`}
             >
               {link.label}
@@ -51,15 +51,15 @@ export function SiteHeader() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-none bg-forest px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark sm:flex"
+            className="flex items-center gap-2 rounded-none bg-forest px-4 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark sm:px-5 sm:py-3"
           >
             <WhatsAppIcon className="size-4" />
-            WhatsApp
+            <span className="hidden sm:inline">WhatsApp</span>
           </a>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="flex size-11 items-center justify-center rounded-none border border-border text-foreground lg:hidden"
+            className="flex size-11 items-center justify-center rounded-none border border-white/40 text-white lg:hidden"
             aria-label={open ? "Sluit menu" : "Open menu"}
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
