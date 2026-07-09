@@ -51,6 +51,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/projecten/tuinaanleg-vianen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/projecten/tuinaanleg-dussen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/projecten/straatwerk-gouda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/projecten/straatwerk-leerdam</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/projecten/schutting-dalem</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://michaelbeset-ops.github.io/slob-tuinen-website/algemene-voorwaarden</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

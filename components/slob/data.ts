@@ -282,6 +282,135 @@ export const PROJECTS: Project[] = [
     ],
     services: ["Grondwerk", "Straatwerk", "Tuinaanleg"],
   },
+  {
+    title: "Tuinaanleg Vianen",
+    location: "Vianen",
+    image: "/images/project-tuinaanleg-vianen-1.webp",
+    gallery: [
+      "/images/project-tuinaanleg-vianen-1.webp",
+      "/images/project-tuinaanleg-vianen-2.webp",
+    ],
+    size: "wide",
+    slug: "tuinaanleg-vianen",
+    summary:
+      "In Vianen legden wij een strak terras met grootformaat tegels aan, met bestrating langs de woning en een nette afwerking tegen de schutting.",
+    body: [
+      "Voor deze tuin in Vianen was de wens een strak, onderhoudsarm terras waar het fijn zitten is. We begonnen met een goed voorbereide, waterpas ondergrond zodat de tegels vlak blijven liggen en het water goed wegloopt.",
+      "Het terras is gelegd met grootformaat tegels in een rustige tint, netjes ingepast tegen de schutting en de woning. Langs de zijkant zorgden we voor bestrating met een nette kantopsluiting, zodat het geheel strak op elkaar aansluit.",
+    ],
+    highlights: [
+      "Waterpas voorbereide ondergrond",
+      "Terras met grootformaat tegels",
+      "Bestrating langs de woning",
+      "Nette kantopsluiting",
+      "Strak en onderhoudsarm opgeleverd",
+    ],
+    services: ["Tuinaanleg", "Straatwerk"],
+  },
+  {
+    title: "Tuinaanleg Dussen",
+    location: "Dussen",
+    image: "/images/project-tuinaanleg-dussen-1.webp",
+    gallery: [
+      "/images/project-tuinaanleg-dussen-1.webp",
+      "/images/project-tuinaanleg-dussen-2.webp",
+      "/images/project-tuinaanleg-dussen-3.webp",
+    ],
+    size: "regular",
+    slug: "tuinaanleg-dussen",
+    summary:
+      "Een onderhoudsarme voortuin in Dussen met siergrind, strakke plantenbakken van betonblokken en een net pad naar de voordeur.",
+    body: [
+      "Voor deze voortuin in Dussen was de wens een verzorgde, onderhoudsarme uitstraling met weinig omkijken. We hebben de tuin opnieuw ingericht met een basis van siergrind en strakke plantvakken.",
+      "De plantenbakken zijn opgebouwd uit nette betonblokken in grijs en antraciet, gevuld met aarde en klaar voor beplanting. Een strak pad leidt naar de voordeur, met de bestrating netjes aangesloten op de bestaande stoep.",
+    ],
+    highlights: [
+      "Onderhoudsarme voortuin",
+      "Siergrind als basis",
+      "Plantenbakken van betonblokken",
+      "Net toegangspad naar de voordeur",
+      "Strak en verzorgd afgewerkt",
+    ],
+    services: ["Tuinaanleg", "Groenvoorziening", "Straatwerk"],
+  },
+  {
+    title: "Straatwerk Gouda",
+    location: "Gouda",
+    image: "/images/project-straatwerk-gouda-1.webp",
+    gallery: [
+      "/images/project-straatwerk-gouda-1.webp",
+      "/images/project-straatwerk-gouda-2.webp",
+      "/images/project-straatwerk-gouda-3.webp",
+      "/images/project-straatwerk-gouda-4.webp",
+    ],
+    size: "wide",
+    slug: "straatwerk-gouda",
+    summary:
+      "Een ruime oprit in Gouda opnieuw bestraat: van egaliseren en zandbed tot een strak gelegde, egale verharding rond het huis.",
+    body: [
+      "Voor deze woning in Gouda mochten we de ruime oprit opnieuw bestraten. We zijn begonnen met het opnemen van de oude verharding, het egaliseren van de ondergrond en het aanbrengen van een goed verdicht zandbed.",
+      "Daarna hebben we de bestrating strak gelegd, netjes ingepast rond de bestaande bomen en de gevel. Het resultaat is een egale, ruime oprit met volop plek om te parkeren, die vlak blijft liggen en jaren meegaat.",
+    ],
+    highlights: [
+      "Opnemen van de oude verharding",
+      "Egaliseren en verdicht zandbed",
+      "Bestrating strak gelegd rond bestaande bomen",
+      "Ruime, egale parkeerruimte",
+      "Vlak en degelijk opgeleverd",
+    ],
+    services: ["Straatwerk", "Grondwerk", "Grondverzet"],
+  },
+  {
+    title: "Straatwerk",
+    location: "Leerdam e.o.",
+    image: "/images/project-straatwerk-leerdam-1.webp",
+    gallery: [
+      "/images/project-straatwerk-leerdam-1.webp",
+      "/images/project-straatwerk-leerdam-2.webp",
+      "/images/project-straatwerk-leerdam-3.webp",
+    ],
+    size: "regular",
+    slug: "straatwerk-leerdam",
+    summary:
+      "Straatwerk in de omgeving van Leerdam: van grondwerk en zandbed tot een strak afgetrilde, egale bestrating, netjes opgeleverd.",
+    body: [
+      "Voor dit project verzorgden we het volledige straatwerk, van voorbereiding tot oplevering. Eerst het grondwerk en een goed verdicht zandbed, zodat de bestrating een stabiele basis heeft.",
+      "Daarna hebben we de stenen strak gelegd en het geheel afgetrild voor een vlakke, egale ligging. We werken door tot het klopt, ook als dat betekent dat we in de avond nog even doorgaan om het netjes af te ronden.",
+    ],
+    highlights: [
+      "Grondwerk en verdicht zandbed",
+      "Bestrating strak gelegd",
+      "Afgetrild voor een vlakke ligging",
+      "Nette kantafwerking",
+      "Netjes opgeleverd",
+    ],
+    services: ["Straatwerk", "Grondwerk"],
+  },
+  {
+    title: "Schutting Dalem",
+    location: "Dalem",
+    image: "/images/project-schutting-dalem-1.webp",
+    gallery: [
+      "/images/project-schutting-dalem-1.webp",
+      "/images/project-schutting-dalem-2.webp",
+    ],
+    size: "regular",
+    slug: "schutting-dalem",
+    summary:
+      "In Dalem plaatsten wij een strakke hardhouten schutting met stevige antracieten palen, die de tuin een nette, afgeschermde rand geeft.",
+    body: [
+      "Voor deze nieuwbouwtuin in Dalem plaatsten we een strakke hardhouten schutting. De houten schermen zijn gecombineerd met stevige antracieten palen, wat een moderne, verzorgde uitstraling geeft.",
+      "Alles is waterpas en op maat geplaatst, met een stevige verankering die de schermen jarenlang op hun plek houdt. Zo krijgt de tuin een nette afscheiding en meer privacy, klaar om verder ingericht te worden.",
+    ],
+    highlights: [
+      "Hardhouten schermen",
+      "Stevige antracieten palen",
+      "Waterpas en op maat geplaatst",
+      "Stevige verankering",
+      "Strakke, moderne uitstraling",
+    ],
+    services: ["Schuttingwerk", "Tuinaanleg"],
+  },
 ]
 
 export function getProjectBySlug(slug: string) {
