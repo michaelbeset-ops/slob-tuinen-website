@@ -3,9 +3,8 @@ import { notFound } from "next/navigation"
 import { ArrowLeft, Check, MapPin } from "lucide-react"
 import { SiteHeader } from "@/components/slob/site-header"
 import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
-import { WhatsAppIcon } from "@/components/slob/whatsapp-icon"
 import { BeforeAfter } from "@/components/slob/before-after"
-import { getProjectBySlug, PROJECT_SLUGS, whatsappUrl } from "@/components/slob/data"
+import { getProjectBySlug, PROJECT_SLUGS } from "@/components/slob/data"
 import { withBasePath } from "@/lib/base-path"
 
 const SITE_URL = "https://michaelbeset-ops.github.io/slob-tuinen-website/"
@@ -250,14 +249,9 @@ export default async function ProjectPage({
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href={whatsappUrl(
-                  `Hallo Martin, ik zag jullie project "${project.title}" in ${project.location} en wil graag een offerte voor iets soortgelijks.`,
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={withBasePath("/offerte")}
                 className="inline-flex items-center gap-3 bg-forest px-8 py-5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark"
               >
-                <WhatsAppIcon className="size-5" />
                 Offerte aanvragen
               </a>
               <a
