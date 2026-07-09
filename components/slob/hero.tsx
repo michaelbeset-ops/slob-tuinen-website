@@ -1,7 +1,7 @@
 import { ArrowDown, Check } from "lucide-react"
 import { Navbar } from "./navbar"
 import { WhatsAppIcon } from "./whatsapp-icon"
-import { WHATSAPP_QUOTE, WHATSAPP_URL } from "./data"
+import { WHATSAPP_URL } from "./data"
 import { withBasePath } from "@/lib/base-path"
 
 export function Hero() {
@@ -46,9 +46,7 @@ export function Hero() {
             Direct contact via WhatsApp
           </a>
           <a
-            href={WHATSAPP_QUOTE}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={withBasePath("/offerte")}
             className="inline-flex items-center justify-center gap-2 rounded-none border border-white/40 px-6 py-4 text-sm font-semibold uppercase tracking-wide text-white/85 transition-colors hover:border-white hover:text-white md:px-8 md:py-5"
           >
             Offerte aanvragen
