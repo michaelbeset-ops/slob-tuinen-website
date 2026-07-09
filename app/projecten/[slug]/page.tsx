@@ -184,6 +184,38 @@ export default async function ProjectPage({
           </section>
         )}
 
+        {/* Galerij */}
+        {(() => {
+          const gallery = (project.gallery ?? []).filter(
+            (src) => src !== project.image,
+          )
+          return gallery.length > 0 ? (
+            <section className="mx-auto max-w-[1600px] px-6 py-16 md:px-12 md:py-20">
+              <div className="border-t border-border pt-14">
+                <h2 className="mb-8 font-black uppercase tracking-tighter text-foreground text-[clamp(1.75rem,4vw,3rem)]">
+                  Beeld van het werk
+                </h2>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
+                  {gallery.map((src, i) => (
+                    <div
+                      key={src}
+                      className="relative aspect-[4/3] overflow-hidden bg-muted"
+                    >
+                      <img
+                        src={withBasePath(src)}
+                        alt={`${project.title} in ${project.location}, foto ${i + 2}`}
+                        loading="lazy"
+                        decoding="async"
+                        className="size-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          ) : null
+        })()}
+
         {/* Voor & na */}
         {project.beforeImage && (
           <section className="mx-auto max-w-[1600px] px-6 py-16 md:px-12 md:py-20">
