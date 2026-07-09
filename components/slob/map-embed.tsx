@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { MapPin } from "lucide-react"
 
 const MAPS_EMBED_URL =
@@ -11,9 +11,38 @@ const MAPS_ROUTE_URL =
 /**
  * Click-to-load Google Maps: de kaart (en de cookies van Google) worden pas
  * geladen nadat de bezoeker daar expliciet voor kiest. Sneller én AVG-proof.
+ *
+ * De keuze wordt onthouden: heeft de bezoeker de cookies geaccepteerd (of eerder
+ * de kaart geladen), dan laadt de kaart voortaan automatisch. Zo hoeft niemand
+ * telkens opnieuw op "Kaart laden" te klikken.
  */
 export function MapEmbed() {
   const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    const check = () => {
+      try {
+        const cookie = localStorage.getItem("cookie_consent")
+        const maps = localStorage.getItem("maps_consent")
+        if (cookie === "accepted" || maps === "accepted") setLoaded(true)
+      } catch {
+        /* localStorage niet beschikbaar: kaart blijft achter de knop */
+      }
+    }
+    check()
+    // Zodra de bezoeker de cookies accepteert, meteen de kaart tonen.
+    window.addEventListener("slob-cookie-accepted", check)
+    return () => window.removeEventListener("slob-cookie-accepted", check)
+  }, [])
+
+  const load = () => {
+    try {
+      localStorage.setItem("maps_consent", "accepted")
+    } catch {
+      /* negeer */
+    }
+    setLoaded(true)
+  }
 
   if (loaded) {
     return (
@@ -41,7 +70,7 @@ export function MapEmbed() {
       <div className="flex flex-col gap-3 sm:flex-row">
         <button
           type="button"
-          onClick={() => setLoaded(true)}
+          onClick={load}
           className="bg-forest px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark"
         >
           Kaart laden
