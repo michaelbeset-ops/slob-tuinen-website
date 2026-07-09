@@ -35,28 +35,28 @@ export function Hero() {
           bel me gerust, dan kijk ik met u mee.
         </p>
 
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center md:mt-10">
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 rounded-none bg-forest px-8 py-5 text-base font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark"
+            className="inline-flex items-center justify-center gap-3 rounded-none bg-forest px-6 py-4 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-forest-dark md:px-8 md:py-5 md:text-base"
           >
-            <WhatsAppIcon className="size-5" />
+            <WhatsAppIcon className="size-5 shrink-0" />
             Direct contact via WhatsApp
           </a>
           <a
             href={WHATSAPP_QUOTE}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-none border border-white/40 px-8 py-5 text-sm font-semibold uppercase tracking-wide text-white/85 transition-colors hover:border-white hover:text-white"
+            className="inline-flex items-center justify-center gap-2 rounded-none border border-white/40 px-6 py-4 text-sm font-semibold uppercase tracking-wide text-white/85 transition-colors hover:border-white hover:text-white md:px-8 md:py-5"
           >
             Offerte aanvragen
           </a>
         </div>
 
         {/* Vertrouwenspunten */}
-        <ul className="mt-8 flex flex-col gap-x-8 gap-y-3 text-sm text-white/85 sm:flex-row sm:flex-wrap sm:items-center">
+        <ul className="mt-6 flex flex-col gap-x-8 gap-y-2.5 text-[0.8125rem] text-white/85 sm:flex-row sm:flex-wrap sm:items-center md:mt-8 md:text-sm">
           {[
             "Eén vast aanspreekpunt van begin tot eind",
             "Jarenlange ervaring in zwaar grond- en straatwerk",

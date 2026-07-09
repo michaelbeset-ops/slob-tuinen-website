@@ -68,18 +68,18 @@ export function Reviews() {
           </div>
 
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-4 border border-border bg-card px-6 py-5 shadow-sm">
-              <GoogleG className="size-12 shrink-0" />
+            <div className="flex items-center gap-4 border border-border bg-card px-4 py-4 shadow-sm md:px-6 md:py-5">
+              <GoogleG className="size-10 shrink-0 md:size-12" />
               <div>
                 <div className="flex items-center gap-2.5">
-                  <span className="text-4xl font-black leading-none tracking-tight text-foreground">5,0</span>
+                  <span className="text-3xl font-black leading-none tracking-tight text-foreground md:text-4xl">5,0</span>
                   <Stars count={5} size="lg" />
                 </div>
                 <p className="mt-1.5 text-sm font-medium text-muted-foreground">Beoordelingen op Google</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="hidden items-center gap-2 md:flex">
               <button
                 type="button"
                 onClick={() => scrollToIndex(active - 1)}
@@ -113,11 +113,16 @@ export function Reviews() {
             key={review.name}
             className="w-[85%] shrink-0 snap-start border border-border bg-card p-6 sm:w-[60%] md:p-8 lg:w-[38%]"
           >
-            <Stars count={review.rating} size="lg" />
-            <blockquote className="mt-5 text-pretty text-lg leading-relaxed text-foreground">
+            <div className="md:hidden">
+              <Stars count={review.rating} size="md" />
+            </div>
+            <div className="hidden md:block">
+              <Stars count={review.rating} size="lg" />
+            </div>
+            <blockquote className="mt-4 text-pretty leading-relaxed text-foreground md:mt-5 md:text-lg">
               &ldquo;{review.quote}&rdquo;
             </blockquote>
-            <figcaption className="mt-8 flex items-center gap-3 border-t border-border pt-5">
+            <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-5 md:mt-8">
               <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-forest text-sm font-bold uppercase text-white">
                 {review.name.charAt(0)}
               </span>

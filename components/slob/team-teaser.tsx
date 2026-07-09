@@ -29,10 +29,10 @@ export function TeamTeaser() {
               van Slob
             </h2>
             <p className="mt-6 max-w-md text-pretty leading-relaxed text-white/65">
-              Achter elk project staat een nuchtere club mannen die simpelweg
-              van aanpakken weet. Geen dure praatjes, maar mouwen opstropen. We
-              werken netjes, overleggen als dat nodig is en gaan pas weg als de
-              oprit of tuin er strak bij ligt. Gewoon goed geregeld.
+              Achter elk project staat een vast team dat van aanpakken weet.
+              Geen loze beloftes, maar vakwerk en korte lijnen. We werken netjes,
+              overleggen waar nodig en zijn pas tevreden als de oprit of tuin er
+              strak bij ligt.
             </p>
             <a
               href={withBasePath("/over-ons")}

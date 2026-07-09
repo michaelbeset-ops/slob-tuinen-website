@@ -81,6 +81,8 @@ export type Service = {
   paragraphs: string[]
   /** Wat wij bieden (bulletlijst). */
   highlights: string[]
+  /** Eigen foto's van uitgevoerd werk, getoond als galerij op de dienstpagina. */
+  gallery?: string[]
 }
 
 export const SERVICES: Service[] = [
@@ -107,7 +109,7 @@ export const SERVICES: Service[] = [
   {
     id: "grondverzet",
     title: "Grondverzet",
-    image: "/images/service-grondverzet.webp",
+    image: "/images/project-grondverzet-kopje.webp",
     intro: "Graven, verplaatsen en egaliseren met zwaar materieel.",
     summary:
       "Grondverzet in Leerdam en de Betuwe: ontgraven, ophogen, egaliseren en grond afvoeren. Wij hebben het materieel in huis en leveren uw terrein netjes op.",
@@ -123,6 +125,7 @@ export const SERVICES: Service[] = [
       "Kavels bouwrijp maken",
       "Modern materieel, ervaren uitvoering",
     ],
+    gallery: ["/images/service-grondverzet-work.webp"],
   },
   {
     id: "beschoeiingswerk",
@@ -203,6 +206,11 @@ export const SERVICES: Service[] = [
       "Klinkers, tegels of natuursteen",
       "Degelijke voorbereiding van de ondergrond",
     ],
+    gallery: [
+      "/images/service-straatwerk-work-1.webp",
+      "/images/service-straatwerk-work-2.webp",
+      "/images/service-straatwerk-work-3.webp",
+    ],
   },
 ]
 
@@ -256,12 +264,6 @@ export const PROJECTS: Project[] = [
     services: ["Grondwerk", "Grondverzet", "Straatwerk"],
   },
   {
-    title: "Moderne Oprit",
-    location: "Leerdam",
-    image: "/images/project-oprit.webp",
-    size: "tall",
-  },
-  {
     title: "Tuinaanleg Dalem",
     location: "Dalem",
     image: "/images/project-dalem-1.webp",
@@ -289,22 +291,107 @@ export const PROJECTS: Project[] = [
     services: ["Grondwerk", "Straatwerk", "Tuinaanleg"],
   },
   {
-    title: "Grootschalig Grondverzet",
-    location: "Betuwe",
-    image: "/images/project-grondverzet-kopje.webp",
+    title: "Tuinaanleg Vianen",
+    location: "Vianen",
+    image: "/images/project-tuinaanleg-vianen-1.webp",
+    gallery: [
+      "/images/project-tuinaanleg-vianen-1.webp",
+      "/images/project-tuinaanleg-vianen-2.webp",
+    ],
     size: "wide",
+    slug: "tuinaanleg-vianen",
+    summary:
+      "In Vianen legden wij een strak terras met grootformaat tegels aan, met bestrating langs de woning en een nette afwerking tegen de schutting.",
+    body: [
+      "Voor deze tuin in Vianen was de wens een strak, onderhoudsarm terras waar het fijn zitten is. We begonnen met een goed voorbereide, waterpas ondergrond zodat de tegels vlak blijven liggen en het water goed wegloopt.",
+      "Het terras is gelegd met grootformaat tegels in een rustige tint, netjes ingepast tegen de schutting en de woning. Langs de zijkant zorgden we voor bestrating met een nette kantopsluiting, zodat het geheel strak op elkaar aansluit.",
+    ],
+    highlights: [
+      "Waterpas voorbereide ondergrond",
+      "Terras met grootformaat tegels",
+      "Bestrating langs de woning",
+      "Nette kantopsluiting",
+      "Strak en onderhoudsarm opgeleverd",
+    ],
+    services: ["Tuinaanleg", "Straatwerk"],
   },
   {
-    title: "Complete Tuinaanleg",
-    location: "Leerdam e.o.",
-    image: "/images/project-tuin.webp",
+    title: "Tuinaanleg Dussen",
+    location: "Dussen",
+    image: "/images/project-tuinaanleg-dussen-1.webp",
+    gallery: [
+      "/images/project-tuinaanleg-dussen-1.webp",
+      "/images/project-tuinaanleg-dussen-2.webp",
+      "/images/project-tuinaanleg-dussen-3.webp",
+    ],
     size: "regular",
+    slug: "tuinaanleg-dussen",
+    summary:
+      "Een onderhoudsarme voortuin in Dussen met siergrind, strakke plantenbakken van betonblokken en een net pad naar de voordeur.",
+    body: [
+      "Voor deze voortuin in Dussen was de wens een verzorgde, onderhoudsarme uitstraling met weinig omkijken. We hebben de tuin opnieuw ingericht met een basis van siergrind en strakke plantvakken.",
+      "De plantenbakken zijn opgebouwd uit nette betonblokken in grijs en antraciet, gevuld met aarde en klaar voor beplanting. Een strak pad leidt naar de voordeur, met de bestrating netjes aangesloten op de bestaande stoep.",
+    ],
+    highlights: [
+      "Onderhoudsarme voortuin",
+      "Siergrind als basis",
+      "Plantenbakken van betonblokken",
+      "Net toegangspad naar de voordeur",
+      "Strak en verzorgd afgewerkt",
+    ],
+    services: ["Tuinaanleg", "Groenvoorziening", "Straatwerk"],
   },
   {
-    title: "Beschoeiing & Oever",
-    location: "Vijfheerenlanden",
-    image: "/images/project-beschoeiing.webp",
-    size: "tall",
+    title: "Straatwerk Gouda",
+    location: "Gouda",
+    image: "/images/project-straatwerk-gouda-1.webp",
+    gallery: [
+      "/images/project-straatwerk-gouda-1.webp",
+      "/images/project-straatwerk-gouda-2.webp",
+      "/images/project-straatwerk-gouda-3.webp",
+      "/images/project-straatwerk-gouda-4.webp",
+    ],
+    size: "wide",
+    slug: "straatwerk-gouda",
+    summary:
+      "Een ruime oprit in Gouda opnieuw bestraat: van egaliseren en zandbed tot een strak gelegde, egale verharding rond het huis.",
+    body: [
+      "Voor deze woning in Gouda mochten we de ruime oprit opnieuw bestraten. We zijn begonnen met het opnemen van de oude verharding, het egaliseren van de ondergrond en het aanbrengen van een goed verdicht zandbed.",
+      "Daarna hebben we de bestrating strak gelegd, netjes ingepast rond de bestaande bomen en de gevel. Het resultaat is een egale, ruime oprit met volop plek om te parkeren, die vlak blijft liggen en jaren meegaat.",
+    ],
+    highlights: [
+      "Opnemen van de oude verharding",
+      "Egaliseren en verdicht zandbed",
+      "Bestrating strak gelegd rond bestaande bomen",
+      "Ruime, egale parkeerruimte",
+      "Vlak en degelijk opgeleverd",
+    ],
+    services: ["Straatwerk", "Grondwerk", "Grondverzet"],
+  },
+  {
+    title: "Schutting Dalem",
+    location: "Dalem",
+    image: "/images/project-schutting-dalem-1.webp",
+    gallery: [
+      "/images/project-schutting-dalem-1.webp",
+      "/images/project-schutting-dalem-2.webp",
+    ],
+    size: "regular",
+    slug: "schutting-dalem",
+    summary:
+      "In Dalem plaatsten wij een strakke hardhouten schutting met stevige antracieten palen, die de tuin een nette, afgeschermde rand geeft.",
+    body: [
+      "Voor deze nieuwbouwtuin in Dalem plaatsten we een strakke hardhouten schutting. De houten schermen zijn gecombineerd met stevige antracieten palen, wat een moderne, verzorgde uitstraling geeft.",
+      "Alles is waterpas en op maat geplaatst, met een stevige verankering die de schermen jarenlang op hun plek houdt. Zo krijgt de tuin een nette afscheiding en meer privacy, klaar om verder ingericht te worden.",
+    ],
+    highlights: [
+      "Hardhouten schermen",
+      "Stevige antracieten palen",
+      "Waterpas en op maat geplaatst",
+      "Stevige verankering",
+      "Strakke, moderne uitstraling",
+    ],
+    services: ["Schuttingwerk", "Tuinaanleg"],
   },
 ]
 

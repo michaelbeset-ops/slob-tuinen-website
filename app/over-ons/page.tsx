@@ -33,10 +33,10 @@ export default function OverOnsPage() {
               het werk
             </h1>
             <p className="mt-8 max-w-lg text-pretty text-lg leading-relaxed text-white/75">
-              Slob Tuinen, dat is Martin Slob. Een nuchtere Leerdammer die zijn
-              vak verstaat en gewoon doet wat hij belooft. Hij staat zelf op de
-              klus en pakt elk werk aan alsof het zijn eigen tuin is, of het nu
-              gaat om zwaar grondwerk of de laatste straatsteen.
+              Slob Tuinen, dat is Martin Slob. Een echte Leerdammer die zijn
+              vak verstaat en doet wat hij belooft. Hij staat zelf op de klus en
+              pakt elk werk aan alsof het zijn eigen tuin is, of het nu gaat om
+              zwaar grondwerk of de laatste straatsteen.
             </p>
             <div className="mt-6">
               <span className="inline-block bg-forest px-6 py-3 text-sm font-bold uppercase tracking-wide text-white">
