@@ -25,27 +25,46 @@ export type TeamMember = {
   name: string
   role: string
   image?: string
+  /** Korte introductie of omschrijving van de werkzaamheden, per alinea. */
+  bio?: string[]
 }
 
-// Vervang de namen en voeg foto's toe (image: "/images/naam.webp") zodra die
-// er zijn. De kaarten op /over-ons tonen tot die tijd een initiaal.
+/** Groepsfoto van het team, o.a. gebruikt in de "Over ons"-sectie op de homepage. */
+export const TEAM_PHOTO = "/images/team-groepsfoto.webp"
+
 export const TEAM: TeamMember[] = [
   {
     name: "Martin Slob",
     role: "Eigenaar & Uitvoerder",
-    image: "/images/martin-slob.webp",
+    image: "/images/team-martin.webp",
+    bio: [
+      "Hallo, ik ben Martin Slob en ik kom uit Leerdam. Begin 2025 heb ik het bedrijf Slob Tuinen opgericht.",
+      "Wij houden ons bezig met tuinen, groenvoorziening, straatwerk, grondverzet, kraanverhuur, beschoeiingswerk, parken en bedrijventerreinen.",
+      "We werken samen met vaste partners waarmee we dit alles mogelijk maken en de juiste kwaliteit kunnen leveren.",
+      "We hopen snel bij u langs te mogen komen om uw project te bezichtigen en een offerte te maken!",
+    ],
   },
   {
-    name: "Medewerker 1",
-    role: "Grondwerk & Bestrating",
+    name: "Rick de Bruijn",
+    role: "Straatwerk, Beschoeiing & Grondverzet",
+    image: "/images/team-rick.webp",
+    bio: [
+      "Rick realiseert werkzaamheden in straatwerk, beschoeiingen en grondverzet.",
+    ],
   },
   {
-    name: "Medewerker 2",
-    role: "Tuinaanleg & Groenvoorziening",
+    name: "Tieme de Rijke",
+    role: "Straatwerk & Beschoeiing",
+    image: "/images/team-tieme.webp",
+    bio: ["Tieme realiseert werkzaamheden in straatwerk en beschoeiingen."],
   },
   {
-    name: "Medewerker 3",
-    role: "Beschoeiing & Grondverzet",
+    name: "Jesse Pelicaan",
+    role: "Groenvoorziening & Tuinaanleg",
+    image: "/images/team-jesse.webp",
+    bio: [
+      "Jesse realiseert werkzaamheden in groenvoorziening, bedrijventerreinen en tuinen.",
+    ],
   },
 ]
 
@@ -197,6 +216,8 @@ export type Project = {
   image: string
   /** Optional "before" photo. When set, the detail page toont een swipe-vergelijking. */
   beforeImage?: string
+  /** Extra foto's, getoond als galerij op de detailpagina. */
+  gallery?: string[]
   size: "tall" | "wide" | "regular"
   /** Wanneer gezet, is de projectkaart klikbaar naar /projecten/[slug]. */
   slug?: string
@@ -241,9 +262,36 @@ export const PROJECTS: Project[] = [
     size: "tall",
   },
   {
+    title: "Tuinaanleg Dalem",
+    location: "Dalem",
+    image: "/images/project-dalem-1.webp",
+    gallery: [
+      "/images/project-dalem-1.webp",
+      "/images/project-dalem-2.webp",
+      "/images/project-dalem-3.webp",
+    ],
+    size: "wide",
+    slug: "tuinaanleg-dalem",
+    summary:
+      "In Dalem legden wij een complete achtertuin aan: een strakke bestrating van getrommelde klinkers en een warm hardhouten vlonder rond de bestaande bomen.",
+    body: [
+      "Voor deze tuin in Dalem mochten we de hele achtertuin opnieuw inrichten. De wens was een onderhoudsarme tuin met een warme, natuurlijke uitstraling waar het fijn zitten is, met behoud van de bestaande leibomen tegen de schutting.",
+      "We zijn begonnen met het grondwerk en een goed voorbereide, waterpas ondergrond. Daarna hebben we de bestrating gelegd met getrommelde klinkers in een rustig legverband, met nette kantopsluiting zodat alles strak blijft liggen. Rond de bomen legden we een hardhouten vlonder, netjes ingepast met uitsparingen zodat de stammen de ruimte houden om te groeien.",
+      "Het resultaat is een complete, gebruiksklare tuin: een ruim terras om te zitten, een warm houten vlonder en genoeg plek voor potten en beplanting. Onderhoudsarm en klaar om jaren van te genieten.",
+    ],
+    highlights: [
+      "Grondwerk en waterpas voorbereide ondergrond",
+      "Bestrating met getrommelde klinkers en nette kantopsluiting",
+      "Hardhouten vlonder, ingepast rond de bestaande bomen",
+      "Ruimte voor beplanting en potten",
+      "Onderhoudsarm en strak opgeleverd",
+    ],
+    services: ["Grondwerk", "Straatwerk", "Tuinaanleg"],
+  },
+  {
     title: "Grootschalig Grondverzet",
     location: "Betuwe",
-    image: "/images/project-grondverzet.webp",
+    image: "/images/project-grondverzet-kopje.webp",
     size: "wide",
   },
   {

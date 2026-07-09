@@ -1,4 +1,4 @@
-import { whatsappUrl } from "./data"
+import { whatsappUrl, TEAM_PHOTO } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { withBasePath } from "@/lib/base-path"
 
@@ -23,15 +23,15 @@ export function About() {
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="relative min-h-[420px] overflow-hidden lg:min-h-[760px]">
           <img
-            src={withBasePath("/images/martin-slob.webp")}
-            alt="Martin Slob, eigenaar van Slob Tuinen, aan het werk"
+            src={withBasePath(TEAM_PHOTO)}
+            alt="Het team van Slob Tuinen bij de bedrijfsbus en kraan"
             loading="lazy"
             decoding="async"
             className="absolute inset-0 size-full object-cover"
           />
           <div className="absolute bottom-0 left-0 bg-forest px-6 py-4">
             <span className="font-black uppercase tracking-tight text-white">
-              Martin Slob
+              Het team van Slob Tuinen
             </span>
           </div>
         </div>

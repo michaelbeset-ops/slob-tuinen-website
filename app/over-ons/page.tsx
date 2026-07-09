@@ -20,7 +20,7 @@ export default function OverOnsPage() {
       {/* Hero: Martin Slob prominent */}
       <section id="hoofdinhoud" tabIndex={-1} className="relative min-h-[70vh] bg-foreground">
         <img
-          src={withBasePath("/images/martin-slob.webp")}
+          src={withBasePath(martin.image ?? "/images/martin-slob.webp")}
           alt="Martin Slob, eigenaar van Slob Tuinen"
           fetchPriority="high"
           decoding="async"
@@ -59,27 +59,14 @@ export default function OverOnsPage() {
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
             <div>
               <h2 className="text-balance font-black uppercase leading-[0.9] tracking-tighter text-foreground text-[clamp(2rem,4vw,3.5rem)]">
-                Zelf op de klus,
+                Even
                 <br />
-                elke dag
+                voorstellen
               </h2>
               <div className="mt-8 flex flex-col gap-5 text-pretty leading-relaxed text-muted-foreground">
-                <p>
-                  Martin werkt al jaren in het buitenvak: grondwerk,
-                  tuinaanleg, beschoeiing en straatwerk. Hij begon jong en
-                  heeft in de loop van de tijd van alles voorbij zien komen. Die
-                  ervaring ziet u terug in het werk.
-                </p>
-                <p>
-                  Het grote verschil? Hij staat er zelf bij. Hij denkt met u
-                  mee, pakt de schop mee de grond in en levert op wat hij heeft
-                  beloofd. Zonder gedoe, zonder verrassingen achteraf.
-                </p>
-                <p>
-                  We werken voor particulieren en bedrijven in Leerdam en de
-                  Betuwe. Een klein klusje of een groot project: het werk klopt,
-                  tot in de details.
-                </p>
+                {(martin.bio ?? []).map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
               </div>
               <a
                 href={whatsappUrl("Hallo Martin, ik zou graag een kennismaking inplannen.")}
@@ -167,9 +154,16 @@ export default function OverOnsPage() {
                     <p className="font-black uppercase tracking-tight text-foreground">
                       {member.name}
                     </p>
-                    <p className="mt-1 text-sm text-muted-foreground">
+                    <p className="mt-1 text-sm font-semibold text-forest">
                       {member.role}
                     </p>
+                    {member.bio && member.bio.length > 0 && (
+                      <div className="mt-3 flex flex-col gap-2 text-sm leading-relaxed text-muted-foreground">
+                        {member.bio.map((p, i) => (
+                          <p key={i}>{p}</p>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
