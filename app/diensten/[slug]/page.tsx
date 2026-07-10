@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { ArrowLeft, ArrowUpRight, Check } from "lucide-react"
+import { ArrowLeft, ArrowUpRight, Check, Plus } from "lucide-react"
 import { SiteHeader } from "@/components/slob/site-header"
 import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
 import { getServiceById, SERVICES } from "@/components/slob/data"
@@ -21,7 +21,7 @@ export async function generateMetadata({
   const service = getServiceById(slug)
   if (!service) return { title: "Dienst niet gevonden | Slob Tuinen" }
 
-  const title = `${service.title} | Slob Tuinen, Leerdam e.o.`
+  const title = `${service.title} in Leerdam en omgeving | Slob Tuinen`
   const description = service.summary
   // OG-afbeelding afgeleid van de afbeeldingsnaam (image-id ≠ altijd de slug).
   const ogImage = service.image.replace(/^\//, "").replace(/\.webp$/, "-og.jpg")
@@ -29,6 +29,7 @@ export async function generateMetadata({
   return {
     title,
     description,
+    keywords: service.keywords,
     alternates: { canonical: `${SITE_URL}diensten/${slug}` },
     openGraph: {
       type: "article",
@@ -91,6 +92,20 @@ export default async function ServicePage({
     ],
   }
 
+  // FAQ-structured-data: kans op een uitgebreid zoekresultaat (rich result) in Google.
+  const faqLd =
+    service.faq && service.faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: service.faq.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a },
+          })),
+        }
+      : null
+
   return (
     <div className="min-h-screen bg-background">
       <script
@@ -101,6 +116,12 @@ export default async function ServicePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      {faqLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
       <SiteHeader />
 
       <main id="hoofdinhoud" tabIndex={-1}>
@@ -211,6 +232,35 @@ export default async function ServicePage({
                       className="size-full object-cover"
                     />
                   </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Veelgestelde vragen (goed voor SEO en de bezoeker) */}
+        {service.faq && service.faq.length > 0 && (
+          <section className="mx-auto max-w-[1600px] px-6 pb-16 md:px-12 md:pb-24">
+            <div className="border-t border-border pt-14">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-forest">
+                Veelgestelde vragen
+              </p>
+              <h2 className="mb-10 font-black uppercase tracking-tighter text-foreground text-[clamp(1.75rem,4vw,3rem)]">
+                {service.title}: goed om te weten
+              </h2>
+              <div className="mx-auto grid max-w-4xl grid-cols-1 gap-px border border-border bg-border">
+                {service.faq.map((item) => (
+                  <details key={item.q} className="group bg-background">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-6 font-bold text-foreground marker:content-none">
+                      <span>{item.q}</span>
+                      <span className="shrink-0 text-forest transition-transform group-open:rotate-45" aria-hidden="true">
+                        <Plus className="size-5" />
+                      </span>
+                    </summary>
+                    <p className="px-6 pb-6 leading-relaxed text-muted-foreground">
+                      {item.a}
+                    </p>
+                  </details>
                 ))}
               </div>
             </div>

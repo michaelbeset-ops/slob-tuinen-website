@@ -83,6 +83,10 @@ export type Service = {
   highlights: string[]
   /** Eigen foto's van uitgevoerd werk, getoond als galerij op de dienstpagina. */
   gallery?: string[]
+  /** Zoektermen waarop deze dienst gevonden mag worden (voor de meta keywords). */
+  keywords?: string[]
+  /** Veelgestelde vragen: op de pagina én als FAQ-structured-data voor Google. */
+  faq?: { q: string; a: string }[]
 }
 
 export const SERVICES: Service[] = [
@@ -104,6 +108,30 @@ export const SERVICES: Service[] = [
       "Bestrating, paden en terrassen",
       "Beplanting, hagen en borders",
       "Netjes opgeleverd tot in de details",
+    ],
+    keywords: [
+      "tuinaanleg",
+      "tuin aanleggen",
+      "hovenier Leerdam",
+      "tuinaanleg Leerdam",
+      "complete tuin aanleggen",
+      "tuinontwerp",
+      "achtertuin aanleggen",
+      "voortuin aanleggen",
+    ],
+    faq: [
+      {
+        q: "Leggen jullie de hele tuin aan of alleen een deel?",
+        a: "Beide kan. We leggen complete tuinen aan, van grondwerk en bestrating tot beplanting, maar we pakken net zo goed een deel van de tuin aan. Alles in eigen beheer, met één aanspreekpunt.",
+      },
+      {
+        q: "Verzorgen jullie ook het ontwerp?",
+        a: "Ja. We komen langs, luisteren naar uw wensen en denken met u mee over de indeling en materialen, zodat de tuin bij uw huis en manier van buitenleven past.",
+      },
+      {
+        q: "In welke omgeving leggen jullie tuinen aan?",
+        a: "In Leerdam en omgeving, waaronder de Vijfheerenlanden, Vianen, Gorinchem, Culemborg en de Betuwe.",
+      },
     ],
   },
   {
@@ -129,25 +157,97 @@ export const SERVICES: Service[] = [
       "/images/service-grondverzet-work.webp",
       "/images/project-grondverzet-kopje.webp",
     ],
+    keywords: [
+      "grondverzet",
+      "grondverzet Leerdam",
+      "grondwerk en grondverzet",
+      "ontgraven",
+      "terrein ophogen",
+      "grond afvoeren",
+      "kavel bouwrijp maken",
+      "minigraver huren met machinist",
+      "grondverzet Betuwe",
+    ],
+    faq: [
+      {
+        q: "Wat valt er allemaal onder grondverzet?",
+        a: "Onder grondverzet vallen ontgraven en uitgraven, ophogen en egaliseren, het afvoeren van overtollige grond en bijvoorbeeld een kavel bouwrijp maken. We hebben het materieel in eigen beheer.",
+      },
+      {
+        q: "Voeren jullie ook de grond af?",
+        a: "Ja. We voeren de grond af die u niet meer nodig heeft en laten het terrein strak en netjes achter.",
+      },
+      {
+        q: "Houden jullie rekening met kabels en leidingen?",
+        a: "Zeker. We werken zorgvuldig en houden rekening met kabels, leidingen en de omgeving, zodat er geen verrassingen ontstaan.",
+      },
+    ],
   },
   {
     id: "beschoeiingswerk",
     title: "Beschoeiingswerk",
     image: "/images/service-beschoeiing.webp",
-    intro: "Stevige oeverbescherming langs het water.",
+    intro: "Beschoeiing plaatsen en vervangen langs sloot, vijver en watergang.",
     summary:
-      "Beschoeiing langs het water in de Vijfheerenlanden en omgeving. Wij plaatsen stevige oevers in hout, kunststof of staal, waterpas en op maat.",
+      "Beschoeiing plaatsen of vervangen in Leerdam, de Vijfheerenlanden en de Betuwe. Wij leggen stevige oeverbeschoeiing aan in hardhout, kunststof of composiet, waterpas, op maat en met een verankering die jarenlang meegaat.",
     paragraphs: [
-      "Een goede beschoeiing houdt uw oever op zijn plek en geeft het water een nette rand. In een waterrijk gebied als de Vijfheerenlanden is dat geen overbodige luxe, maar gewoon nodig.",
-      "We plaatsen beschoeiing in hout, kunststof of staal, afhankelijk van uw situatie en van wat u mooi vindt. Alles komt waterpas en op maat te staan, met een verankering die de druk van grond en water jarenlang houdt.",
-      "Een sloot, een vijver of een bredere watergang: we zorgen voor een oever die decennia meegaat en de overgang tussen land en water netjes afmaakt.",
+      "Een goede beschoeiing houdt uw oever op zijn plek en geeft de overgang tussen land en water een strakke, nette rand. In een waterrijk gebied als de Vijfheerenlanden, de Alblasserwaard en het Rivierenland is oeverbeschoeiing geen luxe maar noodzaak: zonder stevige walbeschoeiing kalft de kant af, zakt uw grond weg en loopt de sloot dicht.",
+      "Wij plaatsen beschoeiing in hardhout, kunststof (bijvoorbeeld een kunststof damwand) of composiet, afhankelijk van uw situatie, budget en gewenste uitstraling. Hardhout heeft een natuurlijke look en gaat zo'n 20 tot 25 jaar mee; kunststof en composiet zijn onderhoudsvrij en gaan vaak 30 jaar of langer mee. Elke beschoeiing komt waterpas en op maat te staan, met stevige palen en een verankering die de druk van grond en water blijvend opvangt.",
+      "Staat uw huidige beschoeiing te rotten, begint de oever te verzakken of hangt het schot scheef? Dan is het tijd om de beschoeiing te vervangen. Wij nemen de oude constructie weg, herstellen de oever en plaatsen een nieuwe, duurzame oeverbescherming, zodat uw kant er weer jaren strak bij ligt.",
+      "Of het nu gaat om een slootkant, een vijver in de tuin, een bredere watergang of een oever langs een bedrijfsterrein: wij werken in Leerdam en omgeving, waaronder de Vijfheerenlanden, Vianen, Gorinchem, Culemborg en de Betuwe. We houden rekening met de regels van het waterschap (Rivierenland) en leveren het werk netjes op.",
     ],
     highlights: [
-      "Beschoeiing in hout, kunststof of staal",
-      "Bescherming tegen afkalving",
-      "Waterpas en op maat geplaatst",
-      "Stevige, duurzame verankering",
-      "Voor sloot, vijver of watergang",
+      "Beschoeiing plaatsen én vervangen",
+      "Hardhout, kunststof damwand of composiet",
+      "Oeverbeschoeiing voor sloot, vijver en watergang",
+      "Bescherming tegen afkalven en verzakken",
+      "Waterpas, op maat en stevig verankerd",
+      "Voor particulier en zakelijk in Leerdam e.o.",
+    ],
+    keywords: [
+      "beschoeiing",
+      "beschoeiing plaatsen",
+      "beschoeiing vervangen",
+      "beschoeiingswerk",
+      "oeverbeschoeiing",
+      "oeverbescherming",
+      "walbeschoeiing",
+      "houten beschoeiing",
+      "hardhouten beschoeiing",
+      "kunststof beschoeiing",
+      "kunststof damwand",
+      "composiet beschoeiing",
+      "beschoeiing sloot",
+      "vijverbeschoeiing",
+      "beschoeiing Leerdam",
+      "beschoeiing Vijfheerenlanden",
+      "beschoeiingsbedrijf Betuwe",
+    ],
+    faq: [
+      {
+        q: "Welk materiaal kan ik het beste kiezen voor mijn beschoeiing: hout, kunststof of composiet?",
+        a: "Dat hangt af van uw situatie en wensen. Hardhout heeft een warme, natuurlijke uitstraling en gaat zo'n 20 tot 25 jaar mee. Kunststof (een kunststof damwand) en composiet zijn onderhoudsvrij en gaan vaak 30 jaar of langer mee. We komen graag langs om samen de beste keuze te maken voor uw oever en budget.",
+      },
+      {
+        q: "Hoe lang gaat een beschoeiing mee?",
+        a: "De levensduur hangt af van het materiaal, de grondsoort en de belasting op de oever. Een hardhouten beschoeiing gaat gemiddeld 20 tot 25 jaar mee, kunststof en composiet vaak 30 jaar of langer.",
+      },
+      {
+        q: "Wanneer moet ik mijn beschoeiing vervangen?",
+        a: "Tijd om te vervangen is er meestal bij rot of scheuren in het hout, een scheefhangend of loskomend schot, of een oever die begint te verzakken of af te kalven. Wij bekijken uw situatie en adviseren eerlijk of herstel of vervangen verstandiger is.",
+      },
+      {
+        q: "Wat is het verschil tussen een beschoeiing en een damwand?",
+        a: "Een beschoeiing is doorgaans lager en houdt de grond langs de waterkant tegen. Een damwand is hoger en zwaarder en wordt gebruikt bij een grotere kerende hoogte. Wij adviseren wat past bij uw oever en de hoogte die gekeerd moet worden.",
+      },
+      {
+        q: "Wat kost beschoeiing per meter?",
+        a: "De prijs per strekkende meter hangt af van het materiaal, de hoogte, de lengte en de bereikbaarheid van de oever. Wij maken graag een vrijblijvende offerte op maat, zodat u vooraf precies weet waar u aan toe bent.",
+      },
+      {
+        q: "In welke regio plaatsen jullie beschoeiing?",
+        a: "Wij werken in Leerdam en omgeving, waaronder de Vijfheerenlanden, Vianen, Gorinchem, Culemborg, de Alblasserwaard en de Betuwe.",
+      },
     ],
   },
   {
@@ -169,6 +269,30 @@ export const SERVICES: Service[] = [
       "Structureel groenonderhoud",
       "Voor particulier en zakelijk",
     ],
+    keywords: [
+      "groenvoorziening",
+      "groenvoorziening Leerdam",
+      "beplanting",
+      "hagen planten",
+      "tuinonderhoud",
+      "snoeiwerk",
+      "groenonderhoud bedrijf",
+      "hovenier onderhoud",
+    ],
+    faq: [
+      {
+        q: "Doen jullie ook het onderhoud na de aanplant?",
+        a: "Ja. Als u dat wilt blijven we langskomen voor snoeien, knippen, schoffelen en het op peil houden van het groen, zodat u er zelf geen omkijken naar heeft.",
+      },
+      {
+        q: "Werken jullie ook voor bedrijven?",
+        a: "Zeker. We verzorgen groenaanleg en onderhoud voor zowel particulieren als bedrijven en bedrijventerreinen.",
+      },
+      {
+        q: "Kiezen jullie de beplanting voor mij uit?",
+        a: "We adviseren de juiste plant op de juiste plek, op basis van grondsoort, zon en het onderhoud dat erbij past. Zo blijft uw groen jaren mooi.",
+      },
+    ],
   },
   {
     id: "grondwerk",
@@ -188,6 +312,30 @@ export const SERVICES: Service[] = [
       "Waterpas voorbereide ondergrond",
       "Voorkomt verzakking en wateroverlast",
       "Basis voor bestrating en beplanting",
+    ],
+    keywords: [
+      "grondwerk",
+      "grondwerk Leerdam",
+      "fundering aanleggen",
+      "drainage aanleggen",
+      "ondergrond voorbereiden",
+      "afwatering tuin",
+      "bouwrijp maken",
+      "grondwerker",
+    ],
+    faq: [
+      {
+        q: "Waarom is goed grondwerk zo belangrijk?",
+        a: "Wat er onder de grond gebeurt, bepaalt of uw bestrating vlak blijft liggen en of planten goed groeien. Met de juiste opbouw, fundering en afwatering voorkomen we verzakking en wateroverlast.",
+      },
+      {
+        q: "Leggen jullie ook drainage aan?",
+        a: "Ja. We verzorgen drainage en afwatering, zodat regenwater goed wegloopt en u geen wateroverlast krijgt.",
+      },
+      {
+        q: "Kunnen jullie na het grondwerk ook de bestrating leggen?",
+        a: "Zeker. Omdat we ook straatwerk en tuinaanleg doen, pakken we meteen door op een goed voorbereide ondergrond.",
+      },
     ],
   },
   {
@@ -213,6 +361,30 @@ export const SERVICES: Service[] = [
       "/images/service-straatwerk-work-1.webp",
       "/images/service-straatwerk-work-2.webp",
       "/images/service-straatwerk-work-3.webp",
+    ],
+    keywords: [
+      "straatwerk",
+      "straatwerk Leerdam",
+      "bestrating",
+      "oprit bestraten",
+      "terras aanleggen",
+      "klinkers leggen",
+      "sierbestrating",
+      "stratenmaker Leerdam",
+    ],
+    faq: [
+      {
+        q: "Welke bestrating kan ik kiezen?",
+        a: "Klinkers, betontegels of natuursteen. We helpen u kiezen in materiaal en legpatroon dat past bij uw huis en gebruik, en dat blijft liggen.",
+      },
+      {
+        q: "Zorgen jullie ook voor een goede afwatering?",
+        a: "Ja. We leggen de bestrating met het juiste afschot en een goede kantopsluiting, zodat regenwater wegloopt en er niets wegzakt.",
+      },
+      {
+        q: "Leggen jullie ook de ondergrond aan?",
+        a: "Zeker. We doen het hele werk, van het voorbereiden en verdichten van de ondergrond tot het strak leggen en aftrillen van de stenen.",
+      },
     ],
   },
 ]
