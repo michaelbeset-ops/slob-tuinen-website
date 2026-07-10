@@ -416,28 +416,6 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    title: "Oprijlaan",
-    location: "Nieuwland",
-    image: "/images/project-oprijlaan-nu.webp",
-    size: "wide",
-    slug: "oprijlaan-nieuwland",
-    summary:
-      "Een modderige, onbegaanbare oprijlaan in Nieuwland werd een strakke, verharde toegangsweg. Wij deden het grondwerk, de afwatering en de verharding.",
-    body: [
-      "De oprijlaan in Nieuwland veranderde bij elke regenbui in een modderpoel. De grond was verzadigd, het water bleef staan en je kon er nauwelijks door, niet met de auto en niet te voet. Er moest iets komen dat het hele jaar droog en berijdbaar blijft.",
-      "We zijn begonnen met het afgraven en afvoeren van de doorweekte bovenlaag. Daarna hebben we een stabiele, waterdoorlatende fundering aangebracht en goed verdicht, met de juiste afschot richting de sloot zodat het regenwater voortaan snel wegloopt. De laan is afgewerkt met een strakke grindverharding en langs de kant hebben we een nette houten afscheiding gezet.",
-      "Waar eerst modder en plassen lagen, ligt nu een egale, droge oprijlaan die past bij het landelijke plaatje. Onderhoudsarm, en klaar om jaren mee te gaan.",
-    ],
-    highlights: [
-      "Afgraven en afvoeren van de verzadigde modderlaag",
-      "Aanbrengen en verdichten van een stabiele, waterdoorlatende fundering",
-      "Afwatering met de juiste afschot richting de sloot",
-      "Strakke grindverharding voor een natuurlijke, onderhoudsarme uitstraling",
-      "Nette houten afscheiding langs de oever",
-    ],
-    services: ["Grondwerk", "Grondverzet", "Straatwerk"],
-  },
-  {
     title: "Tuinaanleg Dalem",
     location: "Dalem",
     image: "/images/project-dalem-1.webp",
