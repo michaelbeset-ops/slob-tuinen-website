@@ -7,7 +7,7 @@ import { BeforeAfter } from "@/components/slob/before-after"
 import { getProjectBySlug, PROJECT_SLUGS } from "@/components/slob/data"
 import { withBasePath } from "@/lib/base-path"
 
-const SITE_URL = "https://michaelbeset-ops.github.io/slob-tuinen-website/"
+const SITE_URL = "https://slobtuinen.nl/"
 
 export function generateStaticParams() {
   return PROJECT_SLUGS.map((slug) => ({ slug }))
