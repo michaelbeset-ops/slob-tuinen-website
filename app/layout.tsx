@@ -20,8 +20,11 @@ export const metadata: Metadata = {
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
   icons: {
-    icon: withBasePath('/logo.png'),
-    apple: withBasePath('/logo.png'),
+    icon: [
+      { url: withBasePath('/favicon-192.png'), sizes: '192x192', type: 'image/png' },
+      { url: withBasePath('/icon-512.png'), sizes: '512x512', type: 'image/png' },
+    ],
+    apple: withBasePath('/apple-icon.png'),
   },
   openGraph: {
     type: 'website',
