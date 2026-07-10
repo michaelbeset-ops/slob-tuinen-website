@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
+  verification: {
+    google: '2NMPHyKD_o53AwpslojKBRuqIhYZr4na_z4Ffiw4AR4',
+  },
   icons: {
     icon: [
       { url: withBasePath('/favicon-192.png'), sizes: '192x192', type: 'image/png' },
