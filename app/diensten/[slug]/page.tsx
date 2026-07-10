@@ -6,7 +6,7 @@ import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
 import { getServiceById, SERVICES } from "@/components/slob/data"
 import { withBasePath } from "@/lib/base-path"
 
-const SITE_URL = "https://michaelbeset-ops.github.io/slob-tuinen-website/"
+const SITE_URL = "https://slobtuinen.nl/"
 
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.id }))

@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
-const SITE_URL = 'https://michaelbeset-ops.github.io/slob-tuinen-website/'
+const SITE_URL = 'https://slobtuinen.nl/'
 const SITE_TITLE = 'Slob Tuinen | Grond, Groen & Straat, Leerdam'
 const SITE_DESCRIPTION =
   'Slob Tuinen: vakmanschap van de hoogste plank door Martin Slob. Tuinaanleg, grondverzet, beschoeiingswerk, groenvoorziening, grondwerk en straatwerk in Leerdam en omgeving.'
