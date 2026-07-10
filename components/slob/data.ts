@@ -125,7 +125,10 @@ export const SERVICES: Service[] = [
       "Kavels bouwrijp maken",
       "Modern materieel, ervaren uitvoering",
     ],
-    gallery: ["/images/service-grondverzet-work.webp"],
+    gallery: [
+      "/images/service-grondverzet-work.webp",
+      "/images/project-grondverzet-kopje.webp",
+    ],
   },
   {
     id: "beschoeiingswerk",
@@ -244,7 +247,6 @@ export const PROJECTS: Project[] = [
     title: "Oprijlaan",
     location: "Nieuwland",
     image: "/images/project-oprijlaan-nu.webp",
-    beforeImage: "/images/project-oprijlaan-toen.webp",
     size: "wide",
     slug: "oprijlaan-nieuwland",
     summary:
@@ -423,11 +425,6 @@ export const REVIEWS: Review[] = [
   {
     name: "Jitse Straub",
     quote: "Vakman! Communicatie goed en alles volledig naar wens gemaakt!",
-    rating: 5,
-  },
-  {
-    name: "Lotte Kemkes",
-    quote: "Keurige vakman, verdiende onze klus.",
     rating: 5,
   },
   {
