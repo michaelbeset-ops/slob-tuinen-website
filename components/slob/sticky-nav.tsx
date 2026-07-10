@@ -26,8 +26,9 @@ export function StickyNav() {
   }, [])
 
   return (
+    <>
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-foreground/95 backdrop-blur transition-transform duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-foreground transition-transform duration-300 ${
         shown ? "translate-y-0" : "-translate-y-full"
       }`}
       aria-hidden={!shown}
@@ -82,6 +83,7 @@ export function StickyNav() {
           </button>
         </div>
       </nav>
+    </header>
 
       {open && shown && (
         <div className="fixed inset-0 z-[60] flex flex-col bg-foreground lg:hidden">
@@ -123,6 +125,6 @@ export function StickyNav() {
           </nav>
         </div>
       )}
-    </header>
+    </>
   )
 }
