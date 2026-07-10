@@ -23,7 +23,7 @@ export default function PrivacybeleidPage() {
 
           <h2>1. Wie zijn wij</h2>
           <p>
-            Slob Tuinen, gevestigd te Recht van Ter Leede, 4143 LP Leerdam,
+            Slob Tuinen, gevestigd te Recht van Ter Leede 28a, 4143 LP Leerdam,
             is verantwoordelijk voor de verwerking van persoonsgegevens zoals
             weergegeven in dit privacybeleid.
           </p>

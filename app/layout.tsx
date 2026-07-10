@@ -63,7 +63,7 @@ const JSON_LD = {
   email: 'slobdienstverlening@gmail.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Recht van Ter Leede',
+    streetAddress: 'Recht van Ter Leede 28a',
     postalCode: '4143 LP',
     addressLocality: 'Leerdam',
     addressCountry: 'NL',

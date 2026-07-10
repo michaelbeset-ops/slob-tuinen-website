@@ -62,7 +62,7 @@ export function Contact() {
                   Adres
                 </span>
                 <span className="text-lg font-semibold">
-                  Recht van Ter Leede, 4143 LP Leerdam
+                  Recht van Ter Leede 28a, 4143 LP Leerdam
                 </span>
               </span>
             </div>
@@ -192,7 +192,7 @@ export function Contact() {
                     {EMAIL}
                   </a>
                 </li>
-                <li>Recht van Ter Leede</li>
+                <li>Recht van Ter Leede 28a</li>
                 <li>4143 LP Leerdam</li>
                 <li>
                   <a
@@ -243,9 +243,20 @@ export function Contact() {
             <span className="text-sm text-white/50">
               &copy; 2026 Slob Tuinen. Grond, Groen &amp; Straat.
             </span>
-            <span className="text-sm text-white/50">
-              KvK 97104078
-            </span>
+            <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-6">
+              <span className="text-sm text-white/50">KvK 97104078</span>
+              <span className="text-sm text-white/50">
+                Designed by{" "}
+                <a
+                  href="https://sitefront.nl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-white/70 transition-colors hover:text-white"
+                >
+                  Sitefront
+                </a>
+              </span>
+            </div>
           </div>
         </div>
       </footer>
