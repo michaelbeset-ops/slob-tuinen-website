@@ -674,6 +674,89 @@ export const PROJECTS: Project[] = [
     ],
     services: ["Tuinaanleg", "Straatwerk", "Groenvoorziening"],
   },
+  {
+    title: "Betonvloer Arkel",
+    location: "Arkel",
+    image: "/images/project-betonvloer-arkel-3.webp",
+    gallery: [
+      "/images/project-betonvloer-arkel-3.webp",
+      "/images/project-betonvloer-arkel-1.webp",
+      "/images/project-betonvloer-arkel-2.webp",
+      "/images/project-betonvloer-arkel-4.webp",
+    ],
+    size: "wide",
+    slug: "betonvloer-arkel",
+    summary:
+      "Een gewapende betonvloer in Arkel, vakkundig gestort en strak gevlinderd voor een egale, sterke en onderhoudsarme ondervloer.",
+    body: [
+      "Voor deze klus in Arkel legden wij een gewapende betonvloer aan als stevige, duurzame basis — bijvoorbeeld voor een overkapping, tuinhuis of berging. We begonnen met het uitgraven en waterpas voorbereiden van de ondergrond en het plaatsen van een nette bekisting.",
+      "Vervolgens brachten we de wapening (betonstaal) aan, zodat de vloer sterk is en niet scheurt. De beton is in één keer gestort en zorgvuldig uitgevlakt. Daarna hebben we de vloer machinaal gevlinderd voor een strakke, egale en gladde afwerking.",
+      "Het resultaat is een vlakke, gewapende betonvloer die tegen een stootje kan en jarenlang meegaat — klaar om op te bouwen.",
+    ],
+    highlights: [
+      "Ondergrond uitgegraven en waterpas voorbereid",
+      "Nette bekisting geplaatst",
+      "Gewapend met betonstaal tegen scheuren",
+      "In één keer gestort en uitgevlakt",
+      "Strak machinaal gevlinderd",
+    ],
+    services: ["Grondwerk", "Grondverzet"],
+  },
+  {
+    title: "Straatwerk Lexmond",
+    location: "Lexmond",
+    image: "/images/project-straatwerk-lexmond-3.webp",
+    gallery: [
+      "/images/project-straatwerk-lexmond-3.webp",
+      "/images/project-straatwerk-lexmond-1.webp",
+      "/images/project-straatwerk-lexmond-2.webp",
+    ],
+    size: "wide",
+    slug: "straatwerk-lexmond",
+    summary:
+      "Compleet straatwerk in Lexmond: een ruime, strak bestrate oprit met nieuwe parkeervakken en een border met staptegels rondom het huis.",
+    body: [
+      "Voor deze woning in Lexmond verzorgden wij het complete straatwerk. We begonnen met het bouwrijp maken en waterpas voorbereiden van de ondergrond met een goed verdicht zandbed, zodat de bestrating vlak blijft liggen en het water goed wegloopt.",
+      "De ruime oprit is bestraat met gebakken klinkers in een strak keperverband, met duidelijk afgezette parkeervakken in een contrasterende steen. Rondom het huis legden we een nette border met grind en staptegels, die het geheel afmaakt en een verzorgde looproute langs de gevel geeft.",
+      "Het resultaat is een ruime, praktische en verzorgde bestrating met volop parkeerruimte, die vlak blijft liggen en jaren meegaat.",
+    ],
+    highlights: [
+      "Ondergrond bouwrijp gemaakt en verdicht zandbed",
+      "Oprit in gebakken klinkers, strak keperverband",
+      "Duidelijke parkeervakken in contrasterende steen",
+      "Border met grind en staptegels rondom het huis",
+      "Ruim, praktisch en netjes opgeleverd",
+    ],
+    services: ["Straatwerk", "Grondwerk"],
+  },
+  {
+    title: "Groenvoorziening Schelluinen",
+    location: "Schelluinen",
+    image: "/images/project-groen-schelluinen-1.webp",
+    gallery: [
+      "/images/project-groen-schelluinen-1.webp",
+      "/images/project-groen-schelluinen-2.webp",
+      "/images/project-groen-schelluinen-3.webp",
+      "/images/project-groen-schelluinen-4.webp",
+    ],
+    size: "wide",
+    slug: "groenvoorziening-schelluinen",
+    summary:
+      "Groenonderhoud in Schelluinen: hagen en struiken strak in bolvorm gesnoeid en de tuin netjes winterklaar gemaakt.",
+    body: [
+      "Voor deze tuin in Schelluinen verzorgden wij het groenonderhoud. De aanwezige hagen en struiken hebben we strak in bolvorm gesnoeid, waardoor de tuin een verzorgde, speelse en tijdloze uitstraling krijgt.",
+      "Naast het vormsnoeien hebben we de tuin volledig winterklaar gemaakt: snoeiafval afgevoerd, randen netjes afgestoken en het groen teruggebracht in model. Zo staat de tuin er het hele seizoen verzorgd bij en komt hij in het voorjaar sterk terug.",
+      "Het resultaat is een strak onderhouden, groene tuin die met minimaal onderhoud jaarrond mooi blijft.",
+    ],
+    highlights: [
+      "Hagen en struiken strak in bolvorm gesnoeid",
+      "Vormsnoei voor een verzorgde uitstraling",
+      "Snoeiafval afgevoerd",
+      "Randen afgestoken en groen in model",
+      "Tuin volledig winterklaar gemaakt",
+    ],
+    services: ["Groenvoorziening"],
+  },
 ]
 
 export function getProjectBySlug(slug: string) {
