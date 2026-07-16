@@ -545,6 +545,32 @@ export const PROJECTS: Project[] = [
     ],
     services: ["Schuttingwerk", "Tuinaanleg"],
   },
+  {
+    title: "Plantenbakken op maat",
+    location: "Leerdam e.o.",
+    image: "/images/project-plantenbakken-1.webp",
+    gallery: [
+      "/images/project-plantenbakken-1.webp",
+      "/images/project-plantenbakken-2.webp",
+    ],
+    size: "wide",
+    slug: "plantenbakken-op-maat",
+    summary:
+      "Op maat gemetselde plantenbakken van stapelblokken, afgewerkt met een strakke hardstenen rand die netjes is gelijmd en afgekit.",
+    body: [
+      "Voor deze klus maakten wij drie plantenbakken volledig op maat. De bakken zijn opgebouwd uit stapelblokken en waterpas gelijmd, zodat ze strak en stevig staan en jarenlang op hun plek blijven.",
+      "De bovenrand is afgewerkt met natuursteen (hardsteen), netjes op verstek gezaagd in de hoeken en strak op de bakken gelijmd. Alle naden zijn zorgvuldig afgekit voor een verzorgde, waterdichte afwerking. De bakken zijn gevuld met tuinaarde en klaar voor beplanting.",
+      "Het resultaat is een set robuuste, onderhoudsarme plantenbakken die de tuin een luxe, strakke uitstraling geven en perfect aansluiten op de bestaande bestrating.",
+    ],
+    highlights: [
+      "Drie plantenbakken volledig op maat",
+      "Stapelblokken waterpas gelijmd",
+      "Hardstenen rand, op verstek en strak gelijmd",
+      "Naden netjes afgekit en waterdicht afgewerkt",
+      "Gevuld met tuinaarde, klaar voor beplanting",
+    ],
+    services: ["Tuinaanleg", "Straatwerk"],
+  },
 ]
 
 export function getProjectBySlug(slug: string) {
