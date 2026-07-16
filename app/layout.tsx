@@ -24,9 +24,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: withBasePath('/favicon.ico'), sizes: 'any' },
+      { url: withBasePath('/favicon-16.png'), sizes: '16x16', type: 'image/png' },
+      { url: withBasePath('/favicon-32.png'), sizes: '32x32', type: 'image/png' },
+      { url: withBasePath('/favicon-48.png'), sizes: '48x48', type: 'image/png' },
       { url: withBasePath('/favicon-192.png'), sizes: '192x192', type: 'image/png' },
       { url: withBasePath('/icon-512.png'), sizes: '512x512', type: 'image/png' },
     ],
+    shortcut: withBasePath('/favicon.ico'),
     apple: withBasePath('/apple-icon.png'),
   },
   openGraph: {
