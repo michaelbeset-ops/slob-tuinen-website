@@ -571,6 +571,109 @@ export const PROJECTS: Project[] = [
     ],
     services: ["Tuinaanleg", "Straatwerk"],
   },
+  {
+    title: "Straatwerk Nieuwegein",
+    location: "Nieuwegein",
+    image: "/images/project-straatwerk-nieuwegein-1.webp",
+    gallery: ["/images/project-straatwerk-nieuwegein-1.webp"],
+    size: "tall",
+    slug: "straatwerk-nieuwegein",
+    summary:
+      "Een nieuwe oprit in Nieuwegein bestraat met gebakken klinkers in een strak legverband, afgewerkt met een contrasterende kantband rondom.",
+    body: [
+      "Voor deze woning in Nieuwegein legden wij de oprit volledig opnieuw aan. We begonnen met het opnemen van de oude situatie, het egaliseren van de ondergrond en het aanbrengen van een goed verdicht zandbed, zodat de bestrating vlak blijft liggen en het water goed wegloopt.",
+      "De oprit is bestraat met gebakken klinkers in een warme, genuanceerde kleur, gelegd in een strak halfsteensverband. Rondom brachten we een contrasterende kantband aan die het geheel netjes omlijst en de verharding stevig op zijn plek houdt.",
+      "Het resultaat is een verzorgde, egale oprit met een tijdloze uitstraling, ruim genoeg om op te parkeren en klaar om jaren mee te gaan.",
+    ],
+    highlights: [
+      "Opnemen van de oude verharding",
+      "Egaliseren en verdicht zandbed",
+      "Gebakken klinkers in strak halfsteensverband",
+      "Contrasterende kantband rondom",
+      "Vlak en degelijk opgeleverd",
+    ],
+    services: ["Straatwerk", "Grondwerk"],
+  },
+  {
+    title: "Terras met flagstones",
+    location: "Leerdam e.o.",
+    image: "/images/project-flagstones-1.webp",
+    gallery: ["/images/project-flagstones-1.webp"],
+    size: "tall",
+    slug: "tuinaanleg-flagstones",
+    summary:
+      "Een ruim terras aangelegd met natuurstenen flagstones, strak afgevoegd met vloeibare voegmortel voor een naadloze, onderhoudsarme afwerking.",
+    body: [
+      "Voor deze karakteristieke woning legden wij een ruim terras aan met natuurstenen flagstones. De onregelmatige natuursteen geeft het terras een warme, landelijke uitstraling die perfect past bij het pand.",
+      "We begonnen met een goed voorbereide, stabiele ondergrond zodat de stenen vlak liggen en het water goed wegloopt. De flagstones zijn met zorg gepast en gelegd, en vervolgens volledig afgevoegd met vloeibare voegmortel. Die afwerking zorgt voor een strakke, gesloten voeg waar geen onkruid tussen groeit en die jarenlang mooi blijft.",
+      "Het resultaat is een sfeervol en onderhoudsarm terras met een natuurlijke look, klaar om van te genieten.",
+    ],
+    highlights: [
+      "Terras van natuurstenen flagstones",
+      "Stabiel voorbereide ondergrond",
+      "Flagstones met zorg gepast en gelegd",
+      "Volledig afgevoegd met vloeibare voegmortel",
+      "Onderhoudsarm en onkruidvrij afgewerkt",
+    ],
+    services: ["Tuinaanleg", "Straatwerk"],
+  },
+  {
+    title: "Tuinaanleg Gorinchem",
+    location: "Gorinchem",
+    image: "/images/project-gorinchem-3.webp",
+    gallery: [
+      "/images/project-gorinchem-3.webp",
+      "/images/project-gorinchem-2.webp",
+      "/images/project-gorinchem-4.webp",
+      "/images/project-gorinchem-5.webp",
+      "/images/project-gorinchem-1.webp",
+    ],
+    size: "wide",
+    slug: "tuinaanleg-gorinchem",
+    summary:
+      "Een complete achtertuin in Gorinchem: het terras opgehoogd met een houten damwand en keramische tegels, waaltjespaden door de tuin en een onderheide betonvloer als stevige basis.",
+    body: [
+      "Voor deze woning in Gorinchem hebben wij de complete achtertuin opnieuw aangelegd. Omdat het terras op hoogte moest komen, plaatsten we een stevige houten damwand als keerwand, waarmee we de tuin netjes op niveau brachten.",
+      "Het verhoogde terras werd afgewerkt met keramische tegels, strak gelegd en afgevoegd voor een moderne, onderhoudsarme uitstraling. Een hardhouten trap verbindt het terras met de rest van de tuin. Door de tuin legden we sfeervolle paden van waaltjes, netjes ingepast met een strakke kantopsluiting.",
+      "Daarnaast realiseerden we een onderheide betonvloer als stevige, zakvrije basis — bijvoorbeeld voor een overkapping of berging. Zo kreeg de tuin een complete, duurzame inrichting die jaren meegaat.",
+    ],
+    highlights: [
+      "Houten damwand als keerwand voor een verhoogd terras",
+      "Keramische tegels, strak gelegd en afgevoegd",
+      "Hardhouten trap naar de tuin",
+      "Sfeervolle waaltjespaden met kantopsluiting",
+      "Onderheide betonvloer als stevige basis",
+    ],
+    services: ["Tuinaanleg", "Straatwerk", "Grondwerk"],
+  },
+  {
+    title: "Tuinaanleg Leerdam",
+    location: "Leerdam",
+    image: "/images/project-leerdam-3.webp",
+    gallery: [
+      "/images/project-leerdam-3.webp",
+      "/images/project-leerdam-1.webp",
+      "/images/project-leerdam-4.webp",
+      "/images/project-leerdam-2.webp",
+    ],
+    size: "wide",
+    slug: "tuinaanleg-leerdam",
+    summary:
+      "Een strak vernieuwde achtertuin in Leerdam met een ruim terras, nette borders en grindpaden met kantopsluiting, klaar voor beplanting en gazon.",
+    body: [
+      "Voor deze tuin in Leerdam legden wij een compleet nieuwe achtertuin aan. Het ruime terras is bestraat met strakke tegels in een donkere tint, netjes ingepast tegen de woning en de schutting.",
+      "Door de tuin maakten we nette grindpaden, afgezet met een strakke kantopsluiting zodat alles mooi gescheiden blijft. Langs de randen legden we borders aan, voorbereid en gevuld met tuinaarde en klaar voor beplanting. Ook de composieten schutting zorgt voor een verzorgde, onderhoudsarme afscheiding.",
+      "Het resultaat is een strakke, onderhoudsarme tuin met een duidelijke indeling van terras, paden en groen — klaar om verder in te richten en van te genieten.",
+    ],
+    highlights: [
+      "Ruim terras met strakke tegels",
+      "Grindpaden met nette kantopsluiting",
+      "Borders voorbereid voor beplanting",
+      "Onderhoudsarme composieten schutting",
+      "Strakke, duidelijke tuinindeling",
+    ],
+    services: ["Tuinaanleg", "Straatwerk", "Groenvoorziening"],
+  },
 ]
 
 export function getProjectBySlug(slug: string) {
