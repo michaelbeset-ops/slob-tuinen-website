@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+# Sfeer-hero niet indexeren in Google Afbeeldingen
+Disallow: /images/hero-voortuin-sfeer.webp
+
+# Blokkeer de sfeer-hero specifiek voor de afbeeldingen-crawler
+User-agent: Googlebot-Image
+Disallow: /images/hero-voortuin-sfeer.webp
 
 Sitemap: https://slobtuinen.nl/sitemap.xml
