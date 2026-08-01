@@ -7,12 +7,13 @@ import { withBasePath } from "@/lib/base-path"
 export function Hero() {
   return (
     <section id="top" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
-      <img
-        src={withBasePath("/images/hero-voortuin.webp")}
-        alt="Voortuin met nieuwe bestrating, split en plantenbakken aangelegd door Slob Tuinen in Leerdam"
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 size-full object-cover"
+      {/* Achtergrond als CSS background i.p.v. <img>, zodat Google Afbeeldingen deze sfeerfoto niet indexeert */}
+      <div
+        aria-hidden="true"
+        role="img"
+        aria-label="Sfeervol aangelegde voortuin met bestrating en verlichting door Slob Tuinen in Leerdam"
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${withBasePath("/images/hero-voortuin-sfeer.webp")})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/30 to-foreground/70" />
 
