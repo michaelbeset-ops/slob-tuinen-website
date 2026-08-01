@@ -757,6 +757,33 @@ export const PROJECTS: Project[] = [
     ],
     services: ["Groenvoorziening"],
   },
+  {
+    title: "Voortuin Dalem",
+    location: "Dalem",
+    image: "/images/project-dalem2-3.webp",
+    gallery: [
+      "/images/project-dalem2-3.webp",
+      "/images/project-dalem2-1.webp",
+      "/images/project-dalem2-2.webp",
+    ],
+    size: "wide",
+    slug: "voortuin-dalem",
+    summary:
+      "Een strakke, onderhoudsarme voortuin in Dalem met grijze bestrating, een sfeervol plantvak met olijfbomen in gemetselde plantenbakken en warme tuinverlichting.",
+    body: [
+      "Voor deze nieuwbouwwoning in Dalem legden wij de complete voortuin aan. De wens was een strakke, onderhoudsarme tuin met een warme uitstraling en volop ruimte om te parkeren en te zitten.",
+      "We hebben de voortuin bestraat met grijze tegels in een strak verband, met een nette kantopsluiting rondom. In het hart van de tuin maakten we een plantvak met gemetselde plantenbakken van stapelblokken, afgetopt met wit split en beplant met sfeervolle olijfbomen. Daaromheen kwam een gevarieerde border met lavendel, siergrassen en vaste planten.",
+      "Met de ingebouwde grondverlichting komt de tuin ook 's avonds prachtig tot z'n recht. Het resultaat is een verzorgde, onderhoudsarme voortuin met karakter — klaar om jaren van te genieten.",
+    ],
+    highlights: [
+      "Grijze bestrating in strak verband met kantopsluiting",
+      "Plantvak met gemetselde plantenbakken van stapelblokken",
+      "Olijfbomen met wit split als blikvanger",
+      "Gevarieerde border met lavendel en vaste planten",
+      "Sfeervolle grondverlichting",
+    ],
+    services: ["Tuinaanleg", "Straatwerk", "Groenvoorziening"],
+  },
 ]
 
 export function getProjectBySlug(slug: string) {
