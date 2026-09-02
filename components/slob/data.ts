@@ -784,6 +784,32 @@ export const PROJECTS: Project[] = [
     ],
     services: ["Tuinaanleg", "Straatwerk", "Groenvoorziening"],
   },
+  {
+    title: "Straatwerk Leerdam",
+    location: "Leerdam",
+    image: "/images/project-straatwerk-leerdam-2.webp",
+    gallery: [
+      "/images/project-straatwerk-leerdam-2.webp",
+      "/images/project-straatwerk-leerdam-1.webp",
+    ],
+    size: "wide",
+    slug: "straatwerk-leerdam",
+    summary:
+      "Openbaar straatwerk in Leerdam: het trottoir langs de straat volledig opnieuw bestraat met nieuwe betontegels, strak en vlak opgeleverd terwijl het verkeer gewoon door kon rijden.",
+    body: [
+      "In Leerdam verzorgden wij het herbestraten van het trottoir langs een woonstraat. De oude verharding is opgenomen, de ondergrond opnieuw geëgaliseerd en verdicht, en daarna is het trottoir strak herstraat met nieuwe betontegels.",
+      "Omdat het werk midden in een woonwijk plaatsvond, hebben we het werkvak netjes afgezet met bebording en geleidebakens, zodat het verkeer en de bewoners er veilig langs konden. Per vak werkten we het trottoir af, inclusief nette aansluitingen op inritten, straatmeubilair en lichtmasten.",
+      "Het resultaat is een vlak, strak en veilig begaanbaar trottoir dat weer jaren meekan. Dit soort openbaar straatwerk voeren we uit voor gemeenten, aannemers en bedrijven in Leerdam en omgeving.",
+    ],
+    highlights: [
+      "Oude verharding opgenomen en afgevoerd",
+      "Ondergrond geëgaliseerd en verdicht",
+      "Trottoir strak herstraat met betontegels",
+      "Nette aansluitingen op inritten en lichtmasten",
+      "Veilige afzetting, verkeer kon doorrijden",
+    ],
+    services: ["Straatwerk", "Grondwerk"],
+  },
 ]
 
 export function getProjectBySlug(slug: string) {
