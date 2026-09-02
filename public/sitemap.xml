@@ -121,6 +121,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://slobtuinen.nl/projecten/straatwerk-groot-ammers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://slobtuinen.nl/algemene-voorwaarden</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

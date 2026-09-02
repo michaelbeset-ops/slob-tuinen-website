@@ -810,6 +810,42 @@ export const PROJECTS: Project[] = [
     ],
     services: ["Straatwerk", "Grondwerk"],
   },
+  {
+    title: "Straatwerk Groot-Ammers",
+    location: "Groot-Ammers",
+    image: "/images/project-straatwerk-groot-ammers-1.webp",
+    gallery: [
+      "/images/project-straatwerk-groot-ammers-1.webp",
+      "/images/project-straatwerk-groot-ammers-2.webp",
+      "/images/project-straatwerk-groot-ammers-3.webp",
+      "/images/project-straatwerk-groot-ammers-4.webp",
+      "/images/project-straatwerk-groot-ammers-5.webp",
+      "/images/project-straatwerk-groot-ammers-6.webp",
+      "/images/project-straatwerk-groot-ammers-7.webp",
+      "/images/project-straatwerk-groot-ammers-8.webp",
+      "/images/project-straatwerk-groot-ammers-9.webp",
+      "/images/project-straatwerk-groot-ammers-10.webp",
+    ],
+    size: "wide",
+    slug: "straatwerk-groot-ammers",
+    summary:
+      "Een compleet nieuw erf in Groot-Ammers: een ruim bestraat terrein rond een nieuwbouwwoning, met rode gebakken klinkers in visgraatverband en een strakke antracieten omlijsting.",
+    body: [
+      "Bij deze nieuwbouwwoning in Groot-Ammers mochten wij het complete erf bestraten. Rondom het huis lag alleen nog zand, dus we begonnen bij het begin: de ondergrond op hoogte brengen, egaliseren en goed verdichten. Met een afreirei en trilplaat hebben we het hele terrein waterpas afgewerkt, zodat de bestrating vlak blijft liggen en het water overal goed wegloopt.",
+      "Rondom brachten we een stevige kantopsluiting van betonbanden aan en langs de gevel legden we een lijngoot, zodat het regenwater netjes wordt afgevoerd en niet tegen het huis blijft staan. Zo ligt er een basis die niet gaat zakken of uitzakken aan de randen.",
+      "Het vlak zelf is bestraat met rode gebakken klinkers in een strak visgraatverband, omlijst door een brede rand van antracieten stenen in halfsteensverband. Dat kleurcontrast geeft het erf rust en maakt het geheel af. Ook de aansluitingen op de betonvloer bij de schuur en de inrit zijn netjes op elkaar afgestemd.",
+      "Het resultaat is een ruim, vlak en verzorgd erf met volop plek om te parkeren en te manoeuvreren — degelijk aangelegd en klaar om jaren mee te gaan.",
+    ],
+    highlights: [
+      "Ondergrond op hoogte gebracht, geëgaliseerd en verdicht",
+      "Kantopsluiting met betonbanden rondom",
+      "Lijngoot langs de gevel voor goede afwatering",
+      "Rode gebakken klinkers in strak visgraatverband",
+      "Brede antracieten rand als contrasterende omlijsting",
+      "Ruim erf met volop parkeer- en manoeuvreerruimte",
+    ],
+    services: ["Straatwerk", "Grondwerk", "Grondverzet"],
+  },
 ]
 
 export function getProjectBySlug(slug: string) {
