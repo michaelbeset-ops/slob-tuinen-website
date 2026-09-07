@@ -8,6 +8,10 @@ import { Reviews } from "@/components/slob/reviews"
 import { Contact } from "@/components/slob/contact"
 import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
 
+export const metadata = {
+  alternates: { canonical: "https://slobtuinen.nl/" },
+}
+
 export default function Page() {
   return (
     <main id="hoofdinhoud" tabIndex={-1} className="bg-background">

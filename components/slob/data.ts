@@ -404,6 +404,8 @@ export type Project = {
   size: "tall" | "wide" | "regular"
   /** Wanneer gezet, is de projectkaart klikbaar naar /projecten/[slug]. */
   slug?: string
+  /** Opleverdatum (YYYY-MM-DD). Voedt de <lastmod> in de sitemap. */
+  date?: string
   /** Korte samenvatting, dient als lead én als SEO meta-description. */
   summary?: string
   /** Beschrijvende alinea's voor de detailpagina. */
@@ -426,6 +428,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "wide",
     slug: "tuinaanleg-dalem",
+    date: "2026-07-09",
     summary:
       "In Dalem legden wij een complete achtertuin aan: een strakke bestrating van getrommelde klinkers en een warm hardhouten vlonder rond de bestaande bomen.",
     body: [
@@ -452,6 +455,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "wide",
     slug: "tuinaanleg-vianen",
+    date: "2026-07-09",
     summary:
       "In Vianen legden wij een strak terras met grootformaat tegels aan, met bestrating langs de woning en een nette afwerking tegen de schutting.",
     body: [
@@ -478,6 +482,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "regular",
     slug: "tuinaanleg-dussen",
+    date: "2026-07-09",
     summary:
       "Een onderhoudsarme voortuin in Dussen met siergrind, strakke plantenbakken van betonblokken en een net pad naar de voordeur.",
     body: [
@@ -505,6 +510,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "wide",
     slug: "straatwerk-gouda",
+    date: "2026-07-09",
     summary:
       "Een ruime oprit in Gouda opnieuw bestraat: van egaliseren en zandbed tot een strak gelegde, egale verharding rond het huis.",
     body: [
@@ -530,6 +536,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "regular",
     slug: "schutting-dalem",
+    date: "2026-07-09",
     summary:
       "In Dalem plaatsten wij een strakke hardhouten schutting met stevige antracieten palen, die de tuin een nette, afgeschermde rand geeft.",
     body: [
@@ -555,6 +562,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "wide",
     slug: "plantenbakken-op-maat",
+    date: "2026-07-16",
     summary:
       "Op maat gemetselde plantenbakken van stapelblokken, afgewerkt met een strakke hardstenen rand die netjes is gelijmd en afgekit.",
     body: [
@@ -578,6 +586,7 @@ export const PROJECTS: Project[] = [
     gallery: ["/images/project-straatwerk-nieuwegein-1.webp"],
     size: "tall",
     slug: "straatwerk-nieuwegein",
+    date: "2026-07-16",
     summary:
       "Een nieuwe oprit in Nieuwegein bestraat met gebakken klinkers in een strak legverband, afgewerkt met een contrasterende kantband rondom.",
     body: [
@@ -601,6 +610,7 @@ export const PROJECTS: Project[] = [
     gallery: ["/images/project-flagstones-1.webp"],
     size: "tall",
     slug: "tuinaanleg-flagstones",
+    date: "2026-07-16",
     summary:
       "Een ruim terras aangelegd met natuurstenen flagstones, strak afgevoegd met vloeibare voegmortel voor een naadloze, onderhoudsarme afwerking.",
     body: [
@@ -630,6 +640,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "wide",
     slug: "tuinaanleg-gorinchem",
+    date: "2026-07-16",
     summary:
       "Een complete achtertuin in Gorinchem: het terras opgehoogd met een houten damwand en keramische tegels, waaltjespaden door de tuin en een onderheide betonvloer als stevige basis.",
     body: [
@@ -658,6 +669,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "wide",
     slug: "tuinaanleg-leerdam",
+    date: "2026-07-16",
     summary:
       "Een strak vernieuwde achtertuin in Leerdam met een ruim terras, nette borders en grindpaden met kantopsluiting, klaar voor beplanting en gazon.",
     body: [
@@ -686,6 +698,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "wide",
     slug: "betonvloer-arkel",
+    date: "2026-07-16",
     summary:
       "Een gewapende betonvloer in Arkel, vakkundig gestort en strak gevlinderd voor een egale, sterke en onderhoudsarme ondervloer.",
     body: [
@@ -713,6 +726,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "wide",
     slug: "straatwerk-lexmond",
+    date: "2026-07-16",
     summary:
       "Compleet straatwerk in Lexmond: een ruime, strak bestrate oprit met nieuwe parkeervakken en een border met staptegels rondom het huis.",
     body: [
@@ -741,6 +755,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "wide",
     slug: "groenvoorziening-schelluinen",
+    date: "2026-07-16",
     summary:
       "Groenonderhoud in Schelluinen: hagen en struiken strak in bolvorm gesnoeid en de tuin netjes winterklaar gemaakt.",
     body: [
@@ -768,6 +783,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "wide",
     slug: "voortuin-dalem",
+    date: "2026-08-01",
     summary:
       "Een strakke, onderhoudsarme voortuin in Dalem met grijze bestrating, een sfeervol plantvak met olijfbomen in gemetselde plantenbakken en warme tuinverlichting.",
     body: [
@@ -794,6 +810,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "wide",
     slug: "straatwerk-leerdam",
+    date: "2026-09-02",
     summary:
       "Openbaar straatwerk in Leerdam: het trottoir langs de straat volledig opnieuw bestraat met nieuwe betontegels, strak en vlak opgeleverd terwijl het verkeer gewoon door kon rijden.",
     body: [
@@ -828,6 +845,7 @@ export const PROJECTS: Project[] = [
     ],
     size: "wide",
     slug: "straatwerk-groot-ammers",
+    date: "2026-09-02",
     summary:
       "Een compleet nieuw erf in Groot-Ammers: een ruim bestraat terrein rond een nieuwbouwwoning, met rode gebakken klinkers in visgraatverband en een strakke antracieten omlijsting.",
     body: [
@@ -884,3 +902,122 @@ export const REVIEWS: Review[] = [
     rating: 5,
   },
 ]
+
+/** Gemiddelde reviewscore, o.a. voor de structured data in de layout. */
+export const REVIEW_AVERAGE =
+  Math.round(
+    (REVIEWS.reduce((sum, r) => sum + r.rating, 0) / REVIEWS.length) * 10,
+  ) / 10
+
+export type Location = {
+  /** Dient tevens als slug: /hovenier/[plaats] */
+  slug: string
+  /** Plaatsnaam zoals we die in lopende tekst gebruiken. */
+  name: string
+  /** Lead + SEO meta-description op de plaatspagina. */
+  summary: string
+  /** Beschrijvende alinea's op de plaatspagina. */
+  paragraphs: string[]
+  /** Wijken, buurtschappen en dorpen die we vanuit hier meepakken. */
+  nearby: string[]
+  /** Slugs uit PROJECTS die we als bewijs op deze pagina tonen. */
+  projectSlugs: string[]
+  /** Zoektermen waarop deze plaats gevonden mag worden. */
+  keywords: string[]
+  /** Veelgestelde vragen: op de pagina én als FAQ-structured-data. */
+  faq: { q: string; a: string }[]
+}
+
+export const LOCATIONS: Location[] = [
+  {
+    slug: "gorinchem",
+    name: "Gorinchem",
+    summary:
+      "Hovenier in Gorinchem voor tuinaanleg, straatwerk, grondwerk en groenvoorziening. Slob Tuinen werkt vanuit Leerdam, op een kwartier rijden, en heeft in Gorinchem en Dalem al meerdere tuinen en opritten opgeleverd.",
+    paragraphs: [
+      "Gorinchem ligt op een kwartier rijden van onze standplaats in Leerdam. Daardoor komen we er vaak: voor een complete tuin, een nieuwe oprit, grondwerk achter de woning of het onderhoud van een bedrijventerrein. Kort op de weg betekent ook dat we makkelijk even langskomen om mee te kijken voordat er iets op papier staat.",
+      "In de oudere wijken binnen de vesting werken we vaak op krappe plekken, waar het materieel niet zomaar de tuin in rijdt en de aanvoer via de voordeur of een smalle steeg gaat. In de nieuwbouw rond Hoog Dalem is het andere werk: daar ligt de tuin er bij oplevering kaal en ongelijk bij, en moet er eerst goed grondwerk komen voordat de bestrating en de beplanting erin kunnen.",
+      "Wat het ook is, we doen het in eigen beheer. Het grondwerk, de bestrating, de beschoeiing en het groen komen van hetzelfde team, dus u heeft één aanspreekpunt: Martin. Dat scheelt afstemming, en het voorkomt dat het ene werk het andere in de weg zit.",
+    ],
+    nearby: ["Dalem", "Hoog Dalem", "Arkel", "Schelluinen", "Hardinxveld", "Spijk"],
+    projectSlugs: [
+      "tuinaanleg-gorinchem",
+      "voortuin-dalem",
+      "tuinaanleg-dalem",
+      "schutting-dalem",
+      "betonvloer-arkel",
+      "groenvoorziening-schelluinen",
+    ],
+    keywords: [
+      "hovenier Gorinchem",
+      "tuinaanleg Gorinchem",
+      "straatwerk Gorinchem",
+      "bestrating Gorinchem",
+      "grondwerk Gorinchem",
+      "groenvoorziening Gorinchem",
+      "tuin laten aanleggen Gorinchem",
+      "hovenier Dalem",
+    ],
+    faq: [
+      {
+        q: "Werken jullie ook in de kern van Gorinchem?",
+        a: "Ja. We werken zowel in de binnenstad als in de nieuwere wijken. Op krappe plekken in de vesting voeren we materiaal met kleiner materieel of met de hand aan, zodat we ook achter een smalle doorgang uit de voeten kunnen.",
+      },
+      {
+        q: "Hoe snel kunnen jullie langskomen?",
+        a: "Gorinchem ligt op een kwartier rijden vanaf Leerdam, dus langskomen om mee te kijken is zo geregeld. Bel of app Martin, dan plannen we een moment dat u uitkomt.",
+      },
+      {
+        q: "Doen jullie ook alleen het straatwerk of alleen de beplanting?",
+        a: "Dat kan. We leggen complete tuinen aan, maar u kunt ons net zo goed inschakelen voor alleen de oprit, alleen het grondwerk of alleen het groen.",
+      },
+    ],
+  },
+  {
+    slug: "vianen",
+    name: "Vianen",
+    summary:
+      "Hovenier in Vianen voor tuinaanleg, straatwerk, grondwerk en groenvoorziening. Slob Tuinen werkt vanuit Leerdam in de hele Vijfheerenlanden en legde in Vianen onder meer een strak terras met grootformaat tegels aan.",
+    paragraphs: [
+      "Vianen hoort bij de Vijfheerenlanden, net als Leerdam, en dat is precies ons werkgebied. We rijden er zonder omweg naartoe, wat het makkelijk maakt om een werk in etappes te doen of nog even terug te komen voor de laatste details.",
+      "Het werk in Vianen loopt uiteen. In de tuinen rond de oude kern gaat het vaak om een terras vervangen, een oprit opnieuw leggen of een tuin die na jaren is verzakt weer waterpas krijgen. In de nieuwere wijken en op de bedrijventerreinen langs de A2 gaat het eerder om grondwerk, bestrating over een groter oppervlak en het groen dat daarbij hoort.",
+      "We beginnen altijd onderin. Een goed voorbereide, waterpas ondergrond bepaalt of bestrating over vijf jaar nog vlak ligt en of het water wegloopt waar het hoort. Dat deel zie je later niet meer terug, maar het is wel het deel waar het op aankomt.",
+    ],
+    nearby: ["Lexmond", "Hagestein", "Everdingen", "Meerkerk", "Nieuwegein", "Hoef en Haag"],
+    projectSlugs: [
+      "tuinaanleg-vianen",
+      "straatwerk-lexmond",
+      "straatwerk-nieuwegein",
+    ],
+    keywords: [
+      "hovenier Vianen",
+      "tuinaanleg Vianen",
+      "straatwerk Vianen",
+      "bestrating Vianen",
+      "grondwerk Vianen",
+      "hovenier Vijfheerenlanden",
+      "tuin laten aanleggen Vianen",
+      "hovenier Lexmond",
+    ],
+    faq: [
+      {
+        q: "Werken jullie in de hele Vijfheerenlanden?",
+        a: "Ja. Vianen, Leerdam, Meerkerk, Lexmond, Hagestein en de dorpen daartussen liggen allemaal in ons vaste werkgebied.",
+      },
+      {
+        q: "Kunnen jullie een verzakt terras of een verzakte oprit herstellen?",
+        a: "Dat doen we regelmatig. We halen de bestrating eruit, brengen de ondergrond weer op hoogte en leggen het geheel opnieuw met een nette kantopsluiting, zodat het strak blijft liggen.",
+      },
+      {
+        q: "Doen jullie ook werk voor bedrijven?",
+        a: "Ja. Naast particuliere tuinen verzorgen we grondwerk, bestrating en groenvoorziening op bedrijventerreinen en bij bedrijfspanden.",
+      },
+    ],
+  },
+]
+
+export function getLocationBySlug(slug: string) {
+  return LOCATIONS.find((l) => l.slug === slug)
+}
+
+export const LOCATION_SLUGS = LOCATIONS.map((l) => l.slug)

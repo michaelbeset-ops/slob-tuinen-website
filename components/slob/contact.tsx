@@ -9,7 +9,7 @@ function InstagramIcon({ className }: { className?: string }) {
     </svg>
   )
 }
-import { EMAIL, EMAIL_MAILTO, PHONE, PHONE_TEL, WHATSAPP_QUOTE, WHATSAPP_URL } from "./data"
+import { EMAIL, EMAIL_MAILTO, LOCATIONS, PHONE, PHONE_TEL, WHATSAPP_QUOTE, WHATSAPP_URL } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { MapEmbed } from "./map-embed"
 import { ContactForm } from "./contact-form"
@@ -128,7 +128,7 @@ export function Contact() {
 
       <footer className="border-t border-white/15">
         <div className="mx-auto max-w-[1600px] px-6 py-16 md:px-12">
-          <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
               <img
@@ -167,6 +167,28 @@ export function Contact() {
                     </a>
                   </li>
                 ))}
+              </ul>
+            </div>
+
+            {/* Werkgebied */}
+            <div>
+              <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-forest">
+                Werkgebied
+              </h3>
+              <ul className="flex flex-col gap-2">
+                <li className="text-sm text-white/60">Leerdam</li>
+                {LOCATIONS.map((l) => (
+                  <li key={l.slug}>
+                    <a
+                      href={withBasePath(`/hovenier/${l.slug}`)}
+                      className="text-sm text-white/60 transition-colors hover:text-white"
+                    >
+                      {l.name}
+                    </a>
+                  </li>
+                ))}
+                <li className="text-sm text-white/60">Vijfheerenlanden</li>
+                <li className="text-sm text-white/60">Betuwe</li>
               </ul>
             </div>
 

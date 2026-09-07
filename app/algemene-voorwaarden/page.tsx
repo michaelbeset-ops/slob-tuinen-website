@@ -5,6 +5,7 @@ export const metadata = {
   title: "Algemene Voorwaarden | Slob Tuinen",
   description:
     "Algemene voorwaarden van Slob Tuinen voor tuinaanleg, grondverzet, beschoeiingswerk, groenvoorziening, grondwerk en straatwerk.",
+  alternates: { canonical: "https://slobtuinen.nl/algemene-voorwaarden" },
 }
 
 export default function AlgemeneVoorwaardenPage() {

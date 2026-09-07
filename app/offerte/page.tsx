@@ -8,6 +8,7 @@ export const metadata = {
   title: "Offerte aanvragen | Slob Tuinen, Leerdam",
   description:
     "Vraag vrijblijvend een offerte aan bij Slob Tuinen. Vul uw gegevens en gewenste dienst in, dan nemen we snel contact met u op.",
+  alternates: { canonical: "https://slobtuinen.nl/offerte" },
 }
 
 export default function OffertePage() {
