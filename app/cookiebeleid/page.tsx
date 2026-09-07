@@ -4,6 +4,7 @@ import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
 export const metadata = {
   title: "Cookiebeleid | Slob Tuinen",
   description: "Cookiebeleid van Slob Tuinen. Lees welke cookies wij gebruiken en waarom.",
+  alternates: { canonical: "https://slobtuinen.nl/cookiebeleid" },
 }
 
 export default function CookiebeleidPage() {

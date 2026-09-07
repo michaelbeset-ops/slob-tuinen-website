@@ -8,6 +8,7 @@ export const metadata = {
   title: "Over Ons | Slob Tuinen, Leerdam",
   description:
     "Maak kennis met Martin Slob en het team van Slob Tuinen. Vakmanschap, eerlijkheid en jarenlange ervaring in grond, groen en straat.",
+  alternates: { canonical: "https://slobtuinen.nl/over-ons" },
 }
 
 const [martin, ...crew] = TEAM

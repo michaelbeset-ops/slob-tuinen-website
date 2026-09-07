@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { withBasePath } from '@/lib/base-path'
 import { CookieBanner } from '@/components/slob/cookie-banner'
+import { REVIEW_AVERAGE, REVIEWS } from '@/components/slob/data'
 import './globals.css'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
@@ -90,7 +91,31 @@ const JSON_LD = {
     addressLocality: 'Leerdam',
     addressCountry: 'NL',
   },
-  areaServed: ['Leerdam', 'Vijfheerenlanden', 'Betuwe'],
+  areaServed: [
+    'Leerdam',
+    'Vijfheerenlanden',
+    'Gorinchem',
+    'Vianen',
+    'Betuwe',
+  ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: REVIEW_AVERAGE,
+    reviewCount: REVIEWS.length,
+    bestRating: 5,
+    worstRating: 1,
+  },
+  review: REVIEWS.map((r) => ({
+    '@type': 'Review',
+    author: { '@type': 'Person', name: r.name },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: r.rating,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    reviewBody: r.quote,
+  })),
   sameAs: ['https://www.instagram.com/slob_tuinen/'],
   priceRange: '$$',
 }
