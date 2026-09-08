@@ -83,6 +83,13 @@ export type Service = {
   highlights: string[]
   /** Eigen foto's van uitgevoerd werk, getoond als galerij op de dienstpagina. */
   gallery?: string[]
+  /**
+   * Kop op de pagina, als de zoekterm anders luidt dan de dienstnaam. Mensen
+   * zoeken op "beschoeiing plaatsen", niet op "beschoeiingswerk".
+   */
+  heading?: string
+  /** Volledige <title>, als de standaard "<dienst> in Leerdam en omgeving" niet past. */
+  seoTitle?: string
   /** Zoektermen waarop deze dienst gevonden mag worden (voor de meta keywords). */
   keywords?: string[]
   /** Veelgestelde vragen: op de pagina én als FAQ-structured-data voor Google. */
@@ -186,6 +193,8 @@ export const SERVICES: Service[] = [
   {
     id: "beschoeiingswerk",
     title: "Beschoeiingswerk",
+    heading: "Beschoeiing plaatsen & vervangen",
+    seoTitle: "Beschoeiing plaatsen en vervangen | Slob Tuinen, Leerdam",
     image: "/images/service-beschoeiing.webp",
     intro: "Beschoeiing plaatsen en vervangen langs sloot, vijver en watergang.",
     summary:
@@ -227,6 +236,16 @@ export const SERVICES: Service[] = [
       "beschoeiing Leerdam",
       "beschoeiing Vijfheerenlanden",
       "beschoeiingsbedrijf Betuwe",
+      "beschoeiing kosten",
+      "beschoeiing prijs per meter",
+      "beschoeiing plaatsen kosten",
+      "damwand plaatsen",
+      "slootkant herstellen",
+      "oever herstellen",
+      "beschoeiing Gorinchem",
+      "beschoeiing Vianen",
+      "beschoeiing Alblasserwaard",
+      "beschoeiing laten plaatsen",
     ],
     faq: [
       {
@@ -248,6 +267,18 @@ export const SERVICES: Service[] = [
       {
         q: "Wat kost beschoeiing per meter?",
         a: "De prijs per strekkende meter hangt af van het materiaal, de hoogte, de lengte en de bereikbaarheid van de oever. Wij maken graag een vrijblijvende offerte op maat, zodat u vooraf precies weet waar u aan toe bent.",
+      },
+      {
+        q: "Heb ik een vergunning nodig voor een beschoeiing?",
+        a: "Dat hangt af van de watergang en de regels van het waterschap. Voor een sloot of vijver op eigen terrein is meestal geen vergunning nodig, langs een watergang van het waterschap soms wel. Wij werken volgens de regels van Waterschap Rivierenland en vertellen u vooraf waar u rekening mee moet houden.",
+      },
+      {
+        q: "Hoe lang duurt het plaatsen van een beschoeiing?",
+        a: "De meeste beschoeiingen bij particulieren staan er binnen één tot enkele dagen, afhankelijk van de lengte van de oever, het materiaal en de bereikbaarheid. Bij het vervangen van een bestaande beschoeiing komt het weghalen van de oude constructie en het herstellen van de oever daarbij.",
+      },
+      {
+        q: "Kunnen jullie ook bij een slecht bereikbare oever komen?",
+        a: "Meestal wel. We werken met een minigraver van 2,5 ton die door een normale poort past, en waar dat niet kan doen we het werk met de hand. Vertel ons wat de situatie is, dan kijken we hoe we erbij komen.",
       },
       {
         q: "In welke regio plaatsen jullie beschoeiing?",
