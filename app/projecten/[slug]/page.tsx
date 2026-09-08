@@ -22,7 +22,12 @@ export async function generateMetadata({
   const project = getProjectBySlug(slug)
   if (!project) return { title: "Project niet gevonden | Slob Tuinen" }
 
-  const title = `${project.title} in ${project.location} | Slob Tuinen`
+  // Veel projecttitels bevatten de plaats al ("Straatwerk Leerdam"); dan niet
+  // nog eens "in Leerdam" erachter plakken.
+  const place = project.title.includes(project.location)
+    ? project.title
+    : `${project.title} in ${project.location}`
+  const title = `${place} | Slob Tuinen`
   const description =
     project.summary ??
     `${project.title} in ${project.location}, uitgevoerd door Slob Tuinen.`

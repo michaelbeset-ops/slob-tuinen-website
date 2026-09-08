@@ -204,6 +204,11 @@ export const SERVICES: Service[] = [
       "Waterpas, op maat en stevig verankerd",
       "Voor particulier en zakelijk in Leerdam e.o.",
     ],
+    gallery: [
+      "/images/project-vlonder-maarssen-1.webp",
+      "/images/project-vlonder-maarssen-2.webp",
+      "/images/project-vlonder-maarssen-3.webp",
+    ],
     keywords: [
       "beschoeiing",
       "beschoeiing plaatsen",
@@ -305,13 +310,21 @@ export const SERVICES: Service[] = [
       "Goed grondwerk is de basis van elk buitenproject. Wat er onder de grond gebeurt, bepaalt of uw bestrating vlak blijft liggen en of planten goed groeien. Daar doen we geen concessies aan.",
       "We verzorgen de ontgraving, de fundering, de drainage en een waterpas voorbereide ondergrond. Met de juiste opbouw en afwatering voorkomen we verzakking en wateroverlast, problemen die anders pas later opduiken en dan duur zijn om te herstellen.",
       "U ziet het straks niet meer terug, maar het bepaalt wel het eindresultaat. Met goed grondwerk ligt er een terrein dat jarenlang strak en stabiel blijft.",
+      "Daarnaast graven we proefsleuven om kabels en leidingen vrij te leggen voordat er echt gegraven wordt. Dat doen we met een minigraver van 2,5 ton, waarbij we de laatste laag rond de leidingen met de hand afwerken. Voor spoed zijn we 24 uur per dag bereikbaar: bij een lekkage, een storing of een geraakte kabel staan we snel op locatie.",
     ],
     highlights: [
       "Ontgraving en fundering",
       "Drainage en afwatering",
       "Waterpas voorbereide ondergrond",
+      "Proefsleuven voor kabels en leidingen",
+      "Minigraver van 2,5 ton, ook op krappe plekken",
+      "24/7 bereikbaar voor spoed",
       "Voorkomt verzakking en wateroverlast",
       "Basis voor bestrating en beplanting",
+    ],
+    gallery: [
+      "/images/project-grondwerk-proefsleuven-leerdam-1.webp",
+      "/images/project-grondwerk-proefsleuven-leerdam-2.webp",
     ],
     keywords: [
       "grondwerk",
@@ -322,6 +335,12 @@ export const SERVICES: Service[] = [
       "afwatering tuin",
       "bouwrijp maken",
       "grondwerker",
+      "proefsleuven graven",
+      "kabels en leidingen lokaliseren",
+      "proefsleuven Leerdam",
+      "spoed grondwerk",
+      "minigraver met machinist",
+      "graafwerk spoed 24/7",
     ],
     faq: [
       {
@@ -331,6 +350,14 @@ export const SERVICES: Service[] = [
       {
         q: "Leggen jullie ook drainage aan?",
         a: "Ja. We verzorgen drainage en afwatering, zodat regenwater goed wegloopt en u geen wateroverlast krijgt.",
+      },
+      {
+        q: "Graven jullie ook proefsleuven voor kabels en leidingen?",
+        a: "Ja. We leggen kabels en leidingen vrij met een minigraver van 2,5 ton en werken de laatste laag rond de leidingen met de hand af, zodat er niets beschadigd raakt. De sleuf zetten we veilig af, zodat verkeer en bewoners erlangs kunnen.",
+      },
+      {
+        q: "Kan ik jullie bellen bij spoed?",
+        a: "Voor spoed zijn we 24 uur per dag bereikbaar. Bij een lekkage, een storing of een geraakte kabel komen we met de minigraver ter plaatse om het probleem vrij te graven.",
       },
       {
         q: "Kunnen jullie na het grondwerk ook de bestrating leggen?",
@@ -890,6 +917,64 @@ const PROJECT_ENTRIES: Project[] = [
       "Klaar om te bestraten en te beplanten",
     ],
     services: ["Grondverzet", "Grondwerk"],
+  },
+  {
+    title: "Vlonder Maarssen",
+    location: "Maarssen",
+    image: "/images/project-vlonder-maarssen-1.webp",
+    gallery: [
+      "/images/project-vlonder-maarssen-1.webp",
+      "/images/project-vlonder-maarssen-2.webp",
+      "/images/project-vlonder-maarssen-3.webp",
+    ],
+    size: "wide",
+    slug: "vlonder-maarssen",
+    date: "2026-09-08",
+    summary:
+      "Aan het water in Maarssen legden wij een hardhouten vlonder aan met een nieuwe beschoeiing langs de oever, ingepast rond de bestaande boom en strak aansluitend op de bestrating.",
+    body: [
+      "Deze tuin in Maarssen grenst aan het water. De oude oever was toe aan vervanging en de hoek bij het water werd nauwelijks gebruikt, terwijl daar juist het mooiste uitzicht is. De wens was een plek om aan het water te zitten, zonder dat de kant verder zou afkalven.",
+      "We zijn onderin begonnen: eerst een nieuwe beschoeiing langs de waterkant, zodat de oever weer vastligt en de grond niet in de sloot zakt. Daarop is de onderconstructie van de vlonder gesteld, waterpas en met genoeg ruimte onder de planken zodat het hout kan drogen en lucht houdt.",
+      "De vlonder zelf is gelegd in hardhout, met een uitsparing rond de bestaande boom zodat die de ruimte houdt om verder te groeien. De rand loopt in een ronding mee met de bestaande sierbestrating, waardoor het terras natuurlijk overgaat in het bestaande pad in plaats van er hard tegenaan te stoppen.",
+      "Wat overblijft is een ruim vlonderterras aan het water, met de boom er middenin en een oever die weer jaren mee kan.",
+    ],
+    highlights: [
+      "Nieuwe beschoeiing langs de waterkant",
+      "Hardhouten vlonder op een waterpas onderconstructie",
+      "Uitsparing rond de bestaande boom",
+      "Gebogen rand, strak aansluitend op de bestaande bestrating",
+      "Oever weer vastgelegd tegen afkalven",
+    ],
+    services: ["Beschoeiingswerk", "Tuinaanleg"],
+  },
+  {
+    title: "Proefsleuven Leerdam",
+    location: "Leerdam",
+    image: "/images/project-grondwerk-proefsleuven-leerdam-1.webp",
+    gallery: [
+      "/images/project-grondwerk-proefsleuven-leerdam-1.webp",
+      "/images/project-grondwerk-proefsleuven-leerdam-2.webp",
+    ],
+    size: "wide",
+    slug: "proefsleuven-leerdam",
+    date: "2026-09-08",
+    summary:
+      "In een woonstraat in Leerdam groeven wij proefsleuven om kabels en leidingen vrij te leggen, met een minigraver van 2,5 ton en een veilige afzetting zodat het verkeer kon doorrijden.",
+    body: [
+      "Voordat er in de openbare ruimte gegraven kan worden, moet duidelijk zijn wat er precies in de grond ligt. Tekeningen geven een richting aan, maar de werkelijkheid ligt er vaak net anders bij. Met proefsleuven leggen we kabels en leidingen daadwerkelijk vrij, zodat de aannemer weet waar hij aan toe is en er niets geraakt wordt.",
+      "We graven met onze minigraver van 2,5 ton en werken de laatste laag rond de leidingen met de hand af. Zo komt er geen schade aan gasleidingen, waterleidingen of datakabels. De sleuf is afgeschoten met schotten en gestempeld, zodat de kanten blijven staan en er veilig in gewerkt kan worden.",
+      "Omdat dit werk midden in een woonstraat plaatsvond, hebben we het terrein afgezet met hekken en bakens en de doorgang vrijgehouden. Bewoners konden erlangs en het verkeer kon doorrijden. Na afloop is de sleuf weer aangevuld en verdicht en is de bestrating netjes teruggelegd.",
+      "Voor spoed zijn we 24/7 bereikbaar. Bij een lekkage, een storing of een kabel die geraakt is, kunnen we er snel bij zijn met de minigraver en het probleem vrijgraven.",
+    ],
+    highlights: [
+      "Proefsleuven graven om kabels en leidingen vrij te leggen",
+      "Minigraver van 2,5 ton, laatste laag met de hand",
+      "Sleuf afgeschoten en gestempeld voor veilig werken",
+      "Veilige afzetting, verkeer en bewoners konden erlangs",
+      "Sleuf aangevuld, verdicht en bestrating teruggelegd",
+      "24/7 bereikbaar voor spoed",
+    ],
+    services: ["Grondwerk", "Grondverzet"],
   },
 ]
 
