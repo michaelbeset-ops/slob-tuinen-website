@@ -416,7 +416,7 @@ export type Project = {
   services?: string[]
 }
 
-export const PROJECTS: Project[] = [
+const PROJECT_ENTRIES: Project[] = [
   {
     title: "Tuinaanleg Dalem",
     location: "Dalem",
@@ -864,7 +864,43 @@ export const PROJECTS: Project[] = [
     ],
     services: ["Straatwerk", "Grondwerk", "Grondverzet"],
   },
+  {
+    title: "Grondverzet Leerdam",
+    location: "Leerdam",
+    image: "/images/project-grondverzet-leerdam-1.webp",
+    gallery: [
+      "/images/project-grondverzet-leerdam-1.webp",
+      "/images/project-grondverzet-leerdam-2.webp",
+    ],
+    size: "wide",
+    slug: "grondverzet-leerdam",
+    date: "2026-09-08",
+    summary:
+      "Bij een nieuwbouwwoning in Leerdam groeven wij de tuin af en brachten we het hele perceel op hoogte, klaar om te bestraten en te beplanten.",
+    body: [
+      "Bij oplevering lag deze tuin in Leerdam er nog bij zoals de aannemer hem achterliet: bouwzand, puinresten en een terrein dat alle kanten op liep. Voordat er iets van bestrating of beplanting in kan, moet zo'n tuin eerst helemaal opnieuw worden opgebouwd.",
+      "We hebben de tuin afgegraven met onze minigraver van 2,5 ton. Die komt door een normale poort naar achteren en laat het terrein heel, wat op een pas opgeleverd perceel scheelt. De overtollige grond en het bouwpuin zijn afgevoerd, waarna we het hele vlak op de juiste hoogte hebben gebracht ten opzichte van de dorpels en de erfgrens.",
+      "Daarna is het terrein geëgaliseerd en verdicht, met voldoende afschot van de woning af zodat regenwater de goede kant op loopt. Zo ligt er een vlakke, stevige ondergrond waar de bestrating en de beplanting zo op kunnen.",
+    ],
+    highlights: [
+      "Tuin afgegraven met minigraver van 2,5 ton",
+      "Bouwpuin en overtollige grond afgevoerd",
+      "Terrein op hoogte gebracht ten opzichte van dorpels en erfgrens",
+      "Geëgaliseerd en verdicht met afschot van de woning af",
+      "Klaar om te bestraten en te beplanten",
+    ],
+    services: ["Grondverzet", "Grondwerk"],
+  },
 ]
+
+/**
+ * Nieuwste werk eerst: de carrousel op de homepage en de projectlijsten volgen
+ * deze volgorde, zodat een nieuw project vooraan verschijnt in plaats van
+ * achteraan. Projecten met dezelfde datum houden de volgorde hierboven.
+ */
+export const PROJECTS: Project[] = [...PROJECT_ENTRIES].sort((a, b) =>
+  (b.date ?? "").localeCompare(a.date ?? ""),
+)
 
 export function getProjectBySlug(slug: string) {
   return PROJECTS.find((p) => p.slug === slug)
