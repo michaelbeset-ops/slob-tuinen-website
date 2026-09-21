@@ -10,6 +10,7 @@ import {
   SERVICES,
 } from "@/components/slob/data"
 import { withBasePath } from "@/lib/base-path"
+import { jsonLd } from "@/lib/json-ld"
 
 const SITE_URL = "https://slobtuinen.nl/"
 
@@ -124,7 +125,7 @@ export default async function LocationPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([serviceLd, faqLd, breadcrumbLd]),
+          __html: jsonLd([serviceLd, faqLd, breadcrumbLd]),
         }}
       />
       <SiteHeader />

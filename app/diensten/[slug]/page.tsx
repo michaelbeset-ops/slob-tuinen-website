@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/slob/site-header"
 import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
 import { getServiceById, SERVICES } from "@/components/slob/data"
 import { withBasePath } from "@/lib/base-path"
+import { jsonLd } from "@/lib/json-ld"
 
 const SITE_URL = "https://slobtuinen.nl/"
 
@@ -110,16 +111,16 @@ export default async function ServicePage({
     <div className="min-h-screen bg-background">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(serviceLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbLd) }}
       />
       {faqLd && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+          dangerouslySetInnerHTML={{ __html: jsonLd(faqLd) }}
         />
       )}
       <SiteHeader />

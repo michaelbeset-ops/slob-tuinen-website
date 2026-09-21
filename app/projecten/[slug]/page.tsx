@@ -6,6 +6,7 @@ import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
 import { BeforeAfter } from "@/components/slob/before-after"
 import { getProjectBySlug, PROJECT_SLUGS } from "@/components/slob/data"
 import { withBasePath } from "@/lib/base-path"
+import { jsonLd } from "@/lib/json-ld"
 
 const SITE_URL = "https://slobtuinen.nl/"
 
@@ -83,7 +84,7 @@ export default async function ProjectPage({
     <div className="min-h-screen bg-background">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbLd) }}
       />
       <SiteHeader />
 
