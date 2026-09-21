@@ -20,7 +20,7 @@ export default function CookiebeleidPage() {
         </h1>
 
         <div className="prose prose-neutral max-w-none text-muted-foreground [&_h2]:mb-3 [&_h2]:mt-10 [&_h2]:font-bold [&_h2]:uppercase [&_h2]:tracking-wide [&_h2]:text-foreground [&_p]:mb-4 [&_p]:leading-relaxed [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-1 [&_table]:mb-6 [&_table]:w-full [&_table]:text-sm [&_th]:border [&_th]:border-border [&_th]:bg-muted [&_th]:p-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-foreground [&_td]:border [&_td]:border-border [&_td]:p-3">
-          <p className="text-sm text-muted-foreground">Laatst bijgewerkt: 5 juli 2026</p>
+          <p className="text-sm text-muted-foreground">Laatst bijgewerkt: 21 september 2026</p>
 
           <h2>1. Wat zijn cookies</h2>
           <p>
@@ -46,9 +46,15 @@ export default function CookiebeleidPage() {
             <tbody>
               <tr>
                 <td>cookie_consent</td>
-                <td>Functioneel</td>
+                <td>Functioneel (local storage)</td>
                 <td>Onthoudt uw cookievoorkeur</td>
-                <td>1 jaar</td>
+                <td>Tot u het zelf wist</td>
+              </tr>
+              <tr>
+                <td>maps_consent</td>
+                <td>Functioneel (local storage)</td>
+                <td>Onthoudt dat u de kaart wilde laden</td>
+                <td>Tot u het zelf wist</td>
               </tr>
               <tr>
                 <td>Google Maps cookies</td>
@@ -62,12 +68,20 @@ export default function CookiebeleidPage() {
             </tbody>
           </table>
 
-          <h2>3. Functionele cookies</h2>
+          <h2>3. Functionele opslag</h2>
           <p>
-            Wij plaatsen één functionele cookie (<code>cookie_consent</code>)
-            om uw keuze ten aanzien van cookies te onthouden. Deze cookie is
-            noodzakelijk om te voorkomen dat het cookiemelding elke keer
-            opnieuw verschijnt. Hiervoor is geen toestemming vereist.
+            Wij bewaren één voorkeur (<code>cookie_consent</code>) om uw keuze
+            ten aanzien van cookies te onthouden, plus eventueel
+            (<code>maps_consent</code>) als u de kaart heeft geladen. Technisch
+            gezien zijn dit geen cookies maar <em>local storage</em>: ze blijven
+            in uw eigen browser en worden nooit meegestuurd naar onze server of
+            naar een andere partij. Ze zijn nodig om te voorkomen dat de
+            cookiemelding elke keer opnieuw verschijnt. Hiervoor is geen
+            toestemming vereist.
+          </p>
+          <p>
+            Deze voorkeuren blijven staan tot u ze zelf wist. Dat kan via de
+            instellingen van uw browser, bij het wissen van websitegegevens.
           </p>
 
           <h2>4. Cookies van Google Maps</h2>
