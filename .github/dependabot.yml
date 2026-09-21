@@ -1,0 +1,21 @@
+# Dependabot houdt de bouwafhankelijkheden bij. Zonder dit bestand bleef een
+# kwetsbare versie van bijvoorbeeld Next.js maandenlang onopgemerkt staan: de
+# site wordt maar af en toe aangepast, dus er is geen natuurlijk moment waarop
+# iemand naar de versies kijkt.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      # Eén verzamel-PR per maand in plaats van vijf losse; dat maakt de kans
+      # groter dat hij ook echt bekeken en samengevoegd wordt.
+      alle-afhankelijkheden:
+        patterns: ["*"]
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly

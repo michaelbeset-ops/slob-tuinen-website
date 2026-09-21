@@ -17,6 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # De deploy-stap gebruikt zijn eigen token. Zonder dit blijft het
+          # workflow-token tijdens de hele build in .git/config staan, waar elk
+          # build- of installatiescript erbij kan.
+          persist-credentials: false
 
       - uses: pnpm/action-setup@v4
         with:
@@ -28,7 +33,10 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        # --frozen-lockfile: installeer exact wat in pnpm-lock.yaml staat.
+        # Met --no-frozen-lockfile mocht CI stilzwijgend nieuwere (en dus
+        # ongecontroleerde) versies binnenhalen dan lokaal getest zijn.
+        run: pnpm install --frozen-lockfile
 
       - name: Build
         run: pnpm build
