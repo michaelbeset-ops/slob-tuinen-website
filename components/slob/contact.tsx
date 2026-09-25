@@ -9,20 +9,11 @@ function InstagramIcon({ className }: { className?: string }) {
     </svg>
   )
 }
-import { EMAIL, EMAIL_MAILTO, LOCATIONS, PHONE, PHONE_TEL, WHATSAPP_QUOTE, WHATSAPP_URL } from "./data"
+import { EMAIL, EMAIL_MAILTO, LOCATIONS, PHONE, PHONE_TEL, SERVICES, WHATSAPP_QUOTE, WHATSAPP_URL } from "./data"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { MapEmbed } from "./map-embed"
 import { ContactForm } from "./contact-form"
 import { withBasePath } from "@/lib/base-path"
-
-const SERVICES = [
-  "Tuinaanleg",
-  "Grondverzet",
-  "Beschoeiingswerk",
-  "Groenvoorziening",
-  "Grondwerk",
-  "Straatwerk",
-]
 
 const LEGAL = [
   { label: "Privacybeleid", href: "/privacybeleid" },
@@ -158,12 +149,12 @@ export function Contact() {
               </h3>
               <ul className="flex flex-col gap-2">
                 {SERVICES.map((s) => (
-                  <li key={s}>
+                  <li key={s.id}>
                     <a
-                      href="#diensten"
+                      href={withBasePath(`/diensten/${s.id}`)}
                       className="text-sm text-white/60 transition-colors hover:text-white"
                     >
-                      {s}
+                      {s.title}
                     </a>
                   </li>
                 ))}
