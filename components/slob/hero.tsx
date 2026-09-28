@@ -21,7 +21,7 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-6 pb-24 md:justify-center md:px-12 md:pb-0">
         <p className="mb-6 hidden max-w-md text-sm font-semibold uppercase tracking-[0.25em] text-forest md:block">
-          Leerdam &amp; omgeving
+          Hovenier in Leerdam &amp; omgeving
         </p>
         <h1 className="text-balance font-black uppercase leading-[0.9] tracking-tighter text-white text-[clamp(2rem,6vw,5rem)]">
           Slob.

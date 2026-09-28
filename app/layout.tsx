@@ -12,9 +12,9 @@ const geistMono = Geist_Mono({
 })
 
 const SITE_URL = 'https://slobtuinen.nl/'
-const SITE_TITLE = 'Slob Tuinen | Grond, Groen & Straat, Leerdam'
+const SITE_TITLE = 'Hovenier Leerdam | Slob Tuinen: Grond, Groen & Straat'
 const SITE_DESCRIPTION =
-  'Slob Tuinen: vakmanschap van de hoogste plank door Martin Slob. Tuinaanleg, grondverzet, beschoeiingswerk, groenvoorziening, grondwerk en straatwerk in Leerdam en omgeving.'
+  'Slob Tuinen is uw hovenier in Leerdam, met vakmanschap van de hoogste plank door Martin Slob. Tuinaanleg, bestrating, beschoeiing, grondverzet, grondwerk en groenvoorziening in Leerdam en omgeving.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -26,6 +26,8 @@ export const metadata: Metadata = {
     'Slobtuinen Leerdam',
     'Slob Tuinen Leerdam',
     'hovenier Leerdam',
+    'bestrating Leerdam',
+    'beschoeiing Leerdam',
     'tuinaanleg Leerdam',
     'straatwerk Leerdam',
     'grondwerk Leerdam',
