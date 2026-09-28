@@ -72,6 +72,8 @@ export type Service = {
   /** Dient tevens als slug: /diensten/[id] */
   id: string
   title: string
+  /** Optionele <title> voor de dienstpagina, afgestemd op waar mensen op zoeken. */
+  metaTitle?: string
   image: string
   /** Korte tagline op de dienstenkaart. */
   intro: string
@@ -186,6 +188,7 @@ export const SERVICES: Service[] = [
   {
     id: "beschoeiingswerk",
     title: "Beschoeiingswerk",
+    metaTitle: "Beschoeiing plaatsen & vervangen in Leerdam e.o. | Slob Tuinen",
     image: "/images/service-beschoeiing.webp",
     intro: "Beschoeiing plaatsen en vervangen langs sloot, vijver en watergang.",
     summary:
@@ -225,6 +228,8 @@ export const SERVICES: Service[] = [
       "beschoeiing sloot",
       "vijverbeschoeiing",
       "beschoeiing Leerdam",
+      "beschoeiing Gorinchem",
+      "slootkant beschoeiing vervangen",
       "beschoeiing Vijfheerenlanden",
       "beschoeiingsbedrijf Betuwe",
     ],
@@ -368,6 +373,7 @@ export const SERVICES: Service[] = [
   {
     id: "straatwerk",
     title: "Straatwerk",
+    metaTitle: "Straatwerk & bestrating in Leerdam e.o. | Slob Tuinen",
     image: "/images/service-straatwerk.webp",
     intro: "Strakke opritten, paden en terrassen.",
     summary:
@@ -392,6 +398,7 @@ export const SERVICES: Service[] = [
     keywords: [
       "straatwerk",
       "straatwerk Leerdam",
+      "bestrating Leerdam",
       "bestrating",
       "oprit bestraten",
       "terras aanleggen",

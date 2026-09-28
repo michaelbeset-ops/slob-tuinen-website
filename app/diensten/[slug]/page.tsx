@@ -21,7 +21,8 @@ export async function generateMetadata({
   const service = getServiceById(slug)
   if (!service) return { title: "Dienst niet gevonden | Slob Tuinen" }
 
-  const title = `${service.title} in Leerdam en omgeving | Slob Tuinen`
+  const title =
+    service.metaTitle ?? `${service.title} in Leerdam en omgeving | Slob Tuinen`
   const description = service.summary
   // OG-afbeelding afgeleid van de afbeeldingsnaam (image-id ≠ altijd de slug).
   const ogImage = service.image.replace(/^\//, "").replace(/\.webp$/, "-og.jpg")
