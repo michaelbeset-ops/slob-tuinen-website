@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { ArrowLeft, ArrowUpRight, Check, Plus } from "lucide-react"
+import { ArrowLeft, ArrowUpRight, Check, MapPin, Plus } from "lucide-react"
 import { SiteHeader } from "@/components/slob/site-header"
 import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
-import { getServiceById, SERVICES } from "@/components/slob/data"
+import { getProjectsByService, getServiceById, SERVICES } from "@/components/slob/data"
 import { withBasePath } from "@/lib/base-path"
 
 const SITE_URL = "https://slobtuinen.nl/"
@@ -60,6 +60,7 @@ export default async function ServicePage({
   if (!service) notFound()
 
   const others = SERVICES.filter((s) => s.id !== slug)
+  const projects = getProjectsByService(service.title).slice(0, 6)
 
   const serviceLd = {
     "@context": "https://schema.org",
@@ -233,6 +234,46 @@ export default async function ServicePage({
                       className="size-full object-cover"
                     />
                   </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Projecten met deze dienst: interne links naar het resultaat */}
+        {projects.length > 0 && (
+          <section className="mx-auto max-w-[1600px] px-6 pb-16 md:px-12 md:pb-24">
+            <div className="border-t border-border pt-14">
+              <h2 className="mb-3 font-black uppercase tracking-tighter text-foreground text-[clamp(1.75rem,4vw,3rem)]">
+                Projecten met {service.title.toLowerCase()}
+              </h2>
+              <p className="mb-8 max-w-xl text-pretty leading-relaxed text-muted-foreground">
+                Werk van onze eigen ploeg, gefotografeerd na oplevering.
+              </p>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-6">
+                {projects.map((p) => (
+                  <a
+                    key={p.slug}
+                    href={withBasePath(`/projecten/${p.slug}`)}
+                    className="group flex flex-col"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                      <img
+                        src={withBasePath(p.image)}
+                        alt={`${p.title} in ${p.location} door Slob Tuinen`}
+                        loading="lazy"
+                        decoding="async"
+                        className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <h3 className="mt-4 font-black uppercase tracking-tight text-foreground">
+                      {p.title}
+                    </h3>
+                    <p className="mt-1 flex items-center gap-1.5 text-sm text-muted-foreground">
+                      <MapPin className="size-3.5 text-forest" />
+                      {p.location}
+                    </p>
+                  </a>
                 ))}
               </div>
             </div>

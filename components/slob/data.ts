@@ -1000,6 +1000,33 @@ export function getProjectBySlug(slug: string) {
 
 export const PROJECT_SLUGS = PROJECTS.flatMap((p) => (p.slug ? [p.slug] : []))
 
+/** Dienstpagina bij een dienstnaam uit Project.services (niet elke naam heeft er een). */
+export function getServiceByTitle(title: string) {
+  return SERVICES.find((s) => s.title === title)
+}
+
+/** Projecten met een eigen pagina waarbij deze dienst is ingezet, nieuwste eerst. */
+export function getProjectsByService(title: string) {
+  return PROJECTS.filter((p) => p.slug && p.services?.includes(title))
+}
+
+/**
+ * Projecten die het meest lijken op dit project (meeste gedeelde diensten),
+ * voor de interne links onderaan een projectpagina.
+ */
+export function getRelatedProjects(project: Project, limit = 3) {
+  const services = project.services ?? []
+  return PROJECTS.filter((p) => p.slug && p.slug !== project.slug)
+    .map((p) => ({
+      p,
+      shared: (p.services ?? []).filter((s) => services.includes(s)).length,
+    }))
+    .filter(({ shared }) => shared > 0)
+    .sort((a, b) => b.shared - a.shared)
+    .slice(0, limit)
+    .map(({ p }) => p)
+}
+
 export type Review = {
   name: string
   quote: string
@@ -1149,3 +1176,8 @@ export function getLocationBySlug(slug: string) {
 }
 
 export const LOCATION_SLUGS = LOCATIONS.map((l) => l.slug)
+
+/** Plaatspagina waarop dit project als voorbeeld staat, als die er is. */
+export function getLocationForProject(slug: string) {
+  return LOCATIONS.find((l) => l.projectSlugs.includes(slug))
+}

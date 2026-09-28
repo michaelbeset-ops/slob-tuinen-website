@@ -1,10 +1,16 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { ArrowLeft, Check, MapPin } from "lucide-react"
+import { ArrowLeft, ArrowUpRight, Check, MapPin } from "lucide-react"
 import { SiteHeader } from "@/components/slob/site-header"
 import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
 import { BeforeAfter } from "@/components/slob/before-after"
-import { getProjectBySlug, PROJECT_SLUGS } from "@/components/slob/data"
+import {
+  getLocationForProject,
+  getProjectBySlug,
+  getRelatedProjects,
+  getServiceByTitle,
+  PROJECT_SLUGS,
+} from "@/components/slob/data"
 import { withBasePath } from "@/lib/base-path"
 
 const SITE_URL = "https://slobtuinen.nl/"
@@ -63,6 +69,13 @@ export default async function ProjectPage({
   const { slug } = await params
   const project = getProjectBySlug(slug)
   if (!project) notFound()
+
+  const related = getRelatedProjects(project)
+  const serviceLinks = (project.services ?? []).flatMap((s) => {
+    const service = getServiceByTitle(s)
+    return service ? [service] : []
+  })
+  const location = getLocationForProject(slug)
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -138,14 +151,25 @@ export default async function ProjectPage({
               )}
               {project.services && project.services.length > 0 && (
                 <ul className="mt-8 flex flex-wrap gap-2">
-                  {project.services.map((s) => (
-                    <li
-                      key={s}
-                      className="border border-border px-4 py-2 text-xs font-semibold uppercase tracking-wide text-foreground"
-                    >
-                      {s}
-                    </li>
-                  ))}
+                  {project.services.map((s) => {
+                    const service = getServiceByTitle(s)
+                    const chip =
+                      "border border-border px-4 py-2 text-xs font-semibold uppercase tracking-wide text-foreground"
+                    return (
+                      <li key={s}>
+                        {service ? (
+                          <a
+                            href={withBasePath(`/diensten/${service.id}`)}
+                            className={`${chip} inline-block transition-colors hover:border-forest hover:text-forest`}
+                          >
+                            {s}
+                          </a>
+                        ) : (
+                          <span className={`${chip} inline-block`}>{s}</span>
+                        )}
+                      </li>
+                    )
+                  })}
                 </ul>
               )}
             </div>
@@ -238,6 +262,92 @@ export default async function ProjectPage({
                   alt={`${project.title} in ${project.location}`}
                 />
               </div>
+            </div>
+          </section>
+        )}
+
+        {/* Verder kijken: interne links naar diensten, plaats en vergelijkbare projecten */}
+        {(related.length > 0 || serviceLinks.length > 0 || location) && (
+          <section className="mx-auto max-w-[1600px] px-6 py-16 md:px-12 md:py-20">
+            <div className="border-t border-border pt-14">
+              {related.length > 0 && (
+                <>
+                  <h2 className="mb-8 font-black uppercase tracking-tighter text-foreground text-[clamp(1.75rem,4vw,3rem)]">
+                    Vergelijkbare projecten
+                  </h2>
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-6">
+                    {related.map((p) => (
+                      <a
+                        key={p.slug}
+                        href={withBasePath(`/projecten/${p.slug}`)}
+                        className="group flex flex-col"
+                      >
+                        <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                          <img
+                            src={withBasePath(p.image)}
+                            alt={`${p.title} in ${p.location} door Slob Tuinen`}
+                            loading="lazy"
+                            decoding="async"
+                            className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
+                        <h3 className="mt-4 font-black uppercase tracking-tight text-foreground">
+                          {p.title}
+                        </h3>
+                        <p className="mt-1 flex items-center gap-1.5 text-sm text-muted-foreground">
+                          <MapPin className="size-3.5 text-forest" />
+                          {p.location}
+                        </p>
+                      </a>
+                    ))}
+                  </div>
+                </>
+              )}
+
+              {(serviceLinks.length > 0 || location) && (
+                <>
+                  <h2
+                    className={`mb-8 font-black uppercase tracking-tighter text-foreground text-[clamp(1.5rem,3vw,2.25rem)] ${related.length > 0 ? "mt-16" : ""}`}
+                  >
+                    Meer over dit werk
+                  </h2>
+                  <div className="grid grid-cols-1 gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
+                    {serviceLinks.map((s) => (
+                      <a
+                        key={s.id}
+                        href={withBasePath(`/diensten/${s.id}`)}
+                        className="group flex items-center justify-between gap-4 bg-background p-6 transition-colors hover:bg-foreground hover:text-white"
+                      >
+                        <span>
+                          <span className="block font-black uppercase tracking-tight text-[clamp(1.1rem,2vw,1.4rem)]">
+                            {s.title}
+                          </span>
+                          <span className="mt-1 block text-sm text-muted-foreground group-hover:text-white/70">
+                            {s.intro}
+                          </span>
+                        </span>
+                        <ArrowUpRight className="size-5 shrink-0 text-forest transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </a>
+                    ))}
+                    {location && (
+                      <a
+                        href={withBasePath(`/hovenier/${location.slug}`)}
+                        className="group flex items-center justify-between gap-4 bg-background p-6 transition-colors hover:bg-foreground hover:text-white"
+                      >
+                        <span>
+                          <span className="block font-black uppercase tracking-tight text-[clamp(1.1rem,2vw,1.4rem)]">
+                            Hovenier in {location.name}
+                          </span>
+                          <span className="mt-1 block text-sm text-muted-foreground group-hover:text-white/70">
+                            Ons werk in {location.name} en omgeving.
+                          </span>
+                        </span>
+                        <ArrowUpRight className="size-5 shrink-0 text-forest transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </a>
+                    )}
+                  </div>
+                </>
+              )}
             </div>
           </section>
         )}
