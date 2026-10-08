@@ -109,6 +109,7 @@ export const SERVICES: Service[] = [
       "Grondwerk en egalisatie",
       "Bestrating, paden en terrassen",
       "Beplanting, hagen en borders",
+      "Hardhouten vlonders en balustrades",
       "Netjes opgeleverd tot in de details",
     ],
     keywords: [
@@ -120,6 +121,9 @@ export const SERVICES: Service[] = [
       "tuinontwerp",
       "achtertuin aanleggen",
       "voortuin aanleggen",
+      "vlonder aanleggen",
+      "vlonder laten aanleggen Leerdam",
+      "hardhouten vlonder",
     ],
     faq: [
       {
@@ -451,6 +455,38 @@ export type Project = {
 }
 
 const PROJECT_ENTRIES: Project[] = [
+  {
+    title: "Vlonder Leerdam",
+    location: "Leerdam",
+    image: "/images/project-vlonder-leerdam-1.webp",
+    gallery: [
+      "/images/project-vlonder-leerdam-1.webp",
+      "/images/project-vlonder-leerdam-2.webp",
+      "/images/project-vlonder-leerdam-3.webp",
+      "/images/project-vlonder-leerdam-4.webp",
+      "/images/project-vlonder-leerdam-5.webp",
+    ],
+    size: "wide",
+    slug: "vlonder-leerdam",
+    date: "2026-10-08",
+    summary:
+      "In Leerdam legden wij een ruime hardhouten vlonder aan met een balustrade, ingebouwde verlichting en boomvakken rond de bestaande leibomen, met vrij uitzicht op het water.",
+    body: [
+      "Deze tuin in Leerdam ligt aan het water en heeft een verhoogd terras direct aan de woning. De wens was een vlonder die de hele breedte van het terras benut, veilig is aan de randen en de bestaande elementen in de tuin een plek geeft: de houten staanders van de overkapping en de rij leibomen langs de schutting.",
+      "We zijn begonnen met een waterpas gestelde onderconstructie, met genoeg ruimte onder de planken zodat het hout kan ventileren en drogen. Daarop zijn de geribbelde hardhouten vlonderplanken gelegd, die stroef blijven als het nat is. Rond de staanders van de overkapping zijn de planken netjes ingepast, en in de vlonder zijn spots ingebouwd zodat het terras ook 's avonds bruikbaar is.",
+      "Langs de randen staat een hardhouten balustrade met een stevige handregel en een tussenregel. Die zorgt voor veiligheid bij het hoogteverschil naar het lagere terras, zonder het uitzicht op het water weg te nemen. De bestaande leibomen kregen elk een eigen boomvak in de vlonder, zodat de stammen de ruimte houden en de bomen gewoon kunnen blijven staan.",
+      "Het resultaat is een vlonderterras van hardhout dat jarenlang meegaat: ruim, veilig, mooi verlicht en met de bomen en het water als vanzelfsprekend onderdeel van de tuin. Wilt u ook een vlonder laten aanleggen in Leerdam of omgeving? Martin komt graag langs om mee te kijken.",
+    ],
+    highlights: [
+      "Hardhouten vlonder met geribbelde, stroeve planken",
+      "Waterpas onderconstructie met ventilatie onder de planken",
+      "Hardhouten balustrade met handregel en tussenregel",
+      "Inbouwspots in de vlonder voor sfeer en veiligheid",
+      "Boomvakken rond de bestaande leibomen",
+      "Planken ingepast rond de staanders van de overkapping",
+    ],
+    services: ["Tuinaanleg"],
+  },
   {
     title: "Tuinaanleg Dalem",
     location: "Dalem",
