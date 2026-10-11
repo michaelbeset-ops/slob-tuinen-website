@@ -1217,3 +1217,31 @@ export const LOCATION_SLUGS = LOCATIONS.map((l) => l.slug)
 export function getLocationForProject(slug: string) {
   return LOCATIONS.find((l) => l.projectSlugs.includes(slug))
 }
+
+/** Veelgestelde vragen op de homepage: zichtbaar op de pagina én als FAQPage-schema. */
+export const HOME_FAQ: { q: string; a: string }[] = [
+  {
+    q: "Wat doet Slob Tuinen?",
+    a: "Slob Tuinen is een hovenier uit Leerdam. We doen tuinaanleg, straatwerk en bestrating, beschoeiingswerk, grondverzet, grondwerk en groenvoorziening, voor particulieren en bedrijven.",
+  },
+  {
+    q: "In welke plaatsen werken jullie?",
+    a: "We werken vanuit Leerdam in de hele Vijfheerenlanden en de regio eromheen, waaronder Vianen, Gorinchem, Culemborg, de Alblasserwaard en de Betuwe.",
+  },
+  {
+    q: "Is een offerte vrijblijvend?",
+    a: "Ja. We komen graag langs om uw situatie te bekijken en maken daarna een vrijblijvende offerte op maat, zodat u vooraf weet waar u aan toe bent.",
+  },
+  {
+    q: "Hoe vraag ik een offerte aan?",
+    a: "Via het offerteformulier op deze website, via WhatsApp of door Martin te bellen op 06 28 86 47 44. U krijgt snel en eerlijk antwoord.",
+  },
+  {
+    q: "Voeren jullie het werk zelf uit?",
+    a: "Ja. Grondwerk, bestrating, beschoeiing en beplanting doen we in eigen beheer, met onze eigen ploeg. U heeft één aanspreekpunt van begin tot eind: Martin.",
+  },
+  {
+    q: "Kunnen jullie ook een deel van de tuin aanpakken?",
+    a: "Zeker. We leggen complete tuinen aan, maar u kunt ons net zo goed inschakelen voor alleen een oprit, een terras, een vlonder, een beschoeiing of alleen het grondwerk.",
+  },
+]
