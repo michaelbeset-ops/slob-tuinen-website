@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { withBasePath } from '@/lib/base-path'
 import { CookieBanner } from '@/components/slob/cookie-banner'
-import { REVIEW_AVERAGE, REVIEWS } from '@/components/slob/data'
+import { SERVICES } from '@/components/slob/data'
 import './globals.css'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
@@ -74,52 +74,54 @@ export const metadata: Metadata = {
   },
 }
 
-/** Structured data voor lokale vindbaarheid in Google (LocalBusiness). */
+/**
+ * Structured data voor lokale vindbaarheid in Google. Landscaper is geen
+ * schema.org-type, daarom HomeAndConstructionBusiness (een LocalBusiness).
+ * Reviews staan zichtbaar op de pagina en bewust niet als aggregateRating in
+ * de schema: Google toont geen sterren voor reviews op het eigen bedrijf.
+ */
 const JSON_LD = {
   '@context': 'https://schema.org',
-  '@type': 'Landscaper',
-  name: 'Slob Tuinen',
-  alternateName: ['Slobtuinen', 'Slobtuinen.nl', 'Slob Tuinen Leerdam'],
-  description: SITE_DESCRIPTION,
-  url: SITE_URL,
-  image: `${SITE_URL}og-image.jpg`,
-  logo: `${SITE_URL}logo.png`,
-  telephone: '+31628864744',
-  email: 'slobdienstverlening@gmail.com',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Recht van Ter Leede 28a',
-    postalCode: '4143 LP',
-    addressLocality: 'Leerdam',
-    addressCountry: 'NL',
-  },
-  areaServed: [
-    'Leerdam',
-    'Vijfheerenlanden',
-    'Gorinchem',
-    'Vianen',
-    'Betuwe',
-  ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: REVIEW_AVERAGE,
-    reviewCount: REVIEWS.length,
-    bestRating: 5,
-    worstRating: 1,
-  },
-  review: REVIEWS.map((r) => ({
-    '@type': 'Review',
-    author: { '@type': 'Person', name: r.name },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: r.rating,
-      bestRating: 5,
-      worstRating: 1,
+  '@graph': [
+    {
+      '@type': 'HomeAndConstructionBusiness',
+      '@id': `${SITE_URL}#bedrijf`,
+      name: 'Slob Tuinen',
+      alternateName: ['Slobtuinen', 'Slobtuinen.nl', 'Slob Tuinen Leerdam'],
+      description: SITE_DESCRIPTION,
+      url: SITE_URL,
+      image: `${SITE_URL}og-image.jpg`,
+      logo: `${SITE_URL}logo.png`,
+      telephone: '+31628864744',
+      email: 'slobdienstverlening@gmail.com',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Recht van Ter Leede 28a',
+        postalCode: '4143 LP',
+        addressLocality: 'Leerdam',
+        addressCountry: 'NL',
+      },
+      areaServed: [
+        'Leerdam',
+        'Vijfheerenlanden',
+        'Gorinchem',
+        'Vianen',
+        'Betuwe',
+      ],
+      founder: { '@type': 'Person', name: 'Martin Slob' },
+      knowsAbout: SERVICES.map((s) => s.title),
+      sameAs: ['https://www.instagram.com/slob_tuinen/'],
     },
-    reviewBody: r.quote,
-  })),
-  sameAs: ['https://www.instagram.com/slob_tuinen/'],
-  priceRange: '$$',
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}#website`,
+      name: 'Slob Tuinen',
+      alternateName: 'Slobtuinen',
+      url: SITE_URL,
+      inLanguage: 'nl-NL',
+      publisher: { '@id': `${SITE_URL}#bedrijf` },
+    },
+  ],
 }
 
 export const viewport: Viewport = {
