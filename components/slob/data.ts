@@ -97,10 +97,14 @@ export const SERVICES: Service[] = [
   {
     id: "tuinaanleg",
     title: "Tuinaanleg",
+    // Search Console nov 2026: "tuinontwerpen leerdam" (pos. 25) en "tuinaanleg vianen/gorinchem" (pos. 12-14).
+    metaTitle: "Tuinaanleg en tuinontwerp in Leerdam e.o. | Slob Tuinen",
     image: "/images/service-tuinaanleg.webp",
     intro: "Een complete tuin, precies zoals u hem voor ogen heeft.",
     summary:
       "Wij leggen complete tuinen aan in Leerdam en omgeving. Van het eerste idee tot de laatste plant, alles in eigen beheer en klaar om er jaren van te genieten.",
+    metaDescription:
+      "Tuinaanleg in Leerdam en omgeving, van tuinontwerp tot de laatste plant. Grondwerk, bestrating en beplanting in eigen beheer, met Martin als aanspreekpunt.",
     paragraphs: [
       "Een goede tuin begint met een goed plan. We komen langs, kijken naar uw huis en luisteren naar wat u wilt. Samen bedenken we hoe de tuin ingedeeld kan worden. Een strakke tuin bij huis of juist een ruime, groene tuin: het moet passen bij hoe u buiten leeft.",
       "Daarna doen we alles zelf. Het grondwerk, de bestrating, de beschoeiing en de beplanting. Doordat we het hele werk in eigen hand houden, sluit alles op elkaar aan en heeft u maar één aanspreekpunt: Martin.",
@@ -1128,7 +1132,7 @@ export const LOCATIONS: Location[] = [
     summary:
       "Hovenier in Gorinchem voor tuinaanleg, straatwerk, grondwerk en groenvoorziening. Slob Tuinen werkt vanuit Leerdam, op een kwartier rijden, en heeft in Gorinchem en Dalem al meerdere tuinen en opritten opgeleverd.",
     metaDescription:
-      "Hovenier in Gorinchem voor tuinaanleg, straatwerk, grondwerk en groen. Slob Tuinen uit Leerdam heeft hier en in Dalem al tuinen en opritten opgeleverd.",
+      "Hovenier in Gorinchem voor tuinaanleg, straatwerk, schuttingen en grondwerk. In Gorinchem en Dalem legden we al tuinen, opritten en een schutting aan.",
     paragraphs: [
       "Gorinchem ligt op een kwartier rijden van onze standplaats in Leerdam. Daardoor komen we er vaak: voor een complete tuin, een nieuwe oprit, grondwerk achter de woning of het onderhoud van een bedrijventerrein. Kort op de weg betekent ook dat we makkelijk even langskomen om mee te kijken voordat er iets op papier staat.",
       "In de oudere wijken binnen de vesting werken we vaak op krappe plekken, waar het materieel niet zomaar de tuin in rijdt en de aanvoer via de voordeur of een smalle steeg gaat. In de nieuwbouw rond Hoog Dalem is het andere werk: daar ligt de tuin er bij oplevering kaal en ongelijk bij, en moet er eerst goed grondwerk komen voordat de bestrating en de beplanting erin kunnen.",
@@ -1174,7 +1178,7 @@ export const LOCATIONS: Location[] = [
     summary:
       "Hovenier in Vianen voor tuinaanleg, straatwerk, grondwerk en groenvoorziening. Slob Tuinen werkt vanuit Leerdam in de hele Vijfheerenlanden en legde in Vianen onder meer een strak terras met grootformaat tegels aan.",
     metaDescription:
-      "Hovenier in Vianen voor tuinaanleg, straatwerk, grondwerk en groen. Slob Tuinen uit Leerdam werkt in de hele Vijfheerenlanden, ook in Lexmond en Hagestein.",
+      "Hovenier in Vianen voor tuinaanleg, straatwerk en grondwerk. Slob Tuinen werkt in de hele Vijfheerenlanden en Martin komt graag langs om mee te kijken.",
     paragraphs: [
       "Vianen hoort bij de Vijfheerenlanden, net als Leerdam, en dat is precies ons werkgebied. We rijden er zonder omweg naartoe, wat het makkelijk maakt om een werk in etappes te doen of nog even terug te komen voor de laatste details.",
       "Het werk in Vianen loopt uiteen. In de tuinen rond de oude kern gaat het vaak om een terras vervangen, een oprit opnieuw leggen of een tuin die na jaren is verzakt weer waterpas krijgen. In de nieuwere wijken en op de bedrijventerreinen langs de A2 gaat het eerder om grondwerk, bestrating over een groter oppervlak en het groen dat daarbij hoort.",
