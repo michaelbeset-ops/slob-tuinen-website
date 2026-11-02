@@ -141,7 +141,7 @@ export default async function ProjectPage({
                 <MapPin className="size-4" />
                 {project.location}
               </p>
-              <h1 className="text-balance font-black uppercase leading-[0.9] tracking-tighter text-foreground text-[clamp(2.5rem,6vw,4.5rem)]">
+              <h1 className="text-balance font-black uppercase leading-[0.9] tracking-tighter text-foreground text-[clamp(2rem,6vw,4.5rem)]">
                 {project.title}
               </h1>
               {project.summary && (

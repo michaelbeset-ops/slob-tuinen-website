@@ -77,8 +77,10 @@ export type Service = {
   image: string
   /** Korte tagline op de dienstenkaart. */
   intro: string
-  /** Lead + SEO meta-description op de dienstpagina. */
+  /** Lead op de dienstpagina, en meta-description als metaDescription ontbreekt. */
   summary: string
+  /** Optionele kortere meta-description (max. ~155 tekens) voor Google. */
+  metaDescription?: string
   /** Beschrijvende alinea's op de dienstpagina. */
   paragraphs: string[]
   /** Wat wij bieden (bulletlijst). */
@@ -197,6 +199,8 @@ export const SERVICES: Service[] = [
     intro: "Beschoeiing plaatsen en vervangen langs sloot, vijver en watergang.",
     summary:
       "Beschoeiing plaatsen of vervangen in Leerdam, de Vijfheerenlanden en de Betuwe. Wij leggen stevige oeverbeschoeiing aan in hardhout, kunststof of composiet, waterpas, op maat en met een verankering die jarenlang meegaat.",
+    metaDescription:
+      "Beschoeiing plaatsen of vervangen in Leerdam en de Vijfheerenlanden. Oeverbeschoeiing in hardhout, kunststof of composiet, waterpas en stevig verankerd.",
     paragraphs: [
       "Een goede beschoeiing houdt uw oever op zijn plek en geeft de overgang tussen land en water een strakke, nette rand. In een waterrijk gebied als de Vijfheerenlanden, de Alblasserwaard en het Rivierenland is oeverbeschoeiing geen luxe maar noodzaak: zonder stevige walbeschoeiing kalft de kant af, zakt uw grond weg en loopt de sloot dicht.",
       "Wij plaatsen beschoeiing in hardhout, kunststof (bijvoorbeeld een kunststof damwand) of composiet, afhankelijk van uw situatie, budget en gewenste uitstraling. Hardhout heeft een natuurlijke look en gaat zo'n 20 tot 25 jaar mee; kunststof en composiet zijn onderhoudsvrij en gaan vaak 30 jaar of langer mee. Elke beschoeiing komt waterpas en op maat te staan, met stevige palen en een verankering die de druk van grond en water blijvend opvangt.",
@@ -315,6 +319,8 @@ export const SERVICES: Service[] = [
     intro: "De basis die u niet ziet, maar die alles bepaalt.",
     summary:
       "Grondwerk in Leerdam en omgeving: ontgraving, fundering, drainage en een waterpas ondergrond. De basis waar u straks niets meer van ziet, maar die alles bepaalt.",
+    metaDescription:
+      "Grondwerk in Leerdam en omgeving: ontgraving, fundering, drainage en een waterpas ondergrond. De basis onder elk buitenproject.",
     paragraphs: [
       "Goed grondwerk is de basis van elk buitenproject. Wat er onder de grond gebeurt, bepaalt of uw bestrating vlak blijft liggen en of planten goed groeien. Daar doen we geen concessies aan.",
       "We verzorgen de ontgraving, de fundering, de drainage en een waterpas voorbereide ondergrond. Met de juiste opbouw en afwatering voorkomen we verzakking en wateroverlast, problemen die anders pas later opduiken en dan duur zijn om te herstellen.",
@@ -716,7 +722,7 @@ const PROJECT_ENTRIES: Project[] = [
     body: [
       "Voor deze woning in Gorinchem hebben wij de complete achtertuin opnieuw aangelegd. Omdat het terras op hoogte moest komen, plaatsten we een stevige houten damwand als keerwand, waarmee we de tuin netjes op niveau brachten.",
       "Het verhoogde terras werd afgewerkt met keramische tegels, strak gelegd en afgevoegd voor een moderne, onderhoudsarme uitstraling. Een hardhouten trap verbindt het terras met de rest van de tuin. Door de tuin legden we sfeervolle paden van waaltjes, netjes ingepast met een strakke kantopsluiting.",
-      "Daarnaast realiseerden we een onderheide betonvloer als stevige, zakvrije basis — bijvoorbeeld voor een overkapping of berging. Zo kreeg de tuin een complete, duurzame inrichting die jaren meegaat.",
+      "Daarnaast realiseerden we een onderheide betonvloer als stevige, zakvrije basis, bijvoorbeeld voor een overkapping of berging. Zo kreeg de tuin een complete, duurzame inrichting die jaren meegaat.",
     ],
     highlights: [
       "Houten damwand als keerwand voor een verhoogd terras",
@@ -745,7 +751,7 @@ const PROJECT_ENTRIES: Project[] = [
     body: [
       "Voor deze tuin in Leerdam legden wij een compleet nieuwe achtertuin aan. Het ruime terras is bestraat met strakke tegels in een donkere tint, netjes ingepast tegen de woning en de schutting.",
       "Door de tuin maakten we nette grindpaden, afgezet met een strakke kantopsluiting zodat alles mooi gescheiden blijft. Langs de randen legden we borders aan, voorbereid en gevuld met tuinaarde en klaar voor beplanting. Ook de composieten schutting zorgt voor een verzorgde, onderhoudsarme afscheiding.",
-      "Het resultaat is een strakke, onderhoudsarme tuin met een duidelijke indeling van terras, paden en groen — klaar om verder in te richten en van te genieten.",
+      "Het resultaat is een strakke, onderhoudsarme tuin met een duidelijke indeling van terras, paden en groen, klaar om verder in te richten en van te genieten.",
     ],
     highlights: [
       "Ruim terras met strakke tegels",
@@ -772,9 +778,9 @@ const PROJECT_ENTRIES: Project[] = [
     summary:
       "Een gewapende betonvloer in Arkel, vakkundig gestort en strak gevlinderd voor een egale, sterke en onderhoudsarme ondervloer.",
     body: [
-      "Voor deze klus in Arkel legden wij een gewapende betonvloer aan als stevige, duurzame basis — bijvoorbeeld voor een overkapping, tuinhuis of berging. We begonnen met het uitgraven en waterpas voorbereiden van de ondergrond en het plaatsen van een nette bekisting.",
+      "Voor deze klus in Arkel legden wij een gewapende betonvloer aan als stevige, duurzame basis, bijvoorbeeld voor een overkapping, tuinhuis of berging. We begonnen met het uitgraven en waterpas voorbereiden van de ondergrond en het plaatsen van een nette bekisting.",
       "Vervolgens brachten we de wapening (betonstaal) aan, zodat de vloer sterk is en niet scheurt. De beton is in één keer gestort en zorgvuldig uitgevlakt. Daarna hebben we de vloer machinaal gevlinderd voor een strakke, egale en gladde afwerking.",
-      "Het resultaat is een vlakke, gewapende betonvloer die tegen een stootje kan en jarenlang meegaat — klaar om op te bouwen.",
+      "Het resultaat is een vlakke, gewapende betonvloer die tegen een stootje kan en jarenlang meegaat, klaar om op te bouwen.",
     ],
     highlights: [
       "Ondergrond uitgegraven en waterpas voorbereid",
@@ -859,7 +865,7 @@ const PROJECT_ENTRIES: Project[] = [
     body: [
       "Voor deze nieuwbouwwoning in Dalem legden wij de complete voortuin aan. De wens was een strakke, onderhoudsarme tuin met een warme uitstraling en volop ruimte om te parkeren en te zitten.",
       "We hebben de voortuin bestraat met grijze tegels in een strak verband, met een nette kantopsluiting rondom. In het hart van de tuin maakten we een plantvak met gemetselde plantenbakken van stapelblokken, afgetopt met wit split en beplant met sfeervolle olijfbomen. Daaromheen kwam een gevarieerde border met lavendel, siergrassen en vaste planten.",
-      "Met de ingebouwde grondverlichting komt de tuin ook 's avonds prachtig tot z'n recht. Het resultaat is een verzorgde, onderhoudsarme voortuin met karakter — klaar om jaren van te genieten.",
+      "Met de ingebouwde grondverlichting komt de tuin ook 's avonds prachtig tot z'n recht. Het resultaat is een verzorgde, onderhoudsarme voortuin met karakter, klaar om jaren van te genieten.",
     ],
     highlights: [
       "Grijze bestrating in strak verband met kantopsluiting",
@@ -922,7 +928,7 @@ const PROJECT_ENTRIES: Project[] = [
       "Bij deze nieuwbouwwoning in Groot-Ammers mochten wij het complete erf bestraten. Rondom het huis lag alleen nog zand, dus we begonnen bij het begin: de ondergrond op hoogte brengen, egaliseren en goed verdichten. Met een afreirei en trilplaat hebben we het hele terrein waterpas afgewerkt, zodat de bestrating vlak blijft liggen en het water overal goed wegloopt.",
       "Rondom brachten we een stevige kantopsluiting van betonbanden aan en langs de gevel legden we een lijngoot, zodat het regenwater netjes wordt afgevoerd en niet tegen het huis blijft staan. Zo ligt er een basis die niet gaat zakken of uitzakken aan de randen.",
       "Het vlak zelf is bestraat met rode gebakken klinkers in een strak visgraatverband, omlijst door een brede rand van antracieten stenen in halfsteensverband. Dat kleurcontrast geeft het erf rust en maakt het geheel af. Ook de aansluitingen op de betonvloer bij de schuur en de inrit zijn netjes op elkaar afgestemd.",
-      "Het resultaat is een ruim, vlak en verzorgd erf met volop plek om te parkeren en te manoeuvreren — degelijk aangelegd en klaar om jaren mee te gaan.",
+      "Het resultaat is een ruim, vlak en verzorgd erf met volop plek om te parkeren en te manoeuvreren, degelijk aangelegd en klaar om jaren mee te gaan.",
     ],
     highlights: [
       "Ondergrond op hoogte gebracht, geëgaliseerd en verdicht",
@@ -1094,19 +1100,15 @@ export const REVIEWS: Review[] = [
   },
 ]
 
-/** Gemiddelde reviewscore, o.a. voor de structured data in de layout. */
-export const REVIEW_AVERAGE =
-  Math.round(
-    (REVIEWS.reduce((sum, r) => sum + r.rating, 0) / REVIEWS.length) * 10,
-  ) / 10
-
 export type Location = {
   /** Dient tevens als slug: /hovenier/[plaats] */
   slug: string
   /** Plaatsnaam zoals we die in lopende tekst gebruiken. */
   name: string
-  /** Lead + SEO meta-description op de plaatspagina. */
+  /** Lead op de plaatspagina, en meta-description als metaDescription ontbreekt. */
   summary: string
+  /** Optionele kortere meta-description (max. ~155 tekens) voor Google. */
+  metaDescription?: string
   /** Beschrijvende alinea's op de plaatspagina. */
   paragraphs: string[]
   /** Wijken, buurtschappen en dorpen die we vanuit hier meepakken. */
@@ -1125,6 +1127,8 @@ export const LOCATIONS: Location[] = [
     name: "Gorinchem",
     summary:
       "Hovenier in Gorinchem voor tuinaanleg, straatwerk, grondwerk en groenvoorziening. Slob Tuinen werkt vanuit Leerdam, op een kwartier rijden, en heeft in Gorinchem en Dalem al meerdere tuinen en opritten opgeleverd.",
+    metaDescription:
+      "Hovenier in Gorinchem voor tuinaanleg, straatwerk, grondwerk en groen. Slob Tuinen uit Leerdam heeft hier en in Dalem al tuinen en opritten opgeleverd.",
     paragraphs: [
       "Gorinchem ligt op een kwartier rijden van onze standplaats in Leerdam. Daardoor komen we er vaak: voor een complete tuin, een nieuwe oprit, grondwerk achter de woning of het onderhoud van een bedrijventerrein. Kort op de weg betekent ook dat we makkelijk even langskomen om mee te kijken voordat er iets op papier staat.",
       "In de oudere wijken binnen de vesting werken we vaak op krappe plekken, waar het materieel niet zomaar de tuin in rijdt en de aanvoer via de voordeur of een smalle steeg gaat. In de nieuwbouw rond Hoog Dalem is het andere werk: daar ligt de tuin er bij oplevering kaal en ongelijk bij, en moet er eerst goed grondwerk komen voordat de bestrating en de beplanting erin kunnen.",
@@ -1169,6 +1173,8 @@ export const LOCATIONS: Location[] = [
     name: "Vianen",
     summary:
       "Hovenier in Vianen voor tuinaanleg, straatwerk, grondwerk en groenvoorziening. Slob Tuinen werkt vanuit Leerdam in de hele Vijfheerenlanden en legde in Vianen onder meer een strak terras met grootformaat tegels aan.",
+    metaDescription:
+      "Hovenier in Vianen voor tuinaanleg, straatwerk, grondwerk en groen. Slob Tuinen uit Leerdam werkt in de hele Vijfheerenlanden, ook in Lexmond en Hagestein.",
     paragraphs: [
       "Vianen hoort bij de Vijfheerenlanden, net als Leerdam, en dat is precies ons werkgebied. We rijden er zonder omweg naartoe, wat het makkelijk maakt om een werk in etappes te doen of nog even terug te komen voor de laatste details.",
       "Het werk in Vianen loopt uiteen. In de tuinen rond de oude kern gaat het vaak om een terras vervangen, een oprit opnieuw leggen of een tuin die na jaren is verzakt weer waterpas krijgen. In de nieuwere wijken en op de bedrijventerreinen langs de A2 gaat het eerder om grondwerk, bestrating over een groter oppervlak en het groen dat daarbij hoort.",

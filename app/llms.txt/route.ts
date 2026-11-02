@@ -9,7 +9,7 @@ import {
 
 const SITE_URL = "https://slobtuinen.nl"
 
-/** Vereist bij output: "export" — het bestand wordt bij de build vastgelegd. */
+/** Vereist bij output: "export": het bestand wordt bij de build vastgelegd. */
 export const dynamic = "force-static"
 
 /**

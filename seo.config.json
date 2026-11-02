@@ -1,0 +1,128 @@
+{
+  "slug": "slob-tuinen",
+  "site": "https://slobtuinen.nl",
+  "base": "",
+  "githubPagesUrl": "",
+  "mode": "klant",
+  "language": "nl-NL",
+  "branche": "hovenier",
+  "strategy": [
+    "lokaal",
+    "ai"
+  ],
+  "brandTerms": [
+    "slob tuinen",
+    "slobtuinen"
+  ],
+  "business": {
+    "schemaType": "Landscaper",
+    "name": "Slob Tuinen",
+    "legalName": "",
+    "description": "Slob Tuinen is een hovenier uit Leerdam voor tuinaanleg, straatwerk, beschoeiingswerk, grondverzet, grondwerk en groenvoorziening in de Vijfheerenlanden en omgeving.",
+    "kvk": "97104078",
+    "vatID": "",
+    "foundingYear": "",
+    "founder": "Martin Slob",
+    "showAddress": true,
+    "street": "Recht van Ter Leede 28a",
+    "postalCode": "4143 LP",
+    "city": "Leerdam",
+    "region": "Utrecht",
+    "country": "NL",
+    "geo": {},
+    "phone": "+31628864744",
+    "phoneDisplay": "06 28 86 47 44",
+    "whatsapp": "https://wa.me/31628864744",
+    "email": "slobdienstverlening@gmail.com",
+    "priceRange": "",
+    "openingHours": [],
+    "specialHours": [],
+    "areaServed": [
+      "Leerdam",
+      "Vijfheerenlanden",
+      "Vianen",
+      "Gorinchem",
+      "Culemborg",
+      "Alblasserwaard",
+      "Betuwe"
+    ],
+    "gbpUrl": "",
+    "reviewLink": "",
+    "gbpPrimaryCategory": "Hovenier",
+    "sameAs": [
+      "https://www.instagram.com/slob_tuinen/"
+    ],
+    "logo": "/logo.png",
+    "image": "/og-image.jpg",
+    "extra": {}
+  },
+  "services": [
+    {
+      "name": "Tuinaanleg",
+      "path": "/diensten/tuinaanleg",
+      "summary": "",
+      "keywords": [
+        "tuinaanleg leerdam",
+        "tuin laten aanleggen leerdam"
+      ]
+    },
+    {
+      "name": "Straatwerk",
+      "path": "/diensten/straatwerk",
+      "summary": "",
+      "keywords": [
+        "straatwerk leerdam",
+        "bestrating leerdam"
+      ]
+    },
+    {
+      "name": "Beschoeiingswerk",
+      "path": "/diensten/beschoeiingswerk",
+      "summary": "",
+      "keywords": [
+        "beschoeiing leerdam",
+        "beschoeiing plaatsen"
+      ]
+    },
+    {
+      "name": "Grondverzet",
+      "path": "/diensten/grondverzet",
+      "summary": "",
+      "keywords": [
+        "grondverzet leerdam"
+      ]
+    },
+    {
+      "name": "Grondwerk",
+      "path": "/diensten/grondwerk",
+      "summary": "",
+      "keywords": [
+        "grondwerk leerdam"
+      ]
+    },
+    {
+      "name": "Groenvoorziening",
+      "path": "/diensten/groenvoorziening",
+      "summary": "",
+      "keywords": [
+        "groenvoorziening leerdam"
+      ]
+    }
+  ],
+  "llmsPages": [],
+  "ignorePaths": [
+    "/privacybeleid",
+    "/cookiebeleid",
+    "/algemene-voorwaarden",
+    "/_not-found"
+  ],
+  "gscProperty": "https://slobtuinen.nl/",
+  "psiUrls": [
+    "/",
+    "/diensten/tuinaanleg",
+    "/hovenier/gorinchem"
+  ],
+  "aiCrawlers": {
+    "training": "allow"
+  }
+}

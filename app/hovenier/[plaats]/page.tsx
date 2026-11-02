@@ -27,7 +27,7 @@ export async function generateMetadata({
   if (!location) return { title: "Plaats niet gevonden | Slob Tuinen" }
 
   const title = `Hovenier ${location.name} | Tuinaanleg & Straatwerk | Slob Tuinen`
-  const description = location.summary
+  const description = location.metaDescription ?? location.summary
   const url = `${SITE_URL}hovenier/${plaats}`
 
   return {

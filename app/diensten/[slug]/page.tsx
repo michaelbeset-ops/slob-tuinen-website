@@ -23,7 +23,7 @@ export async function generateMetadata({
 
   const title =
     service.metaTitle ?? `${service.title} in Leerdam en omgeving | Slob Tuinen`
-  const description = service.summary
+  const description = service.metaDescription ?? service.summary
   // OG-afbeelding afgeleid van de afbeeldingsnaam (image-id ≠ altijd de slug).
   const ogImage = service.image.replace(/^\//, "").replace(/\.webp$/, "-og.jpg")
 
@@ -161,7 +161,7 @@ export default async function ServicePage({
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-forest">
               Onze diensten
             </p>
-            <h1 className="max-w-3xl text-balance font-black uppercase leading-[0.9] tracking-tighter text-white text-[clamp(2.5rem,7vw,5.5rem)]">
+            <h1 className="max-w-3xl text-balance font-black uppercase leading-[0.9] tracking-tighter text-white text-[clamp(2rem,7vw,5.5rem)]">
               {service.title}
             </h1>
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-white/80">

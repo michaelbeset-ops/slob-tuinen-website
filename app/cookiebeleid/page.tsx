@@ -34,6 +34,7 @@ export default function CookiebeleidPage() {
             De website van Slob Tuinen maakt gebruik van de volgende cookies:
           </p>
 
+          <div className="overflow-x-auto">
           <table>
             <thead>
               <tr>
@@ -61,6 +62,7 @@ export default function CookiebeleidPage() {
               </tr>
             </tbody>
           </table>
+          </div>
 
           <h2>3. Functionele cookies</h2>
           <p>

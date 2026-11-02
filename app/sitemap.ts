@@ -3,7 +3,7 @@ import { LOCATIONS, PROJECTS, SERVICES } from "@/components/slob/data"
 
 const SITE_URL = "https://slobtuinen.nl"
 
-/** Vereist bij output: "export" — de sitemap wordt bij de build vastgelegd. */
+/** Vereist bij output: "export": de sitemap wordt bij de build vastgelegd. */
 export const dynamic = "force-static"
 
 /**
