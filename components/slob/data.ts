@@ -466,6 +466,96 @@ export type Project = {
 
 const PROJECT_ENTRIES: Project[] = [
   {
+    title: "Oprit bestraten in Asperen",
+    location: "Asperen",
+    image: "/images/project-oprit-asperen-1.webp",
+    gallery: [
+      "/images/project-oprit-asperen-1.webp",
+      "/images/project-oprit-asperen-2.webp",
+      "/images/project-oprit-asperen-3.webp",
+      "/images/project-oprit-asperen-4.webp",
+    ],
+    size: "wide",
+    slug: "oprit-asperen",
+    date: "2026-11-05",
+    summary:
+      "Lange oprit in Asperen bestraat met antraciet kasseien. Strak uitgezet met de bouwlaser, gelegd op een verdicht zandbed en stevig genoeg voor de auto.",
+    body: [
+      "Deze oprit in Asperen loopt vanaf de straat langs de woning door naar achteren, tot aan de schuur. De wens was een oprit die stevig genoeg is om op te rijden en tegelijk past bij het landelijke karakter van de woning. De keuze viel op donkere kasseien met afgeronde, getrommelde koppen.",
+      "We zijn begonnen met het grondwerk. De oprit is uitgegraven en op hoogte gebracht met onze minigraver, die ook de pallets met stenen naar de plek van verwerking bracht. Met een bouwlaser op statief hebben we de hoogtes uitgezet, zodat de oprit overal het juiste afschot krijgt en het regenwater weg kan lopen.",
+      "Daarna is het zandbed aangebracht, afgereid en verdicht met de trilplaat. Langs een strak gespannen richtsnoer zijn de kasseien rij voor rij gelegd en met de rubberen hamer op hun plek getikt. Door die werkwijze ligt de oprit recht in lijn en blijft de bestrating ook onder het gewicht van een auto vlak liggen.",
+      "Het resultaat is een sfeervolle, degelijke oprit van antraciet kasseien die mooi aansluit bij de woning en de groene borders erlangs. Wilt u ook een oprit laten bestraten in Asperen, Leerdam of de rest van de Betuwe? Martin komt graag langs om mee te kijken.",
+    ],
+    highlights: [
+      "Oprit uitgegraven en op hoogte gebracht met de minigraver",
+      "Hoogtes en afschot uitgezet met een bouwlaser",
+      "Zandbed afgereid en verdicht met de trilplaat",
+      "Antraciet kasseien met getrommelde koppen, gelegd langs een richtsnoer",
+      "Stevig genoeg om met de auto op te rijden",
+    ],
+    services: ["Straatwerk", "Grondwerk"],
+  },
+  {
+    title: "Schutting plaatsen in Leerdam",
+    location: "Leerdam",
+    image: "/images/project-schutting-leerdam-1.webp",
+    gallery: [
+      "/images/project-schutting-leerdam-1.webp",
+      "/images/project-schutting-leerdam-2.webp",
+      "/images/project-schutting-leerdam-3.webp",
+      "/images/project-schutting-leerdam-4.webp",
+      "/images/project-schutting-leerdam-5.webp",
+    ],
+    size: "wide",
+    slug: "schutting-leerdam",
+    date: "2026-11-05",
+    summary:
+      "In Leerdam vervingen wij een oude schutting vol klimop door een strakke schutting met donkere, horizontale planken. Inclusief opruimen en afvoeren.",
+    body: [
+      "Bij deze woning in Leerdam stond langs het achterpad een oude houten schutting die volledig was overgroeid met klimop. De planken waren aan het eind van hun leven en de begroeiing nam steeds meer ruimte in op het smalle pad. Tijd voor een nieuwe, strakke afscheiding.",
+      "We zijn begonnen met opruimen. De klimop, de struiken en de oude schutting zijn verwijderd. Met onze kleine minigraver hebben we de wortels en de oude bestrating en opsluiting eruit gehaald en het puin met de kruiwagen afgevoerd. Zo lag er weer een schone ondergrond om op te bouwen.",
+      "Daarna is de nieuwe schutting geplaatst, met donkere, horizontale planken tussen stevige staanders. De schutting staat recht in lijn langs het pad en sluit netjes aan op de bestaande bestrating. Het achterpad is daardoor weer ruim, verzorgd en goed begaanbaar.",
+      "Het resultaat is een moderne schutting die jarenlang privacy geeft en geen onderhoud aan klimop meer vraagt. Wilt u ook een schutting laten plaatsen in Leerdam of omgeving? Bel of app Martin voor een vrijblijvende offerte.",
+    ],
+    highlights: [
+      "Oude, overwoekerde schutting verwijderd",
+      "Klimop, struiken en wortels opgeruimd",
+      "Oude bestrating en opsluiting uitgegraven met de minigraver",
+      "Nieuwe schutting met donkere, horizontale planken",
+      "Recht in lijn langs het achterpad geplaatst",
+    ],
+    services: ["Schuttingwerk", "Grondverzet", "Tuinaanleg"],
+  },
+  {
+    title: "Grondwerk in Bleskensgraaf",
+    location: "Bleskensgraaf",
+    image: "/images/project-grondwerk-bleskensgraaf-1.webp",
+    gallery: [
+      "/images/project-grondwerk-bleskensgraaf-1.webp",
+      "/images/project-grondwerk-bleskensgraaf-2.webp",
+      "/images/project-grondwerk-bleskensgraaf-3.webp",
+      "/images/project-grondwerk-bleskensgraaf-4.webp",
+    ],
+    size: "wide",
+    slug: "grondwerk-bleskensgraaf",
+    date: "2026-11-05",
+    summary:
+      "Grondwerk bij nieuwbouw in Bleskensgraaf. De grond langs de woningen is afgegraven, op hoogte gebracht en vlak afgewerkt, klaar voor de inrichting.",
+    body: [
+      "In Bleskensgraaf, in de Alblasserwaard, mochten we het grondwerk doen bij nieuwbouwwoningen. Na de bouw lag de strook naast de woningen er ongelijk bij, met bouwzand, sporen van het bouwverkeer en hoogteverschillen. Voordat daar iets aangelegd kan worden, moet de ondergrond eerst goed op orde zijn.",
+      "Met onze minishovel hebben we de grond afgegraven en verplaatst. Daarna is het hele vlak op de juiste hoogte gebracht ten opzichte van de bestaande bestrating en de borders. Met een gespannen koord als leidraad hebben we de lijnen en hoogtes strak uitgezet.",
+      "Tot slot is de grond vlak afgewerkt, zodat hij netjes aansluit op de opsluiting van de bestrating en op de beplanting langs de erfgrens. Zo ligt er een strakke, gelijkmatige ondergrond die klaar is voor de verdere inrichting.",
+      "Goed grondwerk zie je later niet meer terug, maar het bepaalt wel of een tuin of bestrating jaren mooi blijft. Heeft u grondwerk nodig in Bleskensgraaf, Molenlanden of elders in de Alblasserwaard? Martin denkt graag met u mee.",
+    ],
+    highlights: [
+      "Grondwerk bij nieuwbouwwoningen",
+      "Grond afgegraven en verplaatst met de minishovel",
+      "Vlak op hoogte gebracht en strak uitgezet met een koord",
+      "Netjes aansluitend op bestaande bestrating en borders",
+    ],
+    services: ["Grondwerk", "Grondverzet"],
+  },
+  {
     title: "Vlonder Leerdam",
     location: "Leerdam",
     image: "/images/project-vlonder-leerdam-1.webp",

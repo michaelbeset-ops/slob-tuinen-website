@@ -50,7 +50,7 @@ export async function generateMetadata({
       title,
       description,
       url: `${SITE_URL}projecten/${slug}`,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: `${project.title} in ${project.location}` }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: place }],
     },
     twitter: {
       card: "summary_large_image",
@@ -76,6 +76,10 @@ export default async function ProjectPage({
     return service ? [service] : []
   })
   const location = getLocationForProject(slug)
+  // Titel bevat vaak de plaats al ("Grondwerk in Bleskensgraaf"); dan niet dubbel.
+  const placeName = project.title.includes(project.location)
+    ? project.title
+    : `${project.title} in ${project.location}`
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -86,7 +90,7 @@ export default async function ProjectPage({
       {
         "@type": "ListItem",
         position: 3,
-        name: `${project.title} in ${project.location}`,
+        name: placeName,
         item: `${SITE_URL}projecten/${slug}`,
       },
     ],
@@ -129,7 +133,7 @@ export default async function ProjectPage({
             <div className="relative aspect-[4/3] overflow-hidden">
               <img
                 src={withBasePath(project.image)}
-                alt={`${project.title} in ${project.location}, het eindresultaat door Slob Tuinen`}
+                alt={`${placeName}, uitgevoerd door Slob Tuinen`}
                 fetchPriority="high"
                 decoding="async"
                 className="size-full object-cover"
@@ -231,7 +235,7 @@ export default async function ProjectPage({
                     >
                       <img
                         src={withBasePath(src)}
-                        alt={`${project.title} in ${project.location}, foto ${i + 2}`}
+                        alt={`${placeName}, foto ${i + 2}`}
                         loading="lazy"
                         decoding="async"
                         className="size-full object-cover"
@@ -259,7 +263,7 @@ export default async function ProjectPage({
                 <BeforeAfter
                   after={project.image}
                   before={project.beforeImage}
-                  alt={`${project.title} in ${project.location}`}
+                  alt={placeName}
                 />
               </div>
             </div>
