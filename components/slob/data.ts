@@ -923,6 +923,8 @@ const PROJECT_ENTRIES: Project[] = [
       "/images/project-groen-schelluinen-2.webp",
       "/images/project-groen-schelluinen-3.webp",
       "/images/project-groen-schelluinen-4.webp",
+      "/images/project-groen-schelluinen-5.webp",
+      "/images/project-groen-schelluinen-6.webp",
     ],
     size: "wide",
     slug: "groenvoorziening-schelluinen",
