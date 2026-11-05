@@ -261,7 +261,7 @@ export default async function ProjectPage({
               </p>
               <div className="mx-auto max-w-3xl">
                 <BeforeAfter
-                  after={project.image}
+                  after={project.afterCompareImage ?? project.image}
                   before={project.beforeImage}
                   alt={placeName}
                 />

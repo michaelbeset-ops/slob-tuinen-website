@@ -126,7 +126,7 @@ export function Projects() {
                 className="group w-[85%] shrink-0 snap-start sm:w-[60%] lg:w-[42%]"
               >
                 <BeforeAfter
-                  after={project.image || "/placeholder.svg"}
+                  after={project.afterCompareImage ?? (project.image || "/placeholder.svg")}
                   before={project.beforeImage!}
                   alt={`${project.title} in ${project.location}`}
                 />

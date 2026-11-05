@@ -447,6 +447,11 @@ export type Project = {
   image: string
   /** Optional "before" photo. When set, the detail page toont een swipe-vergelijking. */
   beforeImage?: string
+  /**
+   * Optionele "nu"-foto voor de swipe-vergelijking, uitgesneden op hetzelfde
+   * kader als beforeImage. Zonder dit veld wordt image gebruikt.
+   */
+  afterCompareImage?: string
   /** Extra foto's, getoond als galerij op de detailpagina. */
   gallery?: string[]
   size: "tall" | "wide" | "regular"
@@ -478,7 +483,8 @@ const PROJECT_ENTRIES: Project[] = [
       "/images/project-oprit-asperen-6.webp",
       "/images/project-oprit-asperen-7.webp",
     ],
-    beforeImage: "/images/project-oprit-asperen-voor.webp",
+    beforeImage: "/images/project-oprit-asperen-vergelijk-voor.webp",
+    afterCompareImage: "/images/project-oprit-asperen-vergelijk-na.webp",
     size: "wide",
     slug: "oprit-asperen",
     date: "2026-11-05",
