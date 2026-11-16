@@ -1216,6 +1216,8 @@ export type Location = {
   nearby: string[]
   /** Slugs uit PROJECTS die we als bewijs op deze pagina tonen. */
   projectSlugs: string[]
+  /** Optionele lichtere versie (4:3, max. 1000 px) van de eerste projectfoto voor de hero. */
+  heroImage?: string
   /** Zoektermen waarop deze plaats gevonden mag worden. */
   keywords: string[]
   /** Veelgestelde vragen: op de pagina én als FAQ-structured-data. */
@@ -1236,6 +1238,7 @@ export const LOCATIONS: Location[] = [
       "Wat het ook is, we doen het in eigen beheer. Het grondwerk, de bestrating, de beschoeiing en het groen komen van hetzelfde team, dus u heeft één aanspreekpunt: Martin. Dat scheelt afstemming, en het voorkomt dat het ene werk het andere in de weg zit.",
     ],
     nearby: ["Dalem", "Hoog Dalem", "Arkel", "Schelluinen", "Hardinxveld", "Spijk"],
+    heroImage: "/images/project-gorinchem-3-hero.webp",
     projectSlugs: [
       "tuinaanleg-gorinchem",
       "voortuin-dalem",

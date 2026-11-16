@@ -152,8 +152,10 @@ export default async function LocationPage({
             {hero && (
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
-                  src={withBasePath(hero.image)}
+                  src={withBasePath(location.heroImage ?? hero.image)}
                   alt={`Werk van Slob Tuinen in ${location.name}: ${hero.title}`}
+                  width={1000}
+                  height={750}
                   fetchPriority="high"
                   decoding="async"
                   className="size-full object-cover"
