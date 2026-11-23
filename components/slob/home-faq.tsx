@@ -3,7 +3,7 @@ import { HOME_FAQ } from "./data"
 
 export function HomeFaq() {
   return (
-    <section id="veelgestelde-vragen" className="bg-muted py-20 md:py-32">
+    <section id="veelgestelde-vragen" className="bg-background py-20 md:py-32">
       <div className="mx-auto max-w-[1600px] px-6 md:px-12">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-forest">
           Veelgestelde vragen
