@@ -3,7 +3,6 @@ import { notFound } from "next/navigation"
 import { ArrowLeft, ArrowUpRight, Check, MapPin } from "lucide-react"
 import { SiteHeader } from "@/components/slob/site-header"
 import { WhatsAppFloat } from "@/components/slob/whatsapp-float"
-import { BeforeAfter } from "@/components/slob/before-after"
 import {
   getLocationForProject,
   getProjectBySlug,
@@ -247,28 +246,6 @@ export default async function ProjectPage({
             </section>
           ) : null
         })()}
-
-        {/* Voor & na */}
-        {project.beforeImage && (
-          <section className="mx-auto max-w-[1600px] px-6 py-16 md:px-12 md:py-20">
-            <div className="border-t border-border pt-14">
-              <h2 className="mb-3 font-black uppercase tracking-tighter text-foreground text-[clamp(1.75rem,4vw,3rem)]">
-                Van toen naar nu
-              </h2>
-              <p className="mb-8 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-                Sleep de handgreep om het verschil te zien tussen de oude
-                situatie en het eindresultaat.
-              </p>
-              <div className="mx-auto max-w-3xl">
-                <BeforeAfter
-                  after={project.image}
-                  before={project.beforeImage}
-                  alt={placeName}
-                />
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* Verder kijken: interne links naar diensten, plaats en vergelijkbare projecten */}
         {(related.length > 0 || serviceLinks.length > 0 || location) && (

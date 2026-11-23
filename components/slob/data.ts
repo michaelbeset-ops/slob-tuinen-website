@@ -445,8 +445,6 @@ export type Project = {
   title: string
   location: string
   image: string
-  /** Optional "before" photo. When set, the detail page toont een swipe-vergelijking. */
-  beforeImage?: string
   /** Extra foto's, getoond als galerij op de detailpagina. */
   gallery?: string[]
   size: "tall" | "wide" | "regular"
@@ -477,8 +475,8 @@ const PROJECT_ENTRIES: Project[] = [
       "/images/project-oprit-asperen-5.webp",
       "/images/project-oprit-asperen-6.webp",
       "/images/project-oprit-asperen-7.webp",
+      "/images/project-oprit-asperen-voor.webp",
     ],
-    beforeImage: "/images/project-oprit-asperen-voor.webp",
     size: "wide",
     slug: "oprit-asperen",
     date: "2026-11-05",
