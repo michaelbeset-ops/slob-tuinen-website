@@ -55,7 +55,7 @@ export function Reviews() {
   }
 
   return (
-    <section id="reviews" className="bg-background pb-14 pt-20 md:pb-20 md:pt-32">
+    <section id="reviews" className="bg-background py-20 md:py-32">
       <div className="mx-auto max-w-[1600px] px-6 md:px-12">
         <div className="mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
           <div>

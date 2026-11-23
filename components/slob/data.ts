@@ -1326,7 +1326,7 @@ export function getLocationForProject(slug: string) {
   return LOCATIONS.find((l) => l.projectSlugs.includes(slug))
 }
 
-/** Veelgestelde vragen op de homepage: zichtbaar op de pagina én als FAQPage-schema. */
+/** Veelgestelde vragen over Slob Tuinen, voor llms.txt (AI-zoekmachines). */
 export const HOME_FAQ: { q: string; a: string }[] = [
   {
     q: "Wat doet Slob Tuinen?",
