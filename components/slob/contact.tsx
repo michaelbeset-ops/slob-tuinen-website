@@ -23,7 +23,7 @@ const LEGAL = [
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-foreground text-white">
+    <section id="contact" className="border-t border-white/10 bg-foreground text-white">
       <div className="mx-auto max-w-[1600px] px-6 py-20 md:px-12 md:py-32">
         {/* Kop */}
         <div className="max-w-2xl">
